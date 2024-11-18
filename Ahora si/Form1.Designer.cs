@@ -31,23 +31,30 @@
             panel1 = new Panel();
             button1 = new Button();
             Risa = new Label();
+            button2 = new Button();
+            etiquetaputa = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(etiquetaputa);
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(Risa);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(10, 11);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 426);
+            panel1.Size = new Size(679, 318);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // button1
             // 
-            button1.Location = new Point(327, 293);
+            button1.Location = new Point(262, 207);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(82, 22);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -56,18 +63,37 @@
             // Risa
             // 
             Risa.AutoSize = true;
-            Risa.Location = new Point(355, 126);
+            Risa.Location = new Point(287, 81);
             Risa.Name = "Risa";
-            Risa.Size = new Size(43, 20);
+            Risa.Size = new Size(34, 15);
             Risa.TabIndex = 0;
             Risa.Text = "Jotos";
             // 
+            // button2
+            // 
+            button2.Location = new Point(435, 206);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 2;
+            button2.Text = "puto el que me apriete";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // etiquetaputa
+            // 
+            etiquetaputa.AutoSize = true;
+            etiquetaputa.Location = new Point(484, 81);
+            etiquetaputa.Name = "etiquetaputa";
+            etiquetaputa.Size = new Size(0, 15);
+            etiquetaputa.TabIndex = 3;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
@@ -80,5 +106,7 @@
         private Panel panel1;
         private Label Risa;
         private Button button1;
+        private Button button2;
+        private Label etiquetaputa;
     }
 }
