@@ -29,26 +29,38 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
+            button1 = new Button();
+            Risa = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(Risa);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(776, 426);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // button1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(355, 126);
-            label1.Name = "label1";
-            label1.Size = new Size(43, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Jotos";
+            button1.Location = new Point(327, 293);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // Risa
+            // 
+            Risa.AutoSize = true;
+            Risa.Location = new Point(355, 126);
+            Risa.Name = "Risa";
+            Risa.Size = new Size(43, 20);
+            Risa.TabIndex = 0;
+            Risa.Text = "Jotos";
             // 
             // Form1
             // 
@@ -66,6 +78,7 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
+        private Label Risa;
+        private Button button1;
     }
 }
