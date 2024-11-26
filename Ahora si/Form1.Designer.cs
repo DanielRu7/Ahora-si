@@ -28,85 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            etiquetaputa = new Label();
-            button2 = new Button();
-            button1 = new Button();
-            Risa = new Label();
-            panel1.SuspendLayout();
+            textBoxNombre = new TextBox();
+            textBoxCuenta = new TextBox();
+            label1 = new Label();
+            textBoxContrasena = new TextBox();
             SuspendLayout();
             // 
-            // panel1
+            // textBoxNombre
             // 
-            panel1.Controls.Add(etiquetaputa);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(Risa);
-            panel1.Location = new Point(10, 11);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(679, 318);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            textBoxNombre.Location = new Point(270, 110);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.PlaceholderText = "Nombre";
+            textBoxNombre.Size = new Size(204, 27);
+            textBoxNombre.TabIndex = 0;
+            textBoxNombre.TextAlign = HorizontalAlignment.Center;
             // 
-            // etiquetaputa
+            // textBoxCuenta
             // 
-            etiquetaputa.AutoSize = true;
-            etiquetaputa.Location = new Point(484, 81);
-            etiquetaputa.Name = "etiquetaputa";
-            etiquetaputa.Size = new Size(0, 15);
-            etiquetaputa.TabIndex = 3;
+            textBoxCuenta.Location = new Point(270, 169);
+            textBoxCuenta.Name = "textBoxCuenta";
+            textBoxCuenta.PlaceholderText = "Cuenta";
+            textBoxCuenta.Size = new Size(204, 27);
+            textBoxCuenta.TabIndex = 1;
+            textBoxCuenta.TextAlign = HorizontalAlignment.Center;
             // 
-            // button2
+            // label1
             // 
-            button2.Location = new Point(391, 144);
-            button2.Name = "button2";
-            button2.Size = new Size(242, 86);
-            button2.TabIndex = 2;
-            button2.Text = "puto el que me apriete";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(340, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(62, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Login in";
             // 
-            // button1
+            // textBoxContrasena
             // 
-            button1.Location = new Point(262, 207);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // Risa
-            // 
-            Risa.AutoSize = true;
-            Risa.Location = new Point(287, 81);
-            Risa.Name = "Risa";
-            Risa.Size = new Size(34, 15);
-            Risa.TabIndex = 0;
-            Risa.Text = "Jotos";
+            textBoxContrasena.Location = new Point(270, 233);
+            textBoxContrasena.Name = "textBoxContrasena";
+            textBoxContrasena.PlaceholderText = "Contraseña";
+            textBoxContrasena.Size = new Size(204, 27);
+            textBoxContrasena.TabIndex = 3;
+            textBoxContrasena.TextAlign = HorizontalAlignment.Center;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
-            Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
+            ClientSize = new Size(800, 451);
+            Controls.Add(textBoxContrasena);
+            Controls.Add(label1);
+            Controls.Add(textBoxCuenta);
+            Controls.Add(textBoxNombre);
             Name = "Form1";
             Text = "Form1";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label Risa;
-        private Button button1;
-        private Button button2;
-        private Label etiquetaputa;
+        private TextBox textBoxNombre;
+        private TextBox textBoxCuenta;
+        private Label label1;
+        private TextBox textBoxContrasena;
     }
 }
