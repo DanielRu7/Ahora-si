@@ -36,49 +36,54 @@
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(270, 110);
+            textBoxNombre.Location = new Point(236, 82);
+            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.PlaceholderText = "Nombre";
-            textBoxNombre.Size = new Size(204, 27);
+            textBoxNombre.Size = new Size(179, 23);
             textBoxNombre.TabIndex = 0;
             textBoxNombre.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxCuenta
             // 
-            textBoxCuenta.Location = new Point(270, 169);
+            textBoxCuenta.Location = new Point(236, 127);
+            textBoxCuenta.Margin = new Padding(3, 2, 3, 2);
             textBoxCuenta.Name = "textBoxCuenta";
             textBoxCuenta.PlaceholderText = "Cuenta";
-            textBoxCuenta.Size = new Size(204, 27);
+            textBoxCuenta.Size = new Size(179, 23);
             textBoxCuenta.TabIndex = 1;
             textBoxCuenta.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(340, 56);
+            label1.Location = new Point(298, 42);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(50, 15);
             label1.TabIndex = 2;
             label1.Text = "Login in";
+            label1.Click += label1_Click;
             // 
             // textBoxContrasena
             // 
-            textBoxContrasena.Location = new Point(270, 233);
+            textBoxContrasena.Location = new Point(236, 175);
+            textBoxContrasena.Margin = new Padding(3, 2, 3, 2);
             textBoxContrasena.Name = "textBoxContrasena";
             textBoxContrasena.PlaceholderText = "Contraseña";
-            textBoxContrasena.Size = new Size(204, 27);
+            textBoxContrasena.Size = new Size(179, 23);
             textBoxContrasena.TabIndex = 3;
             textBoxContrasena.TextAlign = HorizontalAlignment.Center;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(700, 338);
             Controls.Add(textBoxContrasena);
             Controls.Add(label1);
             Controls.Add(textBoxCuenta);
             Controls.Add(textBoxNombre);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

@@ -6,5 +6,11 @@ namespace Ahora_si
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MenuProductos nuevo = new MenuProductos();
+            nuevo.Show();
+        }
     }
 }
