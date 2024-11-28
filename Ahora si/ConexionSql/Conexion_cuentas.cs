@@ -48,7 +48,7 @@ namespace Ahora_si.ConexionSql
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al insertar cuenta");
+                MessageBox.Show("Error al insertar cuenta en el server");
             }
             cerrar();
         }
@@ -71,7 +71,7 @@ namespace Ahora_si.ConexionSql
             }
             catch
             {
-                MessageBox.Show("Error al buscar la cuenta");
+                MessageBox.Show("Error al buscar la cuenta en el server");
                 return false;
             }
         }

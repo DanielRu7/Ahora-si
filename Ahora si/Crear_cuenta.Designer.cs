@@ -132,7 +132,7 @@
             LogIn.Controls.Add(linkLabel);
             LogIn.Location = new Point(21, 12);
             LogIn.Name = "LogIn";
-            LogIn.Size = new Size(764, 424);
+            LogIn.Size = new Size(745, 424);
             LogIn.TabIndex = 6;
             // 
             // buttonAcceder
@@ -143,7 +143,7 @@
             buttonAcceder.TabIndex = 4;
             buttonAcceder.Text = "Acceder";
             buttonAcceder.UseVisualStyleBackColor = true;
-            buttonAcceder.Click += this.buttonAcceder_Click;
+            buttonAcceder.Click += buttonAcceder_Click;
             // 
             // labelLogIn
             // 
@@ -158,6 +158,7 @@
             // 
             textBoxContrasena1.Location = new Point(310, 194);
             textBoxContrasena1.Name = "textBoxContrasena1";
+            textBoxContrasena1.PasswordChar = '*';
             textBoxContrasena1.PlaceholderText = "Contrasena";
             textBoxContrasena1.Size = new Size(125, 27);
             textBoxContrasena1.TabIndex = 2;
@@ -177,10 +178,10 @@
             linkLabel.AutoSize = true;
             linkLabel.Location = new Point(341, 253);
             linkLabel.Name = "linkLabel";
-            linkLabel.Size = new Size(69, 20);
+            linkLabel.Size = new Size(68, 20);
             linkLabel.TabIndex = 0;
             linkLabel.TabStop = true;
-            linkLabel.Text = "Login in?";
+            linkLabel.Text = "Sign Up?";
             linkLabel.LinkClicked += linkLabel_LinkClicked;
             // 
             // Crear_cuenta

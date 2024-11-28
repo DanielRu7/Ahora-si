@@ -32,6 +32,8 @@ namespace Ahora_si
             textBoxNombre.Clear();
             textBoxCuenta.Clear();
             textBoxContrasena.Clear();
+            textBoxContrasena1.Clear();
+            textBoxCuenta1.Clear();
         }
 
 
@@ -67,13 +69,15 @@ namespace Ahora_si
             Conexion_cuentas con= new Conexion_cuentas();
             if (con.Buscar(cuenta, contrasena))
             {
-                MessageBox.Show("Iniciando secion..");
+                MessageBox.Show("Iniciando secion..");//aqui pofavo
             }
             else
             {
                 MessageBox.Show("Error Cuanta o contrasena incorrecta");
             }
+            limpiarCampos();
             con.cerrar();
+            
 
 
         }
