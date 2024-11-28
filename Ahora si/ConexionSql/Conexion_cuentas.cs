@@ -53,5 +53,28 @@ namespace Ahora_si.ConexionSql
             cerrar();
         }
 
+        public bool Buscar(string cuenta, string contrasena)
+        {
+            try
+            {
+                string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='"+contrasena+"';";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al buscar la cuenta");
+                return false;
+            }
+        }
+
     }
 }

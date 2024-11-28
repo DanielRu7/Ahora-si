@@ -55,6 +55,26 @@ namespace Ahora_si
 
         private void buttonAcceder_Click(object sender, EventArgs e)
         {
+            string cuenta, contrasena;
+            bool res;
+            cuenta = textBoxCuenta1.Text;
+            contrasena = textBoxContrasena1.Text;
+            if (cuenta == "" || cuenta == "")
+            {
+                MessageBox.Show("Llena todos los datos");
+                return;
+            }
+            Conexion_cuentas con= new Conexion_cuentas();
+            if (con.Buscar(cuenta, contrasena))
+            {
+                MessageBox.Show("Iniciando secion..");
+            }
+            else
+            {
+                MessageBox.Show("Error Cuanta o contrasena incorrecta");
+            }
+            con.cerrar();
+
 
         }
 
