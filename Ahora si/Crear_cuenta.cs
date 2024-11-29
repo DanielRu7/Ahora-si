@@ -1,6 +1,7 @@
 using Ahora_si.ConexionSql;
 using System.Collections.Specialized;
-
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Media;
 namespace Ahora_si
 {
     public partial class Crear_cuenta : Form
@@ -9,21 +10,27 @@ namespace Ahora_si
         {
             InitializeComponent();
             ActiveControl = label1;
+            SoundPlayer sonido = new SoundPlayer();
+            sonido.SoundLocation = @"Resources\sonido.wav";
+            sonido.Play();
         }
         private void buttonCrear_Click(object sender, EventArgs e)
         {
             string nombre, cuenta, contrasena;
-            nombre=textBoxNombre.Text;
-            cuenta=textBoxCuenta.Text;
-            contrasena=textBoxContrasena.Text;
-            if (nombre==""||cuenta==""||contrasena=="")
+            nombre = textBoxNombre.Text;
+            cuenta = textBoxCuenta.Text;
+            contrasena = textBoxContrasena.Text;
+            if (nombre == "" || cuenta == "" || contrasena == "")
             {
                 MessageBox.Show("LLena todos los campos!");
                 return;
             }
-            Conexion_cuentas con= new Conexion_cuentas();
-            con.Insertar(nombre,cuenta,contrasena);
+            Conexion_cuentas con = new Conexion_cuentas();
+            con.Insertar(nombre, cuenta, contrasena);
             limpiarCampos();
+            SignUp.Hide();
+            LogIn.Show();
+
 
         }
 
@@ -66,10 +73,13 @@ namespace Ahora_si
                 MessageBox.Show("Llena todos los datos");
                 return;
             }
-            Conexion_cuentas con= new Conexion_cuentas();
+            Conexion_cuentas con = new Conexion_cuentas();
             if (con.Buscar(cuenta, contrasena))
             {
                 MessageBox.Show("Iniciando secion..");//aqui pofavo
+                MenuProductos obj = new MenuProductos(cuenta, contrasena);
+                this.Hide();
+                obj.Show();
             }
             else
             {
@@ -77,12 +87,10 @@ namespace Ahora_si
             }
             limpiarCampos();
             con.cerrar();
-            
+
 
 
         }
-
-        
 
 
     }

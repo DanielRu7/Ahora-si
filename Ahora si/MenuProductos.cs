@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
+using System.Media;
 
 namespace Ahora_si
 {
@@ -17,6 +18,16 @@ namespace Ahora_si
         public MenuProductos()
         {
             InitializeComponent();
+        }
+        public MenuProductos(string cuenta, string contrasena)
+        {
+
+            InitializeComponent();
+            SoundPlayer sonido = new SoundPlayer();
+            // sonido.SoundLocation = @"Resources\musica.wav";
+            // sonido.Load();
+            //sonido.Play();
+            labelCuenta.Text = cuenta;
         }
 
         private void sidebarTransition_Tick(object sender, EventArgs e)
@@ -33,8 +44,9 @@ namespace Ahora_si
             else // Si está contraída, expandir
             {
                 panelSidebar.Width += 10;
-                if (panelSidebar.Width >= 160)
+                if (panelSidebar.Width >= 169)
                 {
+
                     sidebarExpand = true;
                     sidebarTransition.Stop();
                 }
@@ -44,6 +56,19 @@ namespace Ahora_si
         private void pictureBoxMenu_Click(object sender, EventArgs e)
         {
             sidebarTransition.Start();
+        }
+
+        private void labelCuenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Crear_cuenta obj = new Crear_cuenta(); 
+            this.Close();
+            obj.Show();
+
         }
     }
 }

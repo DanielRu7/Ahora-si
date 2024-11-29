@@ -29,119 +29,129 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             pictureBoxMenu = new PictureBox();
-            panelSidebar = new FlowLayoutPanel();
-            button1 = new Button();
-            sidebarTransition = new System.Windows.Forms.Timer(components);
+            labelCuenta = new Label();
             button2 = new Button();
+            button1 = new Button();
             button3 = new Button();
-            flowLayoutPanel1.SuspendLayout();
+            sidebarTransition = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
+            panelSidebar = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
+            panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
             SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = Color.White;
-            flowLayoutPanel1.Controls.Add(pictureBoxMenu);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(914, 68);
-            flowLayoutPanel1.TabIndex = 0;
             // 
             // pictureBoxMenu
             // 
             pictureBoxMenu.Image = Properties.Resources.barra_de_menus;
-            pictureBoxMenu.Location = new Point(3, 4);
-            pictureBoxMenu.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxMenu.Location = new Point(12, 7);
             pictureBoxMenu.Name = "pictureBoxMenu";
-            pictureBoxMenu.Size = new Size(47, 56);
+            pictureBoxMenu.Size = new Size(40, 36);
             pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMenu.TabIndex = 0;
             pictureBoxMenu.TabStop = false;
             pictureBoxMenu.Click += pictureBoxMenu_Click;
             // 
-            // panelSidebar
+            // labelCuenta
             // 
-            panelSidebar.BackColor = Color.FromArgb(42, 42, 42);
-            panelSidebar.Controls.Add(button1);
-            panelSidebar.Controls.Add(button2);
-            panelSidebar.Controls.Add(button3);
-            panelSidebar.Dock = DockStyle.Left;
-            panelSidebar.Location = new Point(0, 68);
-            panelSidebar.Margin = new Padding(3, 4, 3, 4);
-            panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(193, 532);
-            panelSidebar.TabIndex = 1;
+            labelCuenta.AutoSize = true;
+            labelCuenta.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCuenta.ForeColor = Color.White;
+            labelCuenta.Location = new Point(727, 9);
+            labelCuenta.Name = "labelCuenta";
+            labelCuenta.Size = new Size(21, 24);
+            labelCuenta.TabIndex = 3;
+            labelCuenta.Text = "d";
+            labelCuenta.Click += labelCuenta_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(42, 42, 42);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 65);
+            button2.Name = "button2";
+            button2.Size = new Size(163, 53);
+            button2.TabIndex = 1;
+            button2.Text = "editar cuenta";
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(42, 42, 42);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 4);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(3, 6);
             button1.Name = "button1";
-            button1.Size = new Size(186, 71);
+            button1.Size = new Size(163, 53);
             button1.TabIndex = 0;
             button1.Text = "Log out";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(42, 42, 42);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(3, 124);
+            button3.Name = "button3";
+            button3.Size = new Size(163, 53);
+            button3.TabIndex = 2;
+            button3.Text = "parar musica";
+            button3.UseVisualStyleBackColor = false;
             // 
             // sidebarTransition
             // 
             sidebarTransition.Interval = 10;
             sidebarTransition.Tick += sidebarTransition_Tick;
             // 
-            // button2
+            // panel1
             // 
-            button2.BackColor = Color.FromArgb(42, 42, 42);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 83);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(186, 71);
-            button2.TabIndex = 1;
-            button2.Text = "editar cuenta";
-            button2.UseVisualStyleBackColor = false;
+            panel1.BackColor = Color.FromArgb(170, 170, 170);
+            panel1.Controls.Add(pictureBoxMenu);
+            panel1.Controls.Add(labelCuenta);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 49);
+            panel1.TabIndex = 4;
             // 
-            // button3
+            // panelSidebar
             // 
-            button3.BackColor = Color.FromArgb(42, 42, 42);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(3, 162);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(186, 71);
-            button3.TabIndex = 2;
-            button3.Text = "parar musica";
-            button3.UseVisualStyleBackColor = false;
+            panelSidebar.BackColor = Color.FromArgb(42, 42, 42);
+            panelSidebar.Controls.Add(button3);
+            panelSidebar.Controls.Add(button1);
+            panelSidebar.Controls.Add(button2);
+            panelSidebar.Dock = DockStyle.Left;
+            panelSidebar.Location = new Point(0, 49);
+            panelSidebar.Name = "panelSidebar";
+            panelSidebar.Size = new Size(169, 401);
+            panelSidebar.TabIndex = 5;
             // 
             // MenuProductos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(panelSidebar);
-            Controls.Add(flowLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(panel1);
             Name = "MenuProductos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuProductos";
-            flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panelSidebar.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel panelSidebar;
         private Button button1;
         private PictureBox pictureBoxMenu;
         private System.Windows.Forms.Timer sidebarTransition;
         private Button button2;
         private Button button3;
+        private Label labelCuenta;
+        private Panel panel1;
+        private Panel panelSidebar;
     }
 }
