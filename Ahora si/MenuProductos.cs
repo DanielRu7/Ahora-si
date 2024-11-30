@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
 using System.Media;
+using NAudio.Wave;
 
 namespace Ahora_si
 {
     public partial class MenuProductos : Form
     {
-        bool sidebarExpand = true;
+
+        private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.wav"));
+        private WaveOutEvent play = new WaveOutEvent();
+        bool pausa = true;
+
+        bool sidebarExpand = false;
         public MenuProductos()
         {
             InitializeComponent();
@@ -23,11 +29,23 @@ namespace Ahora_si
         {
 
             InitializeComponent();
-            SoundPlayer sonido = new SoundPlayer();
-            // sonido.SoundLocation = @"Resources\musica.wav";
-            // sonido.Load();
-            //sonido.Play();
+
+            play.Init(cadena);
+            play.Volume = 0.2f;
+            if (!pausa)
+            {
+                play.PlaybackStopped += reinicio;
+            }
+
+            play.Play();
+
             labelCuenta.Text = cuenta;
+        }
+
+        private void reinicio(object sender, StoppedEventArgs e)
+        {
+            cadena.Position = 0;
+            play.Play();
         }
 
         private void sidebarTransition_Tick(object sender, EventArgs e)
@@ -44,7 +62,7 @@ namespace Ahora_si
             else // Si está contraída, expandir
             {
                 panelSidebar.Width += 10;
-                if (panelSidebar.Width >= 169)
+                if (panelSidebar.Width >= 193)
                 {
 
                     sidebarExpand = true;
@@ -58,16 +76,36 @@ namespace Ahora_si
             sidebarTransition.Start();
         }
 
-        private void labelCuenta_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Crear_cuenta obj = new Crear_cuenta(); 
             this.Close();
-            obj.Show();
+            play.Stop();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (pausa)//si esta puasado
+            {
+                button3.Text = "Play Musica";
+                play.Stop();
+                pausa = false;
+            }
+            else
+            {
+                button3.Text = "Parar Musica";
+                play.Play();
+                pausa = true;
+            }
+        }
+
+        private void MenuProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            play.Stop();
+        }
+
+        private void MenuProductos_Load(object sender, EventArgs e)
+        {
 
         }
     }

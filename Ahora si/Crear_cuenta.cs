@@ -2,17 +2,23 @@ using Ahora_si.ConexionSql;
 using System.Collections.Specialized;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Media;
+using System.IO;
+using System.Windows.Forms.PropertyGridInternal;
+using NAudio.Wave;
 namespace Ahora_si
+
+
 {
     public partial class Crear_cuenta : Form
     {
+        
         public Crear_cuenta()
         {
             InitializeComponent();
             ActiveControl = label1;
-            SoundPlayer sonido = new SoundPlayer();
-            sonido.SoundLocation = @"Resources\sonido.wav";
-            sonido.Play();
+            
+            
+
         }
         private void buttonCrear_Click(object sender, EventArgs e)
         {
@@ -76,10 +82,11 @@ namespace Ahora_si
             Conexion_cuentas con = new Conexion_cuentas();
             if (con.Buscar(cuenta, contrasena))
             {
-                MessageBox.Show("Iniciando secion..");//aqui pofavo
+
                 MenuProductos obj = new MenuProductos(cuenta, contrasena);
                 this.Hide();
-                obj.Show();
+                obj.ShowDialog();
+                this.Show();
             }
             else
             {
@@ -91,7 +98,5 @@ namespace Ahora_si
 
 
         }
-
-
     }
 }
