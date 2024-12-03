@@ -11,13 +11,13 @@ namespace Ahora_si
 {
     public partial class Crear_cuenta : Form
     {
-        
+
         public Crear_cuenta()
         {
             InitializeComponent();
             ActiveControl = label1;
-            
-            
+
+
 
         }
         private void buttonCrear_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Ahora_si
             con.Insertar(nombre, cuenta, contrasena);
             limpiarCampos();
             SignUp.Hide();
-            LogIn.Show();
+            ButtonInvitado.Show();
 
 
         }
@@ -59,13 +59,13 @@ namespace Ahora_si
 
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LogIn.Hide();
+            ButtonInvitado.Hide();
             SignUp.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             SignUp.Hide();
-            LogIn.Show();
+            ButtonInvitado.Show();
         }
 
         private void buttonAcceder_Click(object sender, EventArgs e)
@@ -97,6 +97,14 @@ namespace Ahora_si
 
 
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuProductos obj = new MenuProductos("invitado", "invitado");
+            this.Hide();
+            obj.ShowDialog();
+            this.Show();
         }
     }
 }

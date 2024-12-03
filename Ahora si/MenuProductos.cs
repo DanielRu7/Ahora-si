@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
 using System.Media;
 using NAudio.Wave;
+using Ahora_si.ConexionSql;
+using Ahora_si.clases;
 
 namespace Ahora_si
 {
@@ -21,17 +23,22 @@ namespace Ahora_si
         bool pausa = true;
 
         bool sidebarExpand = false;
+
+
+        private string cuenta;
+        private string contrasena;
         public MenuProductos()
         {
             InitializeComponent();
         }
         public MenuProductos(string cuenta, string contrasena)
         {
-
+            this.cuenta = cuenta;
+            this.contrasena = contrasena;
             InitializeComponent();
 
             play.Init(cadena);
-            play.Volume = 0.2f;
+            play.Volume = 0.1f;
             if (!pausa)
             {
                 play.PlaybackStopped += reinicio;
@@ -106,6 +113,19 @@ namespace Ahora_si
 
         private void MenuProductos_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void labelCuenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)//cuenta boton
+        {
+            Conexion_cuentas aux=new Conexion_cuentas();
+            persona edit = aux.Busqueda_Usuario(cuenta,contrasena);
+            
 
         }
     }

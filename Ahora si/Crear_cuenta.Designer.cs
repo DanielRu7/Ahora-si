@@ -35,14 +35,15 @@
             SignUp = new Panel();
             buttonRegresar = new Button();
             buttonCrear = new Button();
-            LogIn = new Panel();
+            ButtonInvitado = new Panel();
+            linkLabel1 = new LinkLabel();
             buttonAcceder = new Button();
             labelLogIn = new Label();
             textBoxContrasena1 = new TextBox();
             textBoxCuenta1 = new TextBox();
             linkLabel = new LinkLabel();
             SignUp.SuspendLayout();
-            LogIn.SuspendLayout();
+            ButtonInvitado.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxNombre
@@ -122,22 +123,34 @@
             buttonCrear.UseVisualStyleBackColor = true;
             buttonCrear.Click += buttonCrear_Click;
             // 
-            // LogIn
+            // ButtonInvitado
             // 
-            LogIn.BackColor = SystemColors.ButtonFace;
-            LogIn.Controls.Add(buttonAcceder);
-            LogIn.Controls.Add(labelLogIn);
-            LogIn.Controls.Add(textBoxContrasena1);
-            LogIn.Controls.Add(textBoxCuenta1);
-            LogIn.Controls.Add(linkLabel);
-            LogIn.Location = new Point(12, 12);
-            LogIn.Name = "LogIn";
-            LogIn.Size = new Size(776, 424);
-            LogIn.TabIndex = 6;
+            ButtonInvitado.BackColor = SystemColors.ButtonFace;
+            ButtonInvitado.Controls.Add(linkLabel1);
+            ButtonInvitado.Controls.Add(buttonAcceder);
+            ButtonInvitado.Controls.Add(labelLogIn);
+            ButtonInvitado.Controls.Add(textBoxContrasena1);
+            ButtonInvitado.Controls.Add(textBoxCuenta1);
+            ButtonInvitado.Controls.Add(linkLabel);
+            ButtonInvitado.Location = new Point(12, 12);
+            ButtonInvitado.Name = "ButtonInvitado";
+            ButtonInvitado.Size = new Size(776, 427);
+            ButtonInvitado.TabIndex = 6;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(281, 326);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(163, 20);
+            linkLabel1.TabIndex = 5;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Acceder como invitado";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // buttonAcceder
             // 
-            buttonAcceder.Location = new Point(327, 307);
+            buttonAcceder.Location = new Point(320, 282);
             buttonAcceder.Name = "buttonAcceder";
             buttonAcceder.Size = new Size(94, 29);
             buttonAcceder.TabIndex = 4;
@@ -176,7 +189,7 @@
             // linkLabel
             // 
             linkLabel.AutoSize = true;
-            linkLabel.Location = new Point(341, 253);
+            linkLabel.Location = new Point(337, 248);
             linkLabel.Name = "linkLabel";
             linkLabel.Size = new Size(68, 20);
             linkLabel.TabIndex = 0;
@@ -189,15 +202,17 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
-            Controls.Add(LogIn);
+            Controls.Add(ButtonInvitado);
             Controls.Add(SignUp);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Crear_cuenta";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Crear_cuenta";
             SignUp.ResumeLayout(false);
             SignUp.PerformLayout();
-            LogIn.ResumeLayout(false);
-            LogIn.PerformLayout();
+            ButtonInvitado.ResumeLayout(false);
+            ButtonInvitado.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -209,12 +224,13 @@
         private TextBox textBoxContrasena;
         private Panel SignUp;
         private Button buttonCrear;
-        private Panel LogIn;
+        private Panel ButtonInvitado;
         private LinkLabel linkLabel;
         private Button buttonRegresar;
         private Label labelLogIn;
         private TextBox textBoxContrasena1;
         private TextBox textBoxCuenta1;
         private Button buttonAcceder;
+        private LinkLabel linkLabel1;
     }
 }

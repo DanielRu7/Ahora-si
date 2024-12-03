@@ -60,29 +60,32 @@
             labelCuenta.AutoSize = true;
             labelCuenta.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelCuenta.ForeColor = Color.White;
-            labelCuenta.Location = new Point(831, 12);
+            labelCuenta.Location = new Point(720, 16);
             labelCuenta.Name = "labelCuenta";
-            labelCuenta.Size = new Size(29, 31);
+            labelCuenta.Size = new Size(108, 31);
             labelCuenta.TabIndex = 3;
-            labelCuenta.Text = "d";
+            labelCuenta.Text = "Usuario";
+            labelCuenta.TextAlign = ContentAlignment.MiddleLeft;
+            labelCuenta.Click += labelCuenta_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(42, 42, 42);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 87);
+            button2.Location = new Point(3, 2);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(186, 71);
             button2.TabIndex = 1;
             button2.Text = "editar cuenta";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(42, 42, 42);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 8);
+            button1.Location = new Point(3, 159);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(186, 71);
@@ -95,12 +98,12 @@
             // 
             button3.BackColor = Color.FromArgb(42, 42, 42);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(3, 165);
+            button3.Location = new Point(3, 80);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(186, 71);
             button3.TabIndex = 2;
-            button3.Text = "parar musica";
+            button3.Text = "Parar musica";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
@@ -131,16 +134,15 @@
             panelSidebar.Location = new Point(0, 65);
             panelSidebar.Margin = new Padding(3, 4, 3, 4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(0, 535);
+            panelSidebar.Size = new Size(195, 535);
             panelSidebar.TabIndex = 5;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 65);
+            panel2.Location = new Point(195, 65);
             panel2.Name = "panel2";
-            panel2.Size = new Size(914, 535);
+            panel2.Size = new Size(719, 535);
             panel2.TabIndex = 6;
             // 
             // MenuProductos

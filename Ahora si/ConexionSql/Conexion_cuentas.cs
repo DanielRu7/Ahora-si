@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Ahora_si.clases;
+using MySql.Data.MySqlClient;
 
 namespace Ahora_si.ConexionSql
 {
@@ -60,6 +61,7 @@ namespace Ahora_si.ConexionSql
                 string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='"+contrasena+"';";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 MySqlDataReader reader = cmd.ExecuteReader();
+                
                 if (reader.HasRows)
                 {
                     return true;
@@ -75,6 +77,54 @@ namespace Ahora_si.ConexionSql
                 return false;
             }
         }
+
+        public void Editar(string cuenta,string contrasena,string nombre,int id)
+        {
+            string query= "UPDATE persona SET cuenta='" + cuenta + "', contrasena='" + contrasena + "', nombre='" + nombre + "' WHERE id=" + id + ";";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la edicion de los datos");
+            }
+        }
+
+        public persona Busqueda_Usuario(string cuenta, string contrasena)
+        {
+            persona encontrado = new persona();
+            try
+            {
+                string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='" + contrasena + "';";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    encontrado.Id=Convert.ToInt32(reader["id"]);
+                    encontrado.Cuenta = Convert.ToString(reader["cuenta"])??"";
+                    encontrado.Nombre = Convert.ToString(reader["nombre"])??"";
+                    encontrado.Contrasena = Convert.ToString(reader["contrasena"]) ?? "";
+                    encontrado.Monto = Convert.ToSingle(reader["monto"]);
+                    encontrado.Admin = Convert.ToBoolean(reader["admin"]);
+                    return encontrado;
+                }
+                else
+                {
+                    MessageBox.Show("Cuenta no encontrada");
+                    return encontrado;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al buscar la cuenta en el server");
+                return encontrado;
+            }
+        }
+        
 
     }
 }
