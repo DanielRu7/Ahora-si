@@ -125,6 +125,19 @@ namespace Ahora_si.ConexionSql
             }
         }
         
+        public void Editar(persona per)
+        {
+            string query = "UPDATE persona SET nombre='" + per.Nombre + "', cuenta='" + per.Cuenta + "', contrasena='" + per.Contrasena + "' WHERE id=" + per.Id + ";";
+            try
+            {
 
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Error al momento de editar usuario");
+            }
+        }
     }
 }

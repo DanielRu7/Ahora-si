@@ -75,7 +75,6 @@
             label1.Size = new Size(59, 20);
             label1.TabIndex = 2;
             label1.Text = "Sign up";
-            label1.Click += label1_Click;
             // 
             // textBoxContrasena
             // 
@@ -134,7 +133,7 @@
             ButtonInvitado.Controls.Add(linkLabel);
             ButtonInvitado.Location = new Point(12, 12);
             ButtonInvitado.Name = "ButtonInvitado";
-            ButtonInvitado.Size = new Size(776, 427);
+            ButtonInvitado.Size = new Size(773, 427);
             ButtonInvitado.TabIndex = 6;
             // 
             // linkLabel1

@@ -21,16 +21,11 @@ namespace Ahora_si
         private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.wav"));
         private WaveOutEvent play = new WaveOutEvent();
         bool pausa = true;
-
         bool sidebarExpand = false;
-
-
         private string cuenta;
         private string contrasena;
-        public MenuProductos()
-        {
-            InitializeComponent();
-        }
+
+
         public MenuProductos(string cuenta, string contrasena)
         {
             this.cuenta = cuenta;
@@ -47,6 +42,12 @@ namespace Ahora_si
             play.Play();
 
             labelCuenta.Text = cuenta;
+
+            if (cuenta == "invitado")
+            {
+                button2.Hide();
+            }
+
         }
 
         private void reinicio(object sender, StoppedEventArgs e)
@@ -123,10 +124,16 @@ namespace Ahora_si
 
         private void button2_Click(object sender, EventArgs e)//cuenta boton
         {
-            Conexion_cuentas aux=new Conexion_cuentas();
-            persona edit = aux.Busqueda_Usuario(cuenta,contrasena);
-            
+            Conexion_cuentas aux = new Conexion_cuentas();
+            persona edit = aux.Busqueda_Usuario(cuenta, contrasena);
+            Editar_cuenta mostrar = new Editar_cuenta(edit);
+            mostrar.Show();
+        }
 
+        private void buttonFiniquitar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            this.DialogResult = DialogResult.Abort;
         }
     }
 }

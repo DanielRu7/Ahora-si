@@ -51,11 +51,7 @@ namespace Ahora_si
 
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            MenuProductos nuevo = new MenuProductos();
-            nuevo.Show();
-        }
+        
 
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -85,8 +81,14 @@ namespace Ahora_si
 
                 MenuProductos obj = new MenuProductos(cuenta, contrasena);
                 this.Hide();
-                obj.ShowDialog();
-                this.Show();
+                if (obj.ShowDialog() != DialogResult.Abort)
+                {
+                    this.Show();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
             else
             {
@@ -103,8 +105,15 @@ namespace Ahora_si
         {
             MenuProductos obj = new MenuProductos("invitado", "invitado");
             this.Hide();
-            obj.ShowDialog();
-            this.Show();
+            if (obj.ShowDialog() != DialogResult.Abort) 
+            {
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
     }
 }
