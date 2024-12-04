@@ -148,6 +148,7 @@ namespace Ahora_si
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
             for (int i = 0; i < pro.Count && i < pictureBoxes.Length && i < labels.Length; i++)
             {
+                
                 pictureBoxes[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
                 labels[i].Text = pro[i].Nombre;
             }
@@ -158,10 +159,21 @@ namespace Ahora_si
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            AgregarProducto obj = new AgregarProducto();
-            obj.ShowDialog();
-            mostrar();
-            this.Show();
+            Conexion_productos con = new Conexion_productos();
+            List<producto> pro = con.consulta();
+            if (pro.Count < 10)
+            {
+                AgregarProducto obj = new AgregarProducto();
+                obj.ShowDialog();
+                mostrar();
+                this.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No puedes agregar mas productos");
+                return;
+            }
 
         }
 

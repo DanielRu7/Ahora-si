@@ -21,6 +21,7 @@ namespace Ahora_si
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (textBoxId.Text == "" || textBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
             {
                 MessageBox.Show("Llena todos los campos");

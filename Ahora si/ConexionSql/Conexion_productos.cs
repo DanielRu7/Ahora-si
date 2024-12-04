@@ -6,7 +6,6 @@ namespace Ahora_si.ConexionSql
 {
     internal class Conexion_productos
     {
-
         private string Cadena = "Server=localhost; Database=personal; User=root; Password=; SslMode=none;";
         private MySqlConnection conexion;
 
