@@ -39,9 +39,26 @@
             panelSidebar = new Panel();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            button4 = new Button();
+            button5 = new Button();
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
+            button6 = new Button();
+            label3 = new Label();
+            pictureBox3 = new PictureBox();
+            button7 = new Button();
+            label4 = new Label();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxMenu
@@ -155,11 +172,131 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.Controls.Add(button7);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(button6);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 65);
             panel2.Name = "panel2";
             panel2.Size = new Size(914, 535);
             panel2.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox1.Location = new Point(60, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(118, 131);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(60, 161);
+            label1.Name = "label1";
+            label1.Size = new Size(129, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Nombre producto";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(70, 184);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 2;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(255, 184);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 29);
+            button5.TabIndex = 5;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(245, 161);
+            label2.Name = "label2";
+            label2.Size = new Size(129, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Nombre producto";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox2.Location = new Point(245, 22);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(118, 131);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(430, 184);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 29);
+            button6.TabIndex = 8;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(420, 161);
+            label3.Name = "label3";
+            label3.Size = new Size(129, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Nombre producto";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox3.Location = new Point(420, 22);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(118, 131);
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(617, 184);
+            button7.Name = "button7";
+            button7.Size = new Size(94, 29);
+            button7.TabIndex = 11;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(607, 161);
+            label4.Name = "label4";
+            label4.Size = new Size(129, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Nombre producto";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox4.Location = new Point(607, 22);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(118, 131);
+            pictureBox4.TabIndex = 9;
+            pictureBox4.TabStop = false;
             // 
             // MenuProductos
             // 
@@ -179,6 +316,12 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelSidebar.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -193,5 +336,17 @@
         private Panel panelSidebar;
         private Panel panel2;
         private Button buttonFiniquitar;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private Button button7;
+        private Label label4;
+        private PictureBox pictureBox4;
+        private Button button6;
+        private Label label3;
+        private PictureBox pictureBox3;
+        private Button button5;
+        private Label label2;
+        private PictureBox pictureBox2;
+        private Button button4;
     }
 }
