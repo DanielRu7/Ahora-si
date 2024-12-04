@@ -39,13 +39,13 @@ namespace Ahora_si.ConexionSql
         {
             try
             {
-                string query = "INSERT INTO productos (id, nombre, precio, cantidad,imagen,descripcion) VALUES (" + add.Id + ",'" + add.Nombre + "'," + add.Precio + ","+add.Cantidad+","+add.Imagen+","+add.Descripcion+")";
+                string query = "INSERT INTO productos (id, nombre, precio, cantidad, imagen, descripcion) VALUES (" + add.Id + ",'" + add.Nombre + "'," + add.Precio + ","+add.Cantidad+","+add.Imagen+","+add.Descripcion+")";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al insertar cuenta en el server");
+                MessageBox.Show("Error al insertar producto en el server");
             }
             cerrar();
 
@@ -64,6 +64,13 @@ namespace Ahora_si.ConexionSql
                     producto pro = new producto();
                     pro.Id = Convert.ToInt32(reader["id"]);
                     pro.Nombre = Convert.ToString(reader["nombre"])??"";
+                    pro.Cantidad = Convert.ToInt32(reader["cantidad"]);
+                    pro.Precio = Convert.ToSingle(reader["precio"]);
+                    pro.Descripcion = Convert.ToString(reader["descripcion"])??"";
+                    pro.Imagen = (byte[])reader.GetValue(4);
+
+                    lista.Add(pro);
+
                 }
 
                 

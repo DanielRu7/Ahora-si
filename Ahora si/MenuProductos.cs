@@ -135,5 +135,11 @@ namespace Ahora_si
             Application.Exit();
             this.DialogResult = DialogResult.Abort;
         }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarProducto obj=new AgregarProducto();
+            obj.Show();
+        }
     }
 }
