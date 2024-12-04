@@ -35,7 +35,7 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-        public void insertar(producto add)
+        public bool insertar(producto add)
         {
             try
             {
@@ -47,14 +47,19 @@ namespace Ahora_si.ConexionSql
                 cmd.Parameters.AddWithValue("@cantidad", add.Cantidad);
                 cmd.Parameters.AddWithValue("@imagen", add.Imagen);
                 cmd.Parameters.AddWithValue("@descripcion", add.Descripcion);
-
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Se agrego Exitosamente!");
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al insertar producto en el servidor ");
+                return false;
             }
-            cerrar();
+            finally
+            {
+                cerrar();
+            }
             
         }
 

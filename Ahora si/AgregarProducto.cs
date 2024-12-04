@@ -35,7 +35,10 @@ namespace Ahora_si
             ImagenConvert aux = new ImagenConvert();
             obj.Imagen = aux.imagenToByte(pictureBoxImagen.Image);
             Conexion_productos conexion = new Conexion_productos();
-            conexion.insertar(obj);
+            if (conexion.insertar(obj))
+            {
+                this.Close();
+            }
 
 
         }
@@ -49,5 +52,8 @@ namespace Ahora_si
                 pictureBoxImagen.ImageLocation= ofd.FileName;
             }
         }
+
+        
+        
     }
 }
