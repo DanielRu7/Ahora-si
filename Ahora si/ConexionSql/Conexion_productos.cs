@@ -67,7 +67,7 @@ namespace Ahora_si.ConexionSql
         public List<producto> consulta()
         {
             List<producto> lista = new List<producto>();
-            string query = "SELECT * FROM producto";
+            string query = "SELECT * FROM productos";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
@@ -80,7 +80,8 @@ namespace Ahora_si.ConexionSql
                     pro.Cantidad = Convert.ToInt32(reader["cantidad"]);
                     pro.Precio = Convert.ToSingle(reader["precio"]);
                     pro.Descripcion = Convert.ToString(reader["descripcion"])??"";
-                    pro.Imagen = (byte[])reader.GetValue(4);
+                    pro.Imagen = (byte[])reader["imagen"];
+
 
                     lista.Add(pro);
 
@@ -92,7 +93,10 @@ namespace Ahora_si.ConexionSql
             {
                 MessageBox.Show("Error al mostrar");
             }
-
+            finally
+            {
+                cerrar();
+            }
             return lista;
         }
 

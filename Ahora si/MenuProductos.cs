@@ -25,7 +25,10 @@ namespace Ahora_si
         private string cuenta;
         private string contrasena;
 
-
+        public MenuProductos()
+        {
+            InitializeComponent();
+        }
         public MenuProductos(string cuenta, string contrasena)
         {
             this.cuenta = cuenta;
@@ -114,7 +117,7 @@ namespace Ahora_si
 
         private void MenuProductos_Load(object sender, EventArgs e)
         {
-
+            mostrar();
         }
 
         private void labelCuenta_Click(object sender, EventArgs e)
@@ -136,10 +139,35 @@ namespace Ahora_si
             this.DialogResult = DialogResult.Abort;
         }
 
+        public void mostrar()
+        {
+            Conexion_productos con = new Conexion_productos();
+            List<producto> pro = con.consulta();
+
+            PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
+            Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
+            for (int i = 0; i < pro.Count && i < pictureBoxes.Length && i < labels.Length; i++)
+            {
+                pictureBoxes[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
+                labels[i].Text = pro[i].Nombre;
+            }
+        }
+
+
+
+
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            AgregarProducto obj=new AgregarProducto();
-            obj.Show();
+            AgregarProducto obj = new AgregarProducto();
+            obj.ShowDialog();
+            mostrar();
+            this.Show();
+
+        }
+
+        private void buttonrefrescar_Click(object sender, EventArgs e)
+        {
+            mostrar();
         }
     }
 }

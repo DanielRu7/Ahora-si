@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            buttonRegresar = new Button();
             buttonAgregar = new Button();
             textBoxDescripcion = new TextBox();
             textBoxCantidad = new TextBox();
@@ -42,6 +43,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonRegresar);
             panel1.Controls.Add(buttonAgregar);
             panel1.Controls.Add(textBoxDescripcion);
             panel1.Controls.Add(textBoxCantidad);
@@ -51,15 +53,27 @@
             panel1.Controls.Add(pictureBoxImagen);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(569, 421);
             panel1.TabIndex = 0;
+            // 
+            // buttonRegresar
+            // 
+            buttonRegresar.Location = new Point(443, 380);
+            buttonRegresar.Name = "buttonRegresar";
+            buttonRegresar.Size = new Size(94, 29);
+            buttonRegresar.TabIndex = 7;
+            buttonRegresar.Text = "Regresar";
+            buttonRegresar.UseVisualStyleBackColor = true;
+            buttonRegresar.Click += buttonRegresar_Click;
             // 
             // buttonAgregar
             // 
-            buttonAgregar.Location = new Point(314, 276);
+            buttonAgregar.Location = new Point(365, 333);
+            buttonAgregar.Margin = new Padding(3, 4, 3, 4);
             buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(75, 23);
+            buttonAgregar.Size = new Size(86, 31);
             buttonAgregar.TabIndex = 6;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = true;
@@ -67,60 +81,69 @@
             // 
             // textBoxDescripcion
             // 
-            textBoxDescripcion.Location = new Point(268, 213);
+            textBoxDescripcion.Location = new Point(306, 284);
+            textBoxDescripcion.Margin = new Padding(3, 4, 3, 4);
             textBoxDescripcion.Name = "textBoxDescripcion";
             textBoxDescripcion.PlaceholderText = "Descripcion";
-            textBoxDescripcion.Size = new Size(189, 23);
+            textBoxDescripcion.Size = new Size(215, 27);
             textBoxDescripcion.TabIndex = 5;
             // 
             // textBoxCantidad
             // 
-            textBoxCantidad.Location = new Point(268, 173);
+            textBoxCantidad.Location = new Point(306, 231);
+            textBoxCantidad.Margin = new Padding(3, 4, 3, 4);
             textBoxCantidad.Name = "textBoxCantidad";
             textBoxCantidad.PlaceholderText = "Cantidad";
-            textBoxCantidad.Size = new Size(189, 23);
+            textBoxCantidad.Size = new Size(215, 27);
             textBoxCantidad.TabIndex = 4;
             // 
             // textBoxPrecio
             // 
-            textBoxPrecio.Location = new Point(268, 139);
+            textBoxPrecio.Location = new Point(306, 185);
+            textBoxPrecio.Margin = new Padding(3, 4, 3, 4);
             textBoxPrecio.Name = "textBoxPrecio";
             textBoxPrecio.PlaceholderText = "Precio";
-            textBoxPrecio.Size = new Size(189, 23);
+            textBoxPrecio.Size = new Size(215, 27);
             textBoxPrecio.TabIndex = 3;
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(268, 95);
+            textBoxNombre.Location = new Point(306, 127);
+            textBoxNombre.Margin = new Padding(3, 4, 3, 4);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.PlaceholderText = "Nombre";
-            textBoxNombre.Size = new Size(189, 23);
+            textBoxNombre.Size = new Size(215, 27);
             textBoxNombre.TabIndex = 2;
             // 
             // textBoxId
             // 
-            textBoxId.Location = new Point(268, 51);
+            textBoxId.Location = new Point(306, 68);
+            textBoxId.Margin = new Padding(3, 4, 3, 4);
             textBoxId.Name = "textBoxId";
             textBoxId.PlaceholderText = "Id";
-            textBoxId.Size = new Size(189, 23);
+            textBoxId.Size = new Size(215, 27);
             textBoxId.TabIndex = 1;
             // 
             // pictureBoxImagen
             // 
-            pictureBoxImagen.BackColor = SystemColors.ActiveCaptionText;
-            pictureBoxImagen.Location = new Point(65, 46);
+            pictureBoxImagen.BackColor = Color.Transparent;
+            pictureBoxImagen.Image = Properties.Resources.OIP_removebg_preview;
+            pictureBoxImagen.Location = new Point(74, 61);
+            pictureBoxImagen.Margin = new Padding(3, 4, 3, 4);
             pictureBoxImagen.Name = "pictureBoxImagen";
-            pictureBoxImagen.Size = new Size(147, 150);
+            pictureBoxImagen.Size = new Size(168, 200);
+            pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxImagen.TabIndex = 0;
             pictureBoxImagen.TabStop = false;
             pictureBoxImagen.Click += pictureBoxImagen_Click;
             // 
             // AgregarProducto
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(569, 421);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarProducto";
             Text = "AgregarProducto";
             panel1.ResumeLayout(false);
@@ -139,5 +162,6 @@
         private TextBox textBoxId;
         private PictureBox pictureBoxImagen;
         private Button buttonAgregar;
+        private Button buttonRegresar;
     }
 }

@@ -21,7 +21,7 @@ namespace Ahora_si
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text==""||textBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
+            if (textBoxId.Text == "" || textBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
             {
                 MessageBox.Show("Llena todos los campos");
                 return;
@@ -37,6 +37,8 @@ namespace Ahora_si
             Conexion_productos conexion = new Conexion_productos();
             if (conexion.insertar(obj))
             {
+                MenuProductos auxiliar= new MenuProductos();
+                auxiliar.mostrar();
                 this.Close();
             }
 
@@ -47,13 +49,15 @@ namespace Ahora_si
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (ofd.ShowDialog()==DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxImagen.ImageLocation= ofd.FileName;
+                pictureBoxImagen.ImageLocation = ofd.FileName;
             }
         }
 
-        
-        
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
