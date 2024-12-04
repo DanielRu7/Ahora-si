@@ -34,22 +34,30 @@ namespace Ahora_si.ConexionSql
                 conexion.Close();
             }
         }
-        
+
         public void insertar(producto add)
         {
             try
             {
-                string query = "INSERT INTO productos (id, nombre, precio, cantidad, imagen, descripcion) VALUES (" + add.Id + ",'" + add.Nombre + "'," + add.Precio + ","+add.Cantidad+","+add.Imagen+","+add.Descripcion+")";
+                string query = "INSERT INTO productos (id, nombre, precio, cantidad, imagen, descripcion) VALUES (@id, @nombre, @precio, @cantidad, @imagen, @descripcion)";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", add.Id);
+                cmd.Parameters.AddWithValue("@nombre", add.Nombre);
+                cmd.Parameters.AddWithValue("@precio", add.Precio);
+                cmd.Parameters.AddWithValue("@cantidad", add.Cantidad);
+                cmd.Parameters.AddWithValue("@imagen", add.Imagen);
+                cmd.Parameters.AddWithValue("@descripcion", add.Descripcion);
+
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al insertar producto en el server");
+                MessageBox.Show("Error al insertar producto en el servidor ");
             }
             cerrar();
-
+            
         }
+
 
         public List<producto> consulta()
         {
