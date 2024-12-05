@@ -37,7 +37,7 @@ namespace Ahora_si
             InitializeComponent();
 
             play.Init(cadena);
-            play.Volume = 0.1f;
+            play.Volume = 0.5f;
             if (!pausa)
             {
                 play.PlaybackStopped += reinicio;
@@ -66,13 +66,13 @@ namespace Ahora_si
 
             if (pausa)//si esta puasado
             {
-                button3.Text = "Play Musica";
+                button3.Text = "Stop Musica";
                 play.Play();
                 pausa = false;
             }
             else
             {
-                button3.Text = "Parar Musica";
+                button3.Text = "Play Musica";
                 play.Stop();
                 pausa = true;
             }
