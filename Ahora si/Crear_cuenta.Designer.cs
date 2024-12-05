@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_cuenta));
             textBoxNombre = new TextBox();
             textBoxCuenta = new TextBox();
             label1 = new Label();
@@ -36,9 +37,9 @@
             buttonRegresar = new Button();
             buttonCrear = new Button();
             ButtonInvitado = new Panel();
+            label2 = new Label();
             linkLabel1 = new LinkLabel();
             buttonAcceder = new Button();
-            labelLogIn = new Label();
             textBoxContrasena1 = new TextBox();
             textBoxCuenta1 = new TextBox();
             linkLabel = new LinkLabel();
@@ -48,47 +49,45 @@
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Anchor = AnchorStyles.Top;
-            textBoxNombre.Location = new Point(247, 133);
+            textBoxNombre.Location = new Point(52, 111);
+            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.PlaceholderText = "Nombre";
-            textBoxNombre.Size = new Size(204, 27);
+            textBoxNombre.Size = new Size(179, 23);
             textBoxNombre.TabIndex = 0;
             textBoxNombre.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxCuenta
             // 
-            textBoxCuenta.Anchor = AnchorStyles.Top;
-            textBoxCuenta.Location = new Point(247, 195);
+            textBoxCuenta.Location = new Point(51, 157);
+            textBoxCuenta.Margin = new Padding(3, 2, 3, 2);
             textBoxCuenta.Name = "textBoxCuenta";
             textBoxCuenta.PlaceholderText = "Cuenta";
-            textBoxCuenta.Size = new Size(204, 27);
+            textBoxCuenta.Size = new Size(179, 23);
             textBoxCuenta.TabIndex = 1;
             textBoxCuenta.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Location = new Point(318, 81);
+            label1.Location = new Point(113, 37);
             label1.Name = "label1";
-            label1.Size = new Size(59, 20);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 2;
             label1.Text = "Sign up";
             // 
             // textBoxContrasena
             // 
-            textBoxContrasena.Anchor = AnchorStyles.Top;
-            textBoxContrasena.Location = new Point(247, 259);
+            textBoxContrasena.Location = new Point(51, 205);
+            textBoxContrasena.Margin = new Padding(3, 2, 3, 2);
             textBoxContrasena.Name = "textBoxContrasena";
             textBoxContrasena.PlaceholderText = "Contraseña";
-            textBoxContrasena.Size = new Size(204, 27);
+            textBoxContrasena.Size = new Size(179, 23);
             textBoxContrasena.TabIndex = 3;
             textBoxContrasena.TextAlign = HorizontalAlignment.Center;
             // 
             // SignUp
             // 
-            SignUp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SignUp.BackColor = Color.DimGray;
             SignUp.Controls.Add(buttonRegresar);
             SignUp.Controls.Add(buttonCrear);
@@ -96,16 +95,18 @@
             SignUp.Controls.Add(label1);
             SignUp.Controls.Add(textBoxCuenta);
             SignUp.Controls.Add(textBoxNombre);
-            SignUp.Location = new Point(59, 12);
+            SignUp.Location = new Point(2, 0);
+            SignUp.Margin = new Padding(3, 2, 3, 2);
             SignUp.Name = "SignUp";
-            SignUp.Size = new Size(729, 427);
+            SignUp.Size = new Size(460, 547);
             SignUp.TabIndex = 4;
             // 
             // buttonRegresar
             // 
-            buttonRegresar.Location = new Point(584, 337);
+            buttonRegresar.Location = new Point(133, 304);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(94, 29);
+            buttonRegresar.Size = new Size(82, 22);
             buttonRegresar.TabIndex = 1;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -113,10 +114,10 @@
             // 
             // buttonCrear
             // 
-            buttonCrear.Anchor = AnchorStyles.Top;
-            buttonCrear.Location = new Point(303, 337);
+            buttonCrear.Location = new Point(100, 264);
+            buttonCrear.Margin = new Padding(3, 2, 3, 2);
             buttonCrear.Name = "buttonCrear";
-            buttonCrear.Size = new Size(94, 29);
+            buttonCrear.Size = new Size(82, 22);
             buttonCrear.TabIndex = 5;
             buttonCrear.Text = "Crear";
             buttonCrear.UseVisualStyleBackColor = true;
@@ -124,24 +125,37 @@
             // 
             // ButtonInvitado
             // 
-            ButtonInvitado.BackColor = SystemColors.ButtonFace;
+            ButtonInvitado.BackColor = SystemColors.ControlLightLight;
+            ButtonInvitado.Controls.Add(label2);
             ButtonInvitado.Controls.Add(linkLabel1);
             ButtonInvitado.Controls.Add(buttonAcceder);
-            ButtonInvitado.Controls.Add(labelLogIn);
             ButtonInvitado.Controls.Add(textBoxContrasena1);
             ButtonInvitado.Controls.Add(textBoxCuenta1);
             ButtonInvitado.Controls.Add(linkLabel);
-            ButtonInvitado.Location = new Point(12, 12);
+            ButtonInvitado.Location = new Point(2, 2);
+            ButtonInvitado.Margin = new Padding(3, 2, 3, 2);
             ButtonInvitado.Name = "ButtonInvitado";
-            ButtonInvitado.Size = new Size(773, 427);
+            ButtonInvitado.Size = new Size(443, 545);
             ButtonInvitado.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(155, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 36);
+            label2.TabIndex = 22;
+            label2.Text = "LOGIN ";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(281, 326);
+            linkLabel1.LinkColor = Color.DimGray;
+            linkLabel1.Location = new Point(157, 520);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(163, 20);
+            linkLabel1.Size = new Size(130, 15);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Acceder como invitado";
@@ -149,61 +163,58 @@
             // 
             // buttonAcceder
             // 
-            buttonAcceder.Location = new Point(320, 282);
+            buttonAcceder.BackgroundImage = (Image)resources.GetObject("buttonAcceder.BackgroundImage");
+            buttonAcceder.Location = new Point(179, 214);
+            buttonAcceder.Margin = new Padding(3, 2, 3, 2);
             buttonAcceder.Name = "buttonAcceder";
-            buttonAcceder.Size = new Size(94, 29);
+            buttonAcceder.Size = new Size(75, 69);
             buttonAcceder.TabIndex = 4;
-            buttonAcceder.Text = "Acceder";
+            buttonAcceder.Text = "    ";
             buttonAcceder.UseVisualStyleBackColor = true;
             buttonAcceder.Click += buttonAcceder_Click;
             // 
-            // labelLogIn
-            // 
-            labelLogIn.AutoSize = true;
-            labelLogIn.Location = new Point(355, 73);
-            labelLogIn.Name = "labelLogIn";
-            labelLogIn.Size = new Size(50, 20);
-            labelLogIn.TabIndex = 3;
-            labelLogIn.Text = "Log in";
-            // 
             // textBoxContrasena1
             // 
-            textBoxContrasena1.Location = new Point(310, 195);
+            textBoxContrasena1.Location = new Point(133, 153);
+            textBoxContrasena1.Margin = new Padding(3, 2, 3, 2);
             textBoxContrasena1.Name = "textBoxContrasena1";
             textBoxContrasena1.PasswordChar = '*';
             textBoxContrasena1.PlaceholderText = "Contrasena";
-            textBoxContrasena1.Size = new Size(125, 27);
+            textBoxContrasena1.Size = new Size(154, 23);
             textBoxContrasena1.TabIndex = 2;
             textBoxContrasena1.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxCuenta1
             // 
-            textBoxCuenta1.Location = new Point(310, 123);
+            textBoxCuenta1.Location = new Point(130, 109);
+            textBoxCuenta1.Margin = new Padding(3, 2, 3, 2);
             textBoxCuenta1.Name = "textBoxCuenta1";
             textBoxCuenta1.PlaceholderText = "Cuenta";
-            textBoxCuenta1.Size = new Size(125, 27);
+            textBoxCuenta1.Size = new Size(157, 23);
             textBoxCuenta1.TabIndex = 1;
             textBoxCuenta1.TextAlign = HorizontalAlignment.Center;
             // 
             // linkLabel
             // 
             linkLabel.AutoSize = true;
-            linkLabel.Location = new Point(337, 248);
+            linkLabel.LinkColor = Color.Gray;
+            linkLabel.Location = new Point(155, 302);
             linkLabel.Name = "linkLabel";
-            linkLabel.Size = new Size(68, 20);
+            linkLabel.Size = new Size(127, 15);
             linkLabel.TabIndex = 0;
             linkLabel.TabStop = true;
-            linkLabel.Text = "Sign Up?";
+            linkLabel.Text = "Aun no eres miembro?";
             linkLabel.LinkClicked += linkLabel_LinkClicked;
             // 
             // Crear_cuenta
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(444, 546);
             Controls.Add(ButtonInvitado);
             Controls.Add(SignUp);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Crear_cuenta";
             StartPosition = FormStartPosition.CenterScreen;
@@ -226,10 +237,10 @@
         private Panel ButtonInvitado;
         private LinkLabel linkLabel;
         private Button buttonRegresar;
-        private Label labelLogIn;
         private TextBox textBoxContrasena1;
         private TextBox textBoxCuenta1;
         private Button buttonAcceder;
         private LinkLabel linkLabel1;
+        private Label label2;
     }
 }
