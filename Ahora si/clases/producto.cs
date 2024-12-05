@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ahora_si.clases
 {
-    internal class producto
+    public class producto
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

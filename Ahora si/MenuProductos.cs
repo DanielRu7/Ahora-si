@@ -12,15 +12,16 @@ using System.Media;
 using NAudio.Wave;
 using Ahora_si.ConexionSql;
 using Ahora_si.clases;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 
 namespace Ahora_si
 {
     public partial class MenuProductos : Form
     {
 
-        private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.wav"));
+        private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.mp3"));
         private WaveOutEvent play = new WaveOutEvent();
-        bool pausa = true;
+        bool pausa = false;
         bool sidebarExpand = false;
         private string cuenta;
         private string contrasena;
@@ -40,24 +41,98 @@ namespace Ahora_si
             if (!pausa)
             {
                 play.PlaybackStopped += reinicio;
+                play.Play();
+
             }
-
-            play.Play();
-
+            
             labelCuenta.Text = cuenta;
 
             if (cuenta == "invitado")
             {
                 button2.Hide();
             }
-
         }
-
         private void reinicio(object sender, StoppedEventArgs e)
         {
-            cadena.Position = 0;
-            play.Play();
+            if (!pausa)
+            {
+                cadena.Position = 0;
+                play.Play();
+            }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (pausa)//si esta puasado
+            {
+                button3.Text = "Play Musica";
+                play.Play();
+                pausa = false;
+            }
+            else
+            {
+                button3.Text = "Parar Musica";
+                play.Stop();
+                pausa = true;
+            }
+        }
+        private void MenuProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            play.Stop();
+            pausa = true;
+        }
+
+
+        private void MenuProductos_Load(object sender, EventArgs e)
+        {
+            mostrar();
+            EventoPictureBoxes();
+        }
+
+        
+
+        
+
+        public void EventoPictureBoxes()
+        {
+            int i = 0;
+            PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
+            foreach (var pictureBoxe in pictureBoxes)
+            {
+                
+                pictureBoxe.Click += picturebox_click;
+                pictureBoxe.Tag = i;
+                i++;
+            }
+
+        }
+
+        public void picturebox_click(object sender, EventArgs e)
+        {
+            PictureBox box= sender as PictureBox;
+            if (box != null)
+            {
+                if (box.Image == null)
+                {
+                    AgregarProducto obj = new AgregarProducto();
+                    obj.ShowDialog();
+                    mostrar();
+                }
+                else
+                {
+                    Editar_Producto obj = new Editar_Producto((int)box.Tag);
+                    obj.ShowDialog();
+                    mostrar();
+                }
+                
+            }
+                
+        }
+
+        
+
+        
 
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
@@ -93,37 +168,17 @@ namespace Ahora_si
             play.Stop();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        
 
-            if (pausa)//si esta puasado
-            {
-                button3.Text = "Play Musica";
-                play.Stop();
-                pausa = false;
-            }
-            else
-            {
-                button3.Text = "Parar Musica";
-                play.Play();
-                pausa = true;
-            }
-        }
-
-        private void MenuProductos_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            play.Stop();
-        }
-
-        private void MenuProductos_Load(object sender, EventArgs e)
-        {
-            mostrar();
-        }
+        
+        
 
         private void labelCuenta_Click(object sender, EventArgs e)
         {
 
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)//cuenta boton
         {
@@ -139,6 +194,8 @@ namespace Ahora_si
             this.DialogResult = DialogResult.Abort;
         }
 
+
+
         public void mostrar()
         {
             Conexion_productos con = new Conexion_productos();
@@ -150,36 +207,11 @@ namespace Ahora_si
             {
                 
                 pictureBoxes[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
+                pictureBoxes[i].BackgroundImage = null;
                 labels[i].Text = pro[i].Nombre;
             }
         }
 
-
-
-
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            Conexion_productos con = new Conexion_productos();
-            List<producto> pro = con.consulta();
-            if (pro.Count < 10)
-            {
-                AgregarProducto obj = new AgregarProducto();
-                obj.ShowDialog();
-                mostrar();
-                this.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("No puedes agregar mas productos");
-                return;
-            }
-
-        }
-
-        private void buttonrefrescar_Click(object sender, EventArgs e)
-        {
-            mostrar();
-        }
+        
     }
 }

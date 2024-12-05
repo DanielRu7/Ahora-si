@@ -100,6 +100,47 @@ namespace Ahora_si.ConexionSql
         }
 
 
+        //editar
+        public producto BuscarNombre(int posicion)
+        {
+             
+            List<producto> lista = consulta();
+            producto pro = lista[posicion];
+            return pro;
+
+        }
+
+        public bool Actualizar(producto pro)
+        {
+            try
+            {
+                string query = "UPDATE productos SET nombre = @nombre, precio = @precio, cantidad = @cantidad, imagen = @imagen, descripcion = @descripcion WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", pro.Id);
+                cmd.Parameters.AddWithValue("@nombre", pro.Nombre);
+                cmd.Parameters.AddWithValue("@precio", pro.Precio);
+                cmd.Parameters.AddWithValue("@cantidad", pro.Cantidad);
+                cmd.Parameters.AddWithValue("@imagen", pro.Imagen);
+                cmd.Parameters.AddWithValue("@descripcion", pro.Descripcion);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se actualizó exitosamente!");
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar Datos");
+                return false;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+
+
+
+
+
 
     }
 }

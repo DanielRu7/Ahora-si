@@ -31,21 +31,23 @@
             panel1 = new Panel();
             buttonRegresar = new Button();
             buttonAgregar = new Button();
-            textBoxDescripcion = new TextBox();
             textBoxCantidad = new TextBox();
             textBoxPrecio = new TextBox();
             textBoxNombre = new TextBox();
             textBoxId = new TextBox();
             pictureBoxImagen = new PictureBox();
+            label1 = new Label();
+            richTextBoxDescripcion = new RichTextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(richTextBoxDescripcion);
             panel1.Controls.Add(buttonRegresar);
             panel1.Controls.Add(buttonAgregar);
-            panel1.Controls.Add(textBoxDescripcion);
             panel1.Controls.Add(textBoxCantidad);
             panel1.Controls.Add(textBoxPrecio);
             panel1.Controls.Add(textBoxNombre);
@@ -55,12 +57,12 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(569, 421);
+            panel1.Size = new Size(644, 484);
             panel1.TabIndex = 0;
             // 
             // buttonRegresar
             // 
-            buttonRegresar.Location = new Point(443, 380);
+            buttonRegresar.Location = new Point(521, 432);
             buttonRegresar.Name = "buttonRegresar";
             buttonRegresar.Size = new Size(94, 29);
             buttonRegresar.TabIndex = 7;
@@ -70,7 +72,7 @@
             // 
             // buttonAgregar
             // 
-            buttonAgregar.Location = new Point(365, 333);
+            buttonAgregar.Location = new Point(261, 440);
             buttonAgregar.Margin = new Padding(3, 4, 3, 4);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(86, 31);
@@ -78,15 +80,6 @@
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = true;
             buttonAgregar.Click += button1_Click;
-            // 
-            // textBoxDescripcion
-            // 
-            textBoxDescripcion.Location = new Point(306, 284);
-            textBoxDescripcion.Margin = new Padding(3, 4, 3, 4);
-            textBoxDescripcion.Name = "textBoxDescripcion";
-            textBoxDescripcion.PlaceholderText = "Descripcion";
-            textBoxDescripcion.Size = new Size(215, 27);
-            textBoxDescripcion.TabIndex = 5;
             // 
             // textBoxCantidad
             // 
@@ -127,7 +120,8 @@
             // pictureBoxImagen
             // 
             pictureBoxImagen.BackColor = Color.Transparent;
-            pictureBoxImagen.Image = Properties.Resources.OIP_removebg_preview;
+            pictureBoxImagen.BackgroundImage = Properties.Resources.OIP_removebg_preview;
+            pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Location = new Point(74, 61);
             pictureBoxImagen.Margin = new Padding(3, 4, 3, 4);
             pictureBoxImagen.Name = "pictureBoxImagen";
@@ -137,11 +131,28 @@
             pictureBoxImagen.TabStop = false;
             pictureBoxImagen.Click += pictureBoxImagen_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(306, 278);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 20);
+            label1.TabIndex = 19;
+            label1.Text = "Descripcion";
+            // 
+            // richTextBoxDescripcion
+            // 
+            richTextBoxDescripcion.Location = new Point(306, 301);
+            richTextBoxDescripcion.Name = "richTextBoxDescripcion";
+            richTextBoxDescripcion.Size = new Size(215, 125);
+            richTextBoxDescripcion.TabIndex = 18;
+            richTextBoxDescripcion.Text = "";
+            // 
             // AgregarProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(569, 421);
+            ClientSize = new Size(644, 484);
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarProducto";
@@ -155,7 +166,6 @@
         #endregion
 
         private Panel panel1;
-        private TextBox textBoxDescripcion;
         private TextBox textBoxCantidad;
         private TextBox textBoxPrecio;
         private TextBox textBoxNombre;
@@ -163,5 +173,7 @@
         private PictureBox pictureBoxImagen;
         private Button buttonAgregar;
         private Button buttonRegresar;
+        private Label label1;
+        private RichTextBox richTextBoxDescripcion;
     }
 }

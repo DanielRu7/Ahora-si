@@ -22,7 +22,7 @@ namespace Ahora_si
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (textBoxId.Text == "" || textBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
+            if (textBoxId.Text == "" || richTextBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
             {
                 MessageBox.Show("Llena todos los campos");
                 return;
@@ -32,14 +32,14 @@ namespace Ahora_si
             obj.Nombre = Convert.ToString(textBoxNombre.Text);
             obj.Precio = Convert.ToSingle(textBoxPrecio.Text);
             obj.Cantidad = Convert.ToInt32(textBoxCantidad.Text);
-            obj.Descripcion = Convert.ToString(textBoxDescripcion.Text);
+            obj.Descripcion = Convert.ToString(richTextBoxDescripcion.Text);
             ImagenConvert aux = new ImagenConvert();
             obj.Imagen = aux.imagenToByte(pictureBoxImagen.Image);
+
+
             Conexion_productos conexion = new Conexion_productos();
             if (conexion.insertar(obj))
             {
-                MenuProductos auxiliar= new MenuProductos();
-                auxiliar.mostrar();
                 this.Close();
             }
 
@@ -53,6 +53,7 @@ namespace Ahora_si
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxImagen.ImageLocation = ofd.FileName;
+                pictureBoxImagen.BackgroundImage = null;
             }
         }
 

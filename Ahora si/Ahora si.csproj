@@ -31,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\6711405-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\barra-de-menus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

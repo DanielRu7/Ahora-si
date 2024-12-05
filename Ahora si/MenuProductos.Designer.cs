@@ -39,7 +39,6 @@
             panelSidebar = new Panel();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
-            buttonAgregar = new Button();
             pictureBox10 = new PictureBox();
             label10 = new Label();
             pictureBox9 = new PictureBox();
@@ -60,7 +59,6 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            buttonrefrescar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
@@ -188,8 +186,6 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Controls.Add(buttonrefrescar);
-            panel2.Controls.Add(buttonAgregar);
             panel2.Controls.Add(pictureBox10);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(pictureBox9);
@@ -216,20 +212,11 @@
             panel2.Size = new Size(914, 535);
             panel2.TabIndex = 6;
             // 
-            // buttonAgregar
-            // 
-            buttonAgregar.Location = new Point(38, 7);
-            buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(94, 29);
-            buttonAgregar.TabIndex = 27;
-            buttonAgregar.Text = "Agregar";
-            buttonAgregar.UseVisualStyleBackColor = true;
-            buttonAgregar.Click += buttonAgregar_Click;
-            // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox10.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox10.Location = new Point(737, 288);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(118, 131);
@@ -249,7 +236,8 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox9.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox9.Location = new Point(567, 288);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(118, 131);
@@ -260,7 +248,8 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox8.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox8.Location = new Point(390, 288);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(118, 131);
@@ -271,7 +260,8 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox7.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox7.Location = new Point(215, 288);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(118, 131);
@@ -318,7 +308,8 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox6.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Location = new Point(31, 288);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(118, 131);
@@ -329,7 +320,8 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox5.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox5.Location = new Point(744, 71);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(118, 131);
@@ -349,7 +341,8 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox4.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Location = new Point(574, 71);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(118, 131);
@@ -360,7 +353,8 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox3.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Location = new Point(397, 71);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(118, 131);
@@ -371,7 +365,8 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox2.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox2.Location = new Point(222, 71);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(118, 131);
@@ -418,23 +413,14 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources._6711405_removebg_preview;
+            pictureBox1.BackgroundImage = Properties.Resources._6711405_removebg_preview;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(38, 71);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(118, 131);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // buttonrefrescar
-            // 
-            buttonrefrescar.Location = new Point(768, 24);
-            buttonrefrescar.Name = "buttonrefrescar";
-            buttonrefrescar.Size = new Size(94, 29);
-            buttonrefrescar.TabIndex = 28;
-            buttonrefrescar.Text = "refresacar";
-            buttonrefrescar.UseVisualStyleBackColor = true;
-            buttonrefrescar.Click += buttonrefrescar_Click;
             // 
             // MenuProductos
             // 
@@ -500,7 +486,5 @@
         private Label label7;
         private Label label6;
         private PictureBox pictureBox6;
-        private Button buttonAgregar;
-        private Button buttonrefrescar;
     }
 }
