@@ -37,14 +37,18 @@
             buttonRegresar = new Button();
             buttonCrear = new Button();
             ButtonInvitado = new Panel();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            textBoxContrasena1 = new TextBox();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
             buttonAcceder = new Button();
-            textBoxContrasena1 = new TextBox();
             textBoxCuenta1 = new TextBox();
             linkLabel = new LinkLabel();
             SignUp.SuspendLayout();
             ButtonInvitado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // textBoxNombre
@@ -126,10 +130,12 @@
             // ButtonInvitado
             // 
             ButtonInvitado.BackColor = SystemColors.ControlLightLight;
+            ButtonInvitado.Controls.Add(pictureBox2);
+            ButtonInvitado.Controls.Add(pictureBox1);
+            ButtonInvitado.Controls.Add(textBoxContrasena1);
             ButtonInvitado.Controls.Add(label2);
             ButtonInvitado.Controls.Add(linkLabel1);
             ButtonInvitado.Controls.Add(buttonAcceder);
-            ButtonInvitado.Controls.Add(textBoxContrasena1);
             ButtonInvitado.Controls.Add(textBoxCuenta1);
             ButtonInvitado.Controls.Add(linkLabel);
             ButtonInvitado.Location = new Point(2, 2);
@@ -137,6 +143,39 @@
             ButtonInvitado.Name = "ButtonInvitado";
             ButtonInvitado.Size = new Size(443, 545);
             ButtonInvitado.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources.bloquear;
+            pictureBox2.Location = new Point(263, 146);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(19, 23);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.usuario;
+            pictureBox1.Location = new Point(265, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(17, 25);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            // 
+            // textBoxContrasena1
+            // 
+            textBoxContrasena1.BorderStyle = BorderStyle.None;
+            textBoxContrasena1.Location = new Point(133, 153);
+            textBoxContrasena1.Margin = new Padding(3, 2, 3, 2);
+            textBoxContrasena1.Name = "textBoxContrasena1";
+            textBoxContrasena1.PasswordChar = '*';
+            textBoxContrasena1.PlaceholderText = "Contrasena";
+            textBoxContrasena1.Size = new Size(154, 16);
+            textBoxContrasena1.TabIndex = 2;
             // 
             // label2
             // 
@@ -153,7 +192,7 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.DimGray;
-            linkLabel1.Location = new Point(157, 520);
+            linkLabel1.Location = new Point(152, 348);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(130, 15);
             linkLabel1.TabIndex = 5;
@@ -163,36 +202,26 @@
             // 
             // buttonAcceder
             // 
+            buttonAcceder.BackColor = Color.Transparent;
             buttonAcceder.BackgroundImage = (Image)resources.GetObject("buttonAcceder.BackgroundImage");
-            buttonAcceder.Location = new Point(179, 214);
+            buttonAcceder.Location = new Point(172, 215);
             buttonAcceder.Margin = new Padding(3, 2, 3, 2);
             buttonAcceder.Name = "buttonAcceder";
             buttonAcceder.Size = new Size(75, 69);
             buttonAcceder.TabIndex = 4;
             buttonAcceder.Text = "    ";
-            buttonAcceder.UseVisualStyleBackColor = true;
+            buttonAcceder.UseVisualStyleBackColor = false;
             buttonAcceder.Click += buttonAcceder_Click;
-            // 
-            // textBoxContrasena1
-            // 
-            textBoxContrasena1.Location = new Point(133, 153);
-            textBoxContrasena1.Margin = new Padding(3, 2, 3, 2);
-            textBoxContrasena1.Name = "textBoxContrasena1";
-            textBoxContrasena1.PasswordChar = '*';
-            textBoxContrasena1.PlaceholderText = "Contrasena";
-            textBoxContrasena1.Size = new Size(154, 23);
-            textBoxContrasena1.TabIndex = 2;
-            textBoxContrasena1.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxCuenta1
             // 
-            textBoxCuenta1.Location = new Point(130, 109);
+            textBoxCuenta1.BorderStyle = BorderStyle.None;
+            textBoxCuenta1.Location = new Point(133, 109);
             textBoxCuenta1.Margin = new Padding(3, 2, 3, 2);
             textBoxCuenta1.Name = "textBoxCuenta1";
             textBoxCuenta1.PlaceholderText = "Cuenta";
-            textBoxCuenta1.Size = new Size(157, 23);
+            textBoxCuenta1.Size = new Size(157, 16);
             textBoxCuenta1.TabIndex = 1;
-            textBoxCuenta1.TextAlign = HorizontalAlignment.Center;
             // 
             // linkLabel
             // 
@@ -223,6 +252,8 @@
             SignUp.PerformLayout();
             ButtonInvitado.ResumeLayout(false);
             ButtonInvitado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -242,5 +273,7 @@
         private Button buttonAcceder;
         private LinkLabel linkLabel1;
         private Label label2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

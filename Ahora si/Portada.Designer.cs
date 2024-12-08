@@ -78,6 +78,7 @@
             // 
             // button1
             // 
+            button1.FlatStyle = FlatStyle.System;
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(349, 336);
             button1.Name = "button1";
@@ -90,8 +91,9 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(255, 287);
+            label6.Location = new Point(250, 213);
             label6.Name = "label6";
             label6.Size = new Size(311, 28);
             label6.TabIndex = 6;
@@ -100,8 +102,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(208, 259);
+            label5.Location = new Point(206, 272);
             label5.Name = "label5";
             label5.Size = new Size(416, 28);
             label5.TabIndex = 5;
@@ -110,8 +113,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(227, 231);
+            label4.Location = new Point(230, 241);
             label4.Name = "label4";
             label4.Size = new Size(357, 28);
             label4.TabIndex = 4;
@@ -120,6 +124,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(258, 185);
             label3.Name = "label3";
@@ -130,6 +135,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Red;
             label2.Location = new Point(329, 141);
@@ -142,6 +148,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(302, 100);
             label1.Name = "label1";
@@ -151,10 +158,12 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(337, 42);
+            pictureBox1.Location = new Point(350, 45);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(107, 52);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -170,6 +179,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Name = "Portada";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Portada";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

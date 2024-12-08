@@ -63,6 +63,7 @@ namespace Ahora_si
 
         private void horafecha_Tick(object sender, EventArgs e)
         {
+            lblhora.BackColor = Color.Transparent;
             lblhora.Text = DateTime.Now.ToLongTimeString();
         }
 
