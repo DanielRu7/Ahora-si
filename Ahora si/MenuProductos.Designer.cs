@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProductos));
             pictureBoxMenu = new PictureBox();
             labelCuenta = new Label();
             button2 = new Button();
@@ -109,7 +108,6 @@
             labelCuenta.TabIndex = 3;
             labelCuenta.Text = "Usuario";
             labelCuenta.TextAlign = ContentAlignment.MiddleLeft;
-            labelCuenta.Click += labelCuenta_Click;
             // 
             // button2
             // 
@@ -148,7 +146,6 @@
             button3.TabIndex = 2;
             button3.Text = "Parar musica";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // sidebarTransition
             // 
@@ -346,7 +343,7 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox10.Location = new Point(737, 288);
             pictureBox10.Name = "pictureBox10";
@@ -368,7 +365,7 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox9.Location = new Point(567, 288);
             pictureBox9.Name = "pictureBox9";
@@ -381,7 +378,7 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox8.Location = new Point(390, 288);
             pictureBox8.Name = "pictureBox8";
@@ -394,7 +391,7 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox7.Location = new Point(215, 288);
             pictureBox7.Name = "pictureBox7";
@@ -443,7 +440,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Location = new Point(31, 288);
             pictureBox6.Name = "pictureBox6";
@@ -456,7 +453,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox5.Location = new Point(744, 71);
             pictureBox5.Name = "pictureBox5";
@@ -469,7 +466,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(753, 48);
+            label5.Location = new Point(744, 48);
             label5.Name = "label5";
             label5.Size = new Size(129, 20);
             label5.TabIndex = 15;
@@ -478,7 +475,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Location = new Point(574, 71);
             pictureBox4.Name = "pictureBox4";
@@ -491,7 +488,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Location = new Point(397, 71);
             pictureBox3.Name = "pictureBox3";
@@ -504,7 +501,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox2.Location = new Point(222, 71);
             pictureBox2.Name = "pictureBox2";
@@ -517,7 +514,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(583, 48);
+            label4.Location = new Point(574, 48);
             label4.Name = "label4";
             label4.Size = new Size(129, 20);
             label4.TabIndex = 10;
@@ -526,7 +523,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(398, 48);
+            label3.Location = new Point(390, 48);
             label3.Name = "label3";
             label3.Size = new Size(129, 20);
             label3.TabIndex = 7;
@@ -535,7 +532,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(222, 48);
+            label2.Location = new Point(211, 48);
             label2.Name = "label2";
             label2.Size = new Size(129, 20);
             label2.TabIndex = 4;
@@ -553,7 +550,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(38, 71);
             pictureBox1.Name = "pictureBox1";

@@ -7,12 +7,10 @@ namespace Ahora_si
     public partial class MenuProductos : Form
     {
 
-        private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.mp3"));
-        private WaveOutEvent play = new WaveOutEvent();
-        bool pausa = false;
-        bool sidebarExpand = false;
-        private string cuenta;
-        private string contrasena;
+        Musica musica;
+        private bool sidebarExpand = false;
+        private string? cuenta;
+        private string? contrasena;
 
         public MenuProductos()
         {
@@ -23,52 +21,21 @@ namespace Ahora_si
             this.cuenta = cuenta;
             this.contrasena = contrasena;
             InitializeComponent();
-
-            play.Init(cadena);
-            play.Volume = 0.1f;
-            if (!pausa)
-            {
-                play.PlaybackStopped += reinicio;
-                play.Play();
-
-            }
-
+            musica = new Musica(button3);
             labelCuenta.Text = cuenta;
 
             if (cuenta == "invitado")
             {
                 button2.Hide();
             }
-        }
-        private void reinicio(object sender, StoppedEventArgs e)
-        {
-            if (!pausa)
-            {
-                cadena.Position = 0;
-                play.Play();
-            }
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-            if (pausa)//si esta puasado
-            {
-                button3.Text = "Stop Musica";
-                play.Play();
-                pausa = false;
-            }
-            else
-            {
-                button3.Text = "Play Musica";
-                play.Stop();
-                pausa = true;
-            }
-        }
         private void MenuProductos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            play.Stop();
-            pausa = true;
+            musica.play.Stop();
+            musica.pausa = true;
         }
 
 
@@ -82,7 +49,7 @@ namespace Ahora_si
         public void EventoBorrar()
         {
             Button[] butones = { buttonBorrar1, buttonBorrar2, buttonBorrar3, buttonBorrar4, buttonBorrar5, buttonBorrar6, buttonBorrar7, buttonBorrar8, buttonBorrar9, buttonBorrar10 };
-            foreach (var but in butones)//va arecorrer todo los botones como se cuales son los que tiene productos?
+            foreach (var but in butones)
             {
                 but.Click += buttonBorrar_click;
             }
@@ -97,10 +64,6 @@ namespace Ahora_si
                 Borrar_producto pro= new Borrar_producto(Convert.ToInt32(buton.Tag));
                 pro.ShowDialog();
                 mostrar();
-
-
-
-
             }
 
         }
@@ -174,17 +137,7 @@ namespace Ahora_si
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            play.Stop();
-        }
-
-
-
-
-
-
-        private void labelCuenta_Click(object sender, EventArgs e)
-        {
-
+            musica.play.Stop();
         }
 
 
@@ -192,7 +145,7 @@ namespace Ahora_si
         private void button2_Click(object sender, EventArgs e)//cuenta boton
         {
             Conexion_cuentas aux = new Conexion_cuentas();
-            persona edit = aux.Busqueda_Usuario(cuenta, contrasena);
+            persona edit = aux.Busqueda_Usuario(cuenta??"", contrasena??"");
             Editar_cuenta mostrar = new Editar_cuenta(edit);
             mostrar.Show();
         }
@@ -205,7 +158,7 @@ namespace Ahora_si
 
 
 
-        public void mostrar()
+        public void mostrar()//LO SOLUCIONA TODO B)
         {
             Conexion_productos con = new Conexion_productos();
             List<producto> pro = con.consulta();
@@ -227,7 +180,8 @@ namespace Ahora_si
             {
                 butones[i].Hide();
                 labels[i].Text = "";
-                pictureBoxes[i].BackgroundImage= Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "")
+                pictureBoxes[i].Image = null;
+                pictureBoxes[i].BackgroundImage= Image.FromFile( Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "botonagregar-removebg-preview.png"));
             }
 
         }
