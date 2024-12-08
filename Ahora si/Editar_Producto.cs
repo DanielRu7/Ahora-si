@@ -78,5 +78,10 @@ namespace Ahora_si
         {
             this.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

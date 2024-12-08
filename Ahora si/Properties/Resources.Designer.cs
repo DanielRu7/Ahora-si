@@ -73,6 +73,16 @@ namespace Ahora_si.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap accederlogin {
+            get {
+                object obj = ResourceManager.GetObject("accederlogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barra_de_menus {
             get {
                 object obj = ResourceManager.GetObject("barra-de-menus", resourceCulture);
@@ -86,6 +96,16 @@ namespace Ahora_si.Properties {
         internal static System.Drawing.Bitmap bloquear {
             get {
                 object obj = ResourceManager.GetObject("bloquear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo {
+            get {
+                object obj = ResourceManager.GetObject("circulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -117,6 +137,16 @@ namespace Ahora_si.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-black-vertical-line-rectangle-horizontal-line-angle-black-interne" +
                         "t", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uaa {
+            get {
+                object obj = ResourceManager.GetObject("uaa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

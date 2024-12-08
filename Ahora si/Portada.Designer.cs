@@ -78,14 +78,14 @@
             // 
             // button1
             // 
-            button1.FlatStyle = FlatStyle.System;
+            button1.BackColor = Color.Transparent;
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(349, 336);
+            button1.Location = new Point(342, 358);
             button1.Name = "button1";
             button1.Size = new Size(108, 52);
             button1.TabIndex = 7;
             button1.Text = "¡PLAY!";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label6
@@ -93,7 +93,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(250, 213);
+            label6.Location = new Point(250, 268);
             label6.Name = "label6";
             label6.Size = new Size(311, 28);
             label6.TabIndex = 6;
@@ -104,7 +104,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(206, 272);
+            label5.Location = new Point(206, 327);
             label5.Name = "label5";
             label5.Size = new Size(416, 28);
             label5.TabIndex = 5;
@@ -115,7 +115,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(230, 241);
+            label4.Location = new Point(230, 296);
             label4.Name = "label4";
             label4.Size = new Size(357, 28);
             label4.TabIndex = 4;
@@ -126,7 +126,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(258, 185);
+            label3.Location = new Point(258, 240);
             label3.Name = "label3";
             label3.Size = new Size(303, 28);
             label3.TabIndex = 3;
@@ -138,7 +138,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(329, 141);
+            label2.Location = new Point(323, 200);
             label2.Name = "label2";
             label2.Size = new Size(148, 28);
             label2.TabIndex = 2;
@@ -150,7 +150,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(302, 100);
+            label1.Location = new Point(297, 172);
             label1.Name = "label1";
             label1.Size = new Size(198, 28);
             label1.TabIndex = 1;
@@ -159,11 +159,11 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(350, 45);
+            pictureBox1.Image = Properties.Resources.uaa;
+            pictureBox1.Location = new Point(292, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(107, 52);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.Size = new Size(208, 183);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 

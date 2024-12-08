@@ -21,7 +21,7 @@ namespace Ahora_si
 
         private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.mp3"));
         private WaveOutEvent play = new WaveOutEvent();
-        bool pausa = false;
+        bool pausa = true;
         bool sidebarExpand = false;
         private string cuenta;
         private string contrasena;
@@ -44,7 +44,7 @@ namespace Ahora_si
                 play.Play();
 
             }
-            
+
             labelCuenta.Text = cuenta;
 
             if (cuenta == "invitado")
@@ -66,13 +66,13 @@ namespace Ahora_si
 
             if (pausa)//si esta puasado
             {
-                button3.Text = "Stop Musica";
+                button3.Text = "Pausar música";
                 play.Play();
                 pausa = false;
             }
             else
             {
-                button3.Text = "Play Musica";
+                button3.Text = "Reproducir música";
                 play.Stop();
                 pausa = true;
             }
@@ -90,9 +90,9 @@ namespace Ahora_si
             EventoPictureBoxes();
         }
 
-        
 
-        
+
+
 
         public void EventoPictureBoxes()
         {
@@ -100,7 +100,7 @@ namespace Ahora_si
             PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
             foreach (var pictureBoxe in pictureBoxes)
             {
-                
+
                 pictureBoxe.Click += picturebox_click;
                 pictureBoxe.Tag = i;
                 i++;
@@ -110,7 +110,7 @@ namespace Ahora_si
 
         public void picturebox_click(object sender, EventArgs e)
         {
-            PictureBox box= sender as PictureBox;
+            PictureBox box = sender as PictureBox;
             if (box != null)
             {
                 if (box.Image == null)
@@ -125,14 +125,14 @@ namespace Ahora_si
                     obj.ShowDialog();
                     mostrar();
                 }
-                
+
             }
-                
+
         }
 
-        
 
-        
+
+
 
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
@@ -148,7 +148,7 @@ namespace Ahora_si
             else // Si está contraída, expandir
             {
                 panelSidebar.Width += 10;
-                if (panelSidebar.Width >= 193)
+                if (panelSidebar.Width >= 170)
                 {
 
                     sidebarExpand = true;
@@ -168,10 +168,10 @@ namespace Ahora_si
             play.Stop();
         }
 
-        
 
-        
-        
+
+
+
 
         private void labelCuenta_Click(object sender, EventArgs e)
         {
@@ -205,13 +205,27 @@ namespace Ahora_si
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
             for (int i = 0; i < pro.Count && i < pictureBoxes.Length && i < labels.Length; i++)
             {
-                
+
                 pictureBoxes[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
                 pictureBoxes[i].BackgroundImage = null;
                 labels[i].Text = pro[i].Nombre;
             }
         }
 
-        
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
+
+        private void pictureBoxMenu_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+
+        }
     }
 }
