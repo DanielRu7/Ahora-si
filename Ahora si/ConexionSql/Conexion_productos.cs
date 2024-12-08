@@ -136,7 +136,36 @@ namespace Ahora_si.ConexionSql
                 cerrar();
             }
         }
+        public bool Eliminar(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM productos WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", id);
+                int filasBorradas = cmd.ExecuteNonQuery();
 
+                if (filasBorradas > 0)
+                {
+                    MessageBox.Show("Producto eliminado correctamente.");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el producto con el ID especificado.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el producto");
+                return false;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
 
 
 

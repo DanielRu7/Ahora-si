@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_Producto));
             panel1 = new Panel();
-            pictureBoxImagen = new PictureBox();
-            pictureBox1 = new PictureBox();
             richTextBoxDescripcion = new RichTextBox();
             richTextBox1 = new RichTextBox();
             textBoxNombre = new TextBox();
@@ -49,17 +47,23 @@
             label2 = new Label();
             buttonRegresar = new Button();
             buttonEditar = new Button();
-            pictureBox6 = new PictureBox();
             label6 = new Label();
+            pictureBox6 = new PictureBox();
+            pictureBoxImagen = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.Controls.Add(pictureBoxImagen);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(richTextBoxDescripcion);
             panel1.Controls.Add(richTextBox1);
             panel1.Controls.Add(textBoxNombre);
@@ -79,7 +83,6 @@
             panel1.Controls.Add(buttonEditar);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(pictureBox6);
-            panel1.Controls.Add(pictureBoxImagen);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -87,30 +90,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(444, 546);
             panel1.TabIndex = 0;
-            // 
-            // pictureBoxImagen
-            // 
-            pictureBoxImagen.BackColor = Color.Transparent;
-            pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBoxImagen.Location = new Point(35, 38);
-            pictureBoxImagen.Name = "pictureBoxImagen";
-            pictureBoxImagen.Size = new Size(147, 150);
-            pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxImagen.TabIndex = 8;
-            pictureBoxImagen.TabStop = false;
-            pictureBoxImagen.Click += pictureBoxImagen_Click_1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Black;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(34, 37);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(149, 152);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 31;
-            pictureBox1.TabStop = false;
             // 
             // richTextBoxDescripcion
             // 
@@ -299,28 +278,64 @@
             buttonEditar.UseVisualStyleBackColor = true;
             buttonEditar.Click += buttonEditar_Click;
             // 
-            // pictureBox6
-            // 
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources.circulo;
-            pictureBox6.Location = new Point(-16, 278);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(239, 180);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 32;
-            pictureBox6.TabStop = false;
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.White;
             label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(11, 363);
+            label6.Location = new Point(2, 373);
             label6.Name = "label6";
-            label6.Size = new Size(185, 16);
+            label6.Size = new Size(200, 16);
             label6.TabIndex = 33;
-            label6.Text = "Estas editando un producto";
+            label6.Text = "Estas agregando un producto";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.Transparent;
+            pictureBox6.Image = Properties.Resources.circulo;
+            pictureBox6.Location = new Point(-34, 285);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(270, 192);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 32;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBoxImagen
+            // 
+            pictureBoxImagen.BackColor = Color.Transparent;
+            pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBoxImagen.Location = new Point(35, 38);
+            pictureBoxImagen.Name = "pictureBoxImagen";
+            pictureBoxImagen.Size = new Size(147, 150);
+            pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxImagen.TabIndex = 8;
+            pictureBoxImagen.TabStop = false;
+            pictureBoxImagen.Click += pictureBoxImagen_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.InitialImage = null;
+            pictureBox1.Location = new Point(34, 37);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(149, 152);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 31;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Black;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Enabled = false;
+            pictureBox2.Location = new Point(34, 37);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(149, 152);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
             // 
             // Editar_Producto
             // 
@@ -334,9 +349,10 @@
             Text = "Editar_Producto";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -364,5 +380,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox6;
         private Label label6;
+        private PictureBox pictureBox2;
     }
 }

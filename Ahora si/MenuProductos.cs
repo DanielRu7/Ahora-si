@@ -21,7 +21,7 @@ namespace Ahora_si
 
         private AudioFileReader cadena = new AudioFileReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "sonido.mp3"));
         private WaveOutEvent play = new WaveOutEvent();
-        bool pausa = true;
+        bool pausa = false;
         bool sidebarExpand = false;
         private string cuenta;
         private string contrasena;
@@ -50,6 +50,7 @@ namespace Ahora_si
             if (cuenta == "invitado")
             {
                 button2.Hide();
+                pictureBox13.Hide();
             }
         }
         private void reinicio(object sender, StoppedEventArgs e)
@@ -66,13 +67,15 @@ namespace Ahora_si
 
             if (pausa)//si esta puasado
             {
-                button3.Text = "Pausar música";
+                pictureBoxMusica.Image= Properties.Resources.boton_de_pausa;
+                button3.Text = "Pausar";
                 play.Play();
                 pausa = false;
             }
             else
             {
-                button3.Text = "Reproducir música";
+                pictureBoxMusica.Image = Properties.Resources.boton_de_play__1_;
+                button3.Text = "Reproducir";
                 play.Stop();
                 pausa = true;
             }
@@ -225,6 +228,14 @@ namespace Ahora_si
         private void pictureBoxMenu_MouseHover(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EliminarProducto obj = new EliminarProducto();
+            obj.Show();
+            mostrar();
 
         }
     }

@@ -38,8 +38,13 @@
             sidebarTransition = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
             panelSidebar = new Panel();
+            pictureBoxMusica = new PictureBox();
+            pictureBox13 = new PictureBox();
+            pictureBox12 = new PictureBox();
+            pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            button4 = new Button();
             pictureBox10 = new PictureBox();
             label10 = new Label();
             pictureBox9 = new PictureBox();
@@ -63,6 +68,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMusica).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -80,7 +89,7 @@
             // 
             pictureBoxMenu.BackColor = Color.White;
             pictureBoxMenu.Image = Properties.Resources.barra_de_menus;
-            pictureBoxMenu.Location = new Point(12, 8);
+            pictureBoxMenu.Location = new Point(6, 7);
             pictureBoxMenu.Name = "pictureBoxMenu";
             pictureBoxMenu.Size = new Size(40, 36);
             pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
@@ -108,7 +117,7 @@
             button2.BackColor = Color.FromArgb(42, 42, 42);
             button2.Font = new Font("Segoe UI", 11.25F);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 0);
+            button2.Location = new Point(0, 54);
             button2.Name = "button2";
             button2.Size = new Size(170, 53);
             button2.TabIndex = 1;
@@ -134,11 +143,11 @@
             button3.BackColor = Color.FromArgb(42, 42, 42);
             button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 53);
+            button3.Location = new Point(0, 0);
             button3.Name = "button3";
             button3.Size = new Size(170, 53);
             button3.TabIndex = 2;
-            button3.Text = "Pausar música";
+            button3.Text = "Pausar";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
@@ -161,6 +170,11 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.FromArgb(42, 42, 42);
+            panelSidebar.BorderStyle = BorderStyle.FixedSingle;
+            panelSidebar.Controls.Add(pictureBoxMusica);
+            panelSidebar.Controls.Add(pictureBox13);
+            panelSidebar.Controls.Add(pictureBox12);
+            panelSidebar.Controls.Add(pictureBox11);
             panelSidebar.Controls.Add(buttonFiniquitar);
             panelSidebar.Controls.Add(button3);
             panelSidebar.Controls.Add(button1);
@@ -171,12 +185,52 @@
             panelSidebar.Size = new Size(0, 525);
             panelSidebar.TabIndex = 5;
             // 
+            // pictureBoxMusica
+            // 
+            pictureBoxMusica.Image = Properties.Resources.boton_de_pausa;
+            pictureBoxMusica.Location = new Point(9, 7);
+            pictureBoxMusica.Name = "pictureBoxMusica";
+            pictureBoxMusica.Size = new Size(30, 38);
+            pictureBoxMusica.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMusica.TabIndex = 7;
+            pictureBoxMusica.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.Image = Properties.Resources.perfil_del_usuario;
+            pictureBox13.Location = new Point(10, 65);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(29, 31);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 6;
+            pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Image = Properties.Resources.poder;
+            pictureBox12.Location = new Point(10, 486);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(26, 23);
+            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox12.TabIndex = 5;
+            pictureBox12.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = Properties.Resources.cerrar_sesion;
+            pictureBox11.Location = new Point(9, 430);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(26, 28);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 4;
+            pictureBox11.TabStop = false;
+            // 
             // buttonFiniquitar
             // 
             buttonFiniquitar.BackColor = Color.FromArgb(42, 42, 42);
             buttonFiniquitar.Font = new Font("Segoe UI", 11.25F);
             buttonFiniquitar.ForeColor = Color.White;
-            buttonFiniquitar.Location = new Point(0, 470);
+            buttonFiniquitar.Location = new Point(0, 471);
             buttonFiniquitar.Name = "buttonFiniquitar";
             buttonFiniquitar.Size = new Size(170, 53);
             buttonFiniquitar.TabIndex = 3;
@@ -187,6 +241,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(pictureBox10);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(pictureBox9);
@@ -214,6 +269,19 @@
             panel2.Size = new Size(971, 525);
             panel2.TabIndex = 6;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(192, 0, 0);
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Transparent;
+            button4.Location = new Point(81, 21);
+            button4.Name = "button4";
+            button4.Size = new Size(88, 33);
+            button4.TabIndex = 27;
+            button4.Text = "Eliminar produto";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
@@ -226,6 +294,8 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 26;
             pictureBox10.TabStop = false;
+            pictureBox10.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox10.MouseHover += pictureBox1_MouseHover;
             // 
             // label10
             // 
@@ -249,6 +319,8 @@
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 24;
             pictureBox9.TabStop = false;
+            pictureBox9.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox9.MouseHover += pictureBox1_MouseHover;
             // 
             // pictureBox8
             // 
@@ -262,6 +334,8 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 23;
             pictureBox8.TabStop = false;
+            pictureBox8.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox8.MouseHover += pictureBox1_MouseHover;
             // 
             // pictureBox7
             // 
@@ -275,6 +349,8 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 22;
             pictureBox7.TabStop = false;
+            pictureBox7.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox7.MouseHover += pictureBox1_MouseHover;
             // 
             // label9
             // 
@@ -328,6 +404,8 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;
+            pictureBox6.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox6.MouseHover += pictureBox1_MouseHover;
             // 
             // pictureBox5
             // 
@@ -341,6 +419,8 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 16;
             pictureBox5.TabStop = false;
+            pictureBox5.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox5.MouseHover += pictureBox1_MouseHover;
             // 
             // label5
             // 
@@ -364,6 +444,8 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
+            pictureBox4.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox4.MouseHover += pictureBox1_MouseHover;
             // 
             // pictureBox3
             // 
@@ -377,6 +459,8 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
+            pictureBox3.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox3.MouseHover += pictureBox1_MouseHover;
             // 
             // pictureBox2
             // 
@@ -390,6 +474,8 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 12;
             pictureBox2.TabStop = false;
+            pictureBox2.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox2.MouseHover += pictureBox1_MouseHover;
             // 
             // label4
             // 
@@ -464,6 +550,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelSidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMusica).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -510,5 +600,10 @@
         private Label label7;
         private Label label6;
         private PictureBox pictureBox6;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
+        private PictureBox pictureBox13;
+        private Button button4;
+        private PictureBox pictureBoxMusica;
     }
 }
