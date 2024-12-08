@@ -147,7 +147,28 @@ namespace Ahora_si.ConexionSql
             }
         }
 
+        public void Eliminar(producto borrar)
+        {
+            string query = "DELETE FROM productos WHERE id=" + borrar.Id + ";";
+            try
+            {
+                MySqlCommand cmd=new MySqlCommand(query,conexion);
+                cmd.ExecuteNonQuery();
 
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al borrar...");
+            }
+            finally
+            {
+                cerrar();
+            }
+
+
+
+        }
 
 
 

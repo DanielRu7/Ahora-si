@@ -21,25 +21,25 @@
 
 
         // Métodos para cambiar el color de las etiquetas excepto label3
-        private void Label_MouseEnter_ChangeToGray(object sender, EventArgs e)
+        private void Label_MouseEnter_ChangeToGray(object? sender, EventArgs e)
         {
             Label lbl = sender as Label;
             lbl.ForeColor = Color.Gray; // Cambiar a color gris
         }
 
-        private void Label_MouseLeave_ChangeToBlack(object sender, EventArgs e)
+        private void Label_MouseLeave_ChangeToBlack(object? sender, EventArgs e)
         {
             Label lbl = sender as Label;
             lbl.ForeColor = Color.Black; // Regresar a color negro
         }
 
         // Métodos especiales para label3
-        private void Label3_MouseEnter_ChangeToGold(object sender, EventArgs e)
+        private void Label3_MouseEnter_ChangeToGold(object? sender, EventArgs e)
         {
             label3.ForeColor = Color.Gold; // Cambiar a color dorado
         }
 
-        private void Label3_MouseLeave_ChangeToBlack(object sender, EventArgs e)
+        private void Label3_MouseLeave_ChangeToBlack(object? sender, EventArgs e)
         {
             label3.ForeColor = Color.Black; // Regresar a color negro
         }

@@ -40,6 +40,16 @@
             panelSidebar = new Panel();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            buttonBorrar10 = new Button();
+            buttonBorrar9 = new Button();
+            buttonBorrar8 = new Button();
+            buttonBorrar7 = new Button();
+            buttonBorrar6 = new Button();
+            buttonBorrar5 = new Button();
+            buttonBorrar4 = new Button();
+            buttonBorrar3 = new Button();
+            buttonBorrar2 = new Button();
+            buttonBorrar1 = new Button();
             pictureBox10 = new PictureBox();
             label10 = new Label();
             pictureBox9 = new PictureBox();
@@ -187,6 +197,16 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(buttonBorrar10);
+            panel2.Controls.Add(buttonBorrar9);
+            panel2.Controls.Add(buttonBorrar8);
+            panel2.Controls.Add(buttonBorrar7);
+            panel2.Controls.Add(buttonBorrar6);
+            panel2.Controls.Add(buttonBorrar5);
+            panel2.Controls.Add(buttonBorrar4);
+            panel2.Controls.Add(buttonBorrar3);
+            panel2.Controls.Add(buttonBorrar2);
+            panel2.Controls.Add(buttonBorrar1);
             panel2.Controls.Add(pictureBox10);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(pictureBox9);
@@ -213,6 +233,116 @@
             panel2.Size = new Size(914, 535);
             panel2.TabIndex = 6;
             // 
+            // buttonBorrar10
+            // 
+            buttonBorrar10.Location = new Point(737, 425);
+            buttonBorrar10.Name = "buttonBorrar10";
+            buttonBorrar10.Size = new Size(118, 25);
+            buttonBorrar10.TabIndex = 36;
+            buttonBorrar10.Tag = "9";
+            buttonBorrar10.Text = "B";
+            buttonBorrar10.UseVisualStyleBackColor = true;
+            buttonBorrar10.Visible = false;
+            // 
+            // buttonBorrar9
+            // 
+            buttonBorrar9.Location = new Point(567, 425);
+            buttonBorrar9.Name = "buttonBorrar9";
+            buttonBorrar9.Size = new Size(118, 25);
+            buttonBorrar9.TabIndex = 35;
+            buttonBorrar9.Tag = "8";
+            buttonBorrar9.Text = "B";
+            buttonBorrar9.UseVisualStyleBackColor = true;
+            buttonBorrar9.Visible = false;
+            // 
+            // buttonBorrar8
+            // 
+            buttonBorrar8.Location = new Point(390, 425);
+            buttonBorrar8.Name = "buttonBorrar8";
+            buttonBorrar8.Size = new Size(118, 25);
+            buttonBorrar8.TabIndex = 34;
+            buttonBorrar8.Tag = "7";
+            buttonBorrar8.Text = "B";
+            buttonBorrar8.UseVisualStyleBackColor = true;
+            buttonBorrar8.Visible = false;
+            // 
+            // buttonBorrar7
+            // 
+            buttonBorrar7.Location = new Point(215, 425);
+            buttonBorrar7.Name = "buttonBorrar7";
+            buttonBorrar7.Size = new Size(118, 25);
+            buttonBorrar7.TabIndex = 33;
+            buttonBorrar7.Tag = "6";
+            buttonBorrar7.Text = "B";
+            buttonBorrar7.UseVisualStyleBackColor = true;
+            buttonBorrar7.Visible = false;
+            // 
+            // buttonBorrar6
+            // 
+            buttonBorrar6.Location = new Point(31, 425);
+            buttonBorrar6.Name = "buttonBorrar6";
+            buttonBorrar6.Size = new Size(118, 25);
+            buttonBorrar6.TabIndex = 32;
+            buttonBorrar6.Tag = "5";
+            buttonBorrar6.Text = "B";
+            buttonBorrar6.UseVisualStyleBackColor = true;
+            buttonBorrar6.Visible = false;
+            // 
+            // buttonBorrar5
+            // 
+            buttonBorrar5.Location = new Point(744, 207);
+            buttonBorrar5.Name = "buttonBorrar5";
+            buttonBorrar5.Size = new Size(118, 25);
+            buttonBorrar5.TabIndex = 31;
+            buttonBorrar5.Tag = "4";
+            buttonBorrar5.Text = "B";
+            buttonBorrar5.UseVisualStyleBackColor = true;
+            buttonBorrar5.Visible = false;
+            // 
+            // buttonBorrar4
+            // 
+            buttonBorrar4.Location = new Point(574, 208);
+            buttonBorrar4.Name = "buttonBorrar4";
+            buttonBorrar4.Size = new Size(118, 25);
+            buttonBorrar4.TabIndex = 30;
+            buttonBorrar4.Tag = "3";
+            buttonBorrar4.Text = "B";
+            buttonBorrar4.UseVisualStyleBackColor = true;
+            buttonBorrar4.Visible = false;
+            // 
+            // buttonBorrar3
+            // 
+            buttonBorrar3.Location = new Point(397, 208);
+            buttonBorrar3.Name = "buttonBorrar3";
+            buttonBorrar3.Size = new Size(118, 25);
+            buttonBorrar3.TabIndex = 29;
+            buttonBorrar3.Tag = "2";
+            buttonBorrar3.Text = "B";
+            buttonBorrar3.UseVisualStyleBackColor = true;
+            buttonBorrar3.Visible = false;
+            // 
+            // buttonBorrar2
+            // 
+            buttonBorrar2.Location = new Point(222, 207);
+            buttonBorrar2.Name = "buttonBorrar2";
+            buttonBorrar2.Size = new Size(118, 25);
+            buttonBorrar2.TabIndex = 28;
+            buttonBorrar2.Tag = "1";
+            buttonBorrar2.Text = "B";
+            buttonBorrar2.UseVisualStyleBackColor = true;
+            buttonBorrar2.Visible = false;
+            // 
+            // buttonBorrar1
+            // 
+            buttonBorrar1.Location = new Point(38, 208);
+            buttonBorrar1.Name = "buttonBorrar1";
+            buttonBorrar1.Size = new Size(118, 25);
+            buttonBorrar1.TabIndex = 27;
+            buttonBorrar1.Tag = "0";
+            buttonBorrar1.Text = "B";
+            buttonBorrar1.UseVisualStyleBackColor = true;
+            buttonBorrar1.Visible = false;
+            // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
@@ -224,11 +354,12 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 26;
             pictureBox10.TabStop = false;
+            pictureBox10.Tag = "9";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(737, 428);
+            label10.Location = new Point(737, 265);
             label10.Name = "label10";
             label10.Size = new Size(129, 20);
             label10.TabIndex = 25;
@@ -245,6 +376,7 @@
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 24;
             pictureBox9.TabStop = false;
+            pictureBox9.Tag = "8";
             // 
             // pictureBox8
             // 
@@ -257,6 +389,7 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 23;
             pictureBox8.TabStop = false;
+            pictureBox8.Tag = "7";
             // 
             // pictureBox7
             // 
@@ -269,11 +402,12 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 22;
             pictureBox7.TabStop = false;
+            pictureBox7.Tag = "6";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(567, 428);
+            label9.Location = new Point(567, 265);
             label9.Name = "label9";
             label9.Size = new Size(129, 20);
             label9.TabIndex = 21;
@@ -282,7 +416,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(381, 428);
+            label8.Location = new Point(381, 265);
             label8.Name = "label8";
             label8.Size = new Size(129, 20);
             label8.TabIndex = 20;
@@ -291,7 +425,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(205, 428);
+            label7.Location = new Point(205, 265);
             label7.Name = "label7";
             label7.Size = new Size(129, 20);
             label7.TabIndex = 19;
@@ -300,7 +434,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(21, 428);
+            label6.Location = new Point(21, 265);
             label6.Name = "label6";
             label6.Size = new Size(129, 20);
             label6.TabIndex = 18;
@@ -317,6 +451,7 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;
+            pictureBox6.Tag = "5";
             // 
             // pictureBox5
             // 
@@ -329,11 +464,12 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 16;
             pictureBox5.TabStop = false;
+            pictureBox5.Tag = "4";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(744, 211);
+            label5.Location = new Point(753, 48);
             label5.Name = "label5";
             label5.Size = new Size(129, 20);
             label5.TabIndex = 15;
@@ -350,6 +486,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
+            pictureBox4.Tag = "3";
             // 
             // pictureBox3
             // 
@@ -362,6 +499,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
+            pictureBox3.Tag = "2";
             // 
             // pictureBox2
             // 
@@ -374,11 +512,12 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 12;
             pictureBox2.TabStop = false;
+            pictureBox2.Tag = "1";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(574, 211);
+            label4.Location = new Point(583, 48);
             label4.Name = "label4";
             label4.Size = new Size(129, 20);
             label4.TabIndex = 10;
@@ -387,7 +526,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(389, 211);
+            label3.Location = new Point(398, 48);
             label3.Name = "label3";
             label3.Size = new Size(129, 20);
             label3.TabIndex = 7;
@@ -396,7 +535,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(213, 211);
+            label2.Location = new Point(222, 48);
             label2.Name = "label2";
             label2.Size = new Size(129, 20);
             label2.TabIndex = 4;
@@ -405,7 +544,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 211);
+            label1.Location = new Point(36, 48);
             label1.Name = "label1";
             label1.Size = new Size(129, 20);
             label1.TabIndex = 1;
@@ -422,6 +561,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Tag = "0";
             // 
             // MenuProductos
             // 
@@ -487,5 +627,15 @@
         private Label label7;
         private Label label6;
         private PictureBox pictureBox6;
+        private Button buttonBorrar1;
+        private Button buttonBorrar10;
+        private Button buttonBorrar9;
+        private Button buttonBorrar8;
+        private Button buttonBorrar7;
+        private Button buttonBorrar6;
+        private Button buttonBorrar5;
+        private Button buttonBorrar4;
+        private Button buttonBorrar3;
+        private Button buttonBorrar2;
     }
 }
