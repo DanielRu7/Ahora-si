@@ -110,7 +110,7 @@ namespace Ahora_si
 
         public void picturebox_click(object sender, EventArgs e)
         {
-            PictureBox box= sender as PictureBox;
+            PictureBox? box= sender as PictureBox;
             if (box != null)
             {
                 if (box.Image == null)
