@@ -22,7 +22,7 @@ namespace Ahora_si
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (textBoxId.Text == "" || richTextBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
+            if (textBoxId.Text == "" || richTextBoxDescripcion.Text == "" || textBoxNombre.Text == "" || textBoxCantidad.Text == "" || textBoxPrecio.Text == "" || pictureBoxImagen.Image == null)
             {
                 MessageBox.Show("Llena todos los campos");
                 return;
@@ -67,6 +67,5 @@ namespace Ahora_si
         {
 
         }
-
     }
 }
