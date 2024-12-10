@@ -61,8 +61,9 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(1, 1);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(801, 450);
+            panel1.Size = new Size(915, 600);
             panel1.TabIndex = 0;
             // 
             // lblhora
@@ -71,9 +72,9 @@
             lblhora.BackColor = SystemColors.ControlDark;
             lblhora.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblhora.ForeColor = SystemColors.ActiveCaptionText;
-            lblhora.Location = new Point(379, 425);
+            lblhora.Location = new Point(433, 567);
             lblhora.Name = "lblhora";
-            lblhora.Size = new Size(0, 21);
+            lblhora.Size = new Size(0, 23);
             lblhora.TabIndex = 8;
             // 
             // button1
@@ -82,7 +83,7 @@
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(342, 358);
             button1.Name = "button1";
-            button1.Size = new Size(108, 52);
+            button1.Size = new Size(123, 69);
             button1.TabIndex = 7;
             button1.Text = "¡PLAY!";
             button1.UseVisualStyleBackColor = false;
@@ -95,7 +96,7 @@
             label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(250, 268);
             label6.Name = "label6";
-            label6.Size = new Size(311, 28);
+            label6.Size = new Size(390, 37);
             label6.TabIndex = 6;
             label6.Text = "Alonso Herrera Benavidez";
             // 
@@ -106,7 +107,7 @@
             label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(206, 327);
             label5.Name = "label5";
-            label5.Size = new Size(416, 28);
+            label5.Size = new Size(525, 37);
             label5.TabIndex = 5;
             label5.Text = "Edson Leonardo Sánchez Montalvo";
             // 
@@ -117,7 +118,7 @@
             label4.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(230, 296);
             label4.Name = "label4";
-            label4.Size = new Size(357, 28);
+            label4.Size = new Size(448, 37);
             label4.TabIndex = 4;
             label4.Text = "Diana Ruth Gutiérrez Márquez";
             // 
@@ -128,7 +129,7 @@
             label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(258, 240);
             label3.Name = "label3";
-            label3.Size = new Size(303, 28);
+            label3.Size = new Size(381, 37);
             label3.TabIndex = 3;
             label3.Text = "Georgina Salazar Partida";
             // 
@@ -140,7 +141,7 @@
             label2.ForeColor = Color.Red;
             label2.Location = new Point(323, 200);
             label2.Name = "label2";
-            label2.Size = new Size(148, 28);
+            label2.Size = new Size(188, 37);
             label2.TabIndex = 2;
             label2.Text = "CandyShop";
             // 
@@ -152,7 +153,7 @@
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(297, 172);
             label1.Name = "label1";
-            label1.Size = new Size(198, 28);
+            label1.Size = new Size(248, 37);
             label1.TabIndex = 1;
             label1.Text = "Programación II";
             // 
@@ -174,10 +175,11 @@
             // 
             // Portada
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Portada";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Portada";

@@ -311,11 +311,10 @@
             // 
             // Editar_cuenta
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 434);
+            ClientSize = new Size(429, 579);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Editar_cuenta";
             Text = "Editar_cuenta";
             Load += Editar_cuenta_Load;

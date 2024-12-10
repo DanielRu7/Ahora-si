@@ -67,40 +67,37 @@
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(52, 111);
-            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
+            textBoxNombre.Location = new Point(59, 148);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.PlaceholderText = "Nombre";
-            textBoxNombre.Size = new Size(179, 23);
+            textBoxNombre.Size = new Size(204, 27);
             textBoxNombre.TabIndex = 0;
             textBoxNombre.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxCuenta
             // 
-            textBoxCuenta.Location = new Point(51, 157);
-            textBoxCuenta.Margin = new Padding(3, 2, 3, 2);
+            textBoxCuenta.Location = new Point(58, 209);
             textBoxCuenta.Name = "textBoxCuenta";
             textBoxCuenta.PlaceholderText = "Cuenta";
-            textBoxCuenta.Size = new Size(179, 23);
+            textBoxCuenta.Size = new Size(204, 27);
             textBoxCuenta.TabIndex = 1;
             textBoxCuenta.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(113, 37);
+            label1.Location = new Point(129, 49);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
+            label1.Size = new Size(59, 20);
             label1.TabIndex = 2;
             label1.Text = "Sign up";
             // 
             // textBoxContrasena
             // 
-            textBoxContrasena.Location = new Point(51, 205);
-            textBoxContrasena.Margin = new Padding(3, 2, 3, 2);
+            textBoxContrasena.Location = new Point(58, 273);
             textBoxContrasena.Name = "textBoxContrasena";
             textBoxContrasena.PlaceholderText = "Contraseña";
-            textBoxContrasena.Size = new Size(179, 23);
+            textBoxContrasena.Size = new Size(204, 27);
             textBoxContrasena.TabIndex = 3;
             textBoxContrasena.TextAlign = HorizontalAlignment.Center;
             // 
@@ -114,17 +111,15 @@
             SignUp.Controls.Add(textBoxCuenta);
             SignUp.Controls.Add(textBoxNombre);
             SignUp.Location = new Point(2, 0);
-            SignUp.Margin = new Padding(3, 2, 3, 2);
             SignUp.Name = "SignUp";
-            SignUp.Size = new Size(460, 547);
+            SignUp.Size = new Size(526, 729);
             SignUp.TabIndex = 4;
             // 
             // buttonRegresar
             // 
-            buttonRegresar.Location = new Point(133, 304);
-            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
+            buttonRegresar.Location = new Point(152, 405);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(82, 22);
+            buttonRegresar.Size = new Size(94, 29);
             buttonRegresar.TabIndex = 1;
             buttonRegresar.Text = "Regresar";
             buttonRegresar.UseVisualStyleBackColor = true;
@@ -132,10 +127,9 @@
             // 
             // buttonCrear
             // 
-            buttonCrear.Location = new Point(100, 264);
-            buttonCrear.Margin = new Padding(3, 2, 3, 2);
+            buttonCrear.Location = new Point(114, 352);
             buttonCrear.Name = "buttonCrear";
-            buttonCrear.Size = new Size(82, 22);
+            buttonCrear.Size = new Size(94, 29);
             buttonCrear.TabIndex = 5;
             buttonCrear.Text = "Crear";
             buttonCrear.UseVisualStyleBackColor = true;
@@ -174,7 +168,7 @@
             buttonAcceder.Location = new Point(180, 339);
             buttonAcceder.Margin = new Padding(3, 2, 3, 2);
             buttonAcceder.Name = "buttonAcceder";
-            buttonAcceder.Size = new Size(75, 69);
+            buttonAcceder.Size = new Size(86, 92);
             buttonAcceder.TabIndex = 4;
             buttonAcceder.Text = "    ";
             buttonAcceder.UseVisualStyleBackColor = false;
@@ -357,13 +351,12 @@
             // 
             // Crear_cuenta
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(444, 517);
             Controls.Add(ButtonInvitado);
             Controls.Add(SignUp);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Crear_cuenta";
             StartPosition = FormStartPosition.CenterScreen;

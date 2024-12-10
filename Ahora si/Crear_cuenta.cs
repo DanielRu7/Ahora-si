@@ -67,7 +67,6 @@ namespace Ahora_si
         private void buttonAcceder_Click(object sender, EventArgs e)
         {
             string cuenta, contrasena;
-            bool res;
             cuenta = textBoxCuenta1.Text;
             contrasena = textBoxContrasena1.Text;
             if (cuenta == "" || cuenta == "")

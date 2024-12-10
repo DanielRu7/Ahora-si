@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProductos));
             pictureBoxMenu = new PictureBox();
             labelCuenta = new Label();
             button2 = new Button();
@@ -91,7 +90,7 @@
             pictureBoxMenu.Image = Properties.Resources.barra_de_menus;
             pictureBoxMenu.Location = new Point(6, 7);
             pictureBoxMenu.Name = "pictureBoxMenu";
-            pictureBoxMenu.Size = new Size(40, 36);
+            pictureBoxMenu.Size = new Size(46, 48);
             pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMenu.TabIndex = 0;
             pictureBoxMenu.TabStop = false;
@@ -110,7 +109,6 @@
             labelCuenta.TabIndex = 3;
             labelCuenta.Text = "Usuario";
             labelCuenta.TextAlign = ContentAlignment.MiddleLeft;
-            labelCuenta.Click += labelCuenta_Click;
             // 
             // button2
             // 
@@ -149,7 +147,6 @@
             button3.TabIndex = 2;
             button3.Text = "Pausar";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // sidebarTransition
             // 
@@ -163,6 +160,7 @@
             panel1.Controls.Add(labelCuenta);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(971, 49);
             panel1.TabIndex = 4;
@@ -180,7 +178,8 @@
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(button2);
             panelSidebar.Dock = DockStyle.Left;
-            panelSidebar.Location = new Point(0, 49);
+            panelSidebar.Location = new Point(0, 65);
+            panelSidebar.Margin = new Padding(3, 4, 3, 4);
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(0, 525);
             panelSidebar.TabIndex = 5;
@@ -263,8 +262,7 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 49);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(0, 65);
             panel2.Name = "panel2";
             panel2.Size = new Size(971, 525);
             panel2.TabIndex = 6;
@@ -285,12 +283,12 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox10.Location = new Point(777, 318);
             pictureBox10.Margin = new Padding(3, 2, 3, 2);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(103, 98);
+            pictureBox10.Size = new Size(118, 131);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 26;
             pictureBox10.TabStop = false;
@@ -310,12 +308,12 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox9.Location = new Point(600, 318);
             pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(103, 98);
+            pictureBox9.Size = new Size(118, 131);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 24;
             pictureBox9.TabStop = false;
@@ -325,12 +323,12 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox8.Location = new Point(421, 318);
             pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(103, 98);
+            pictureBox8.Size = new Size(118, 131);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 23;
             pictureBox8.TabStop = false;
@@ -340,12 +338,12 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox7.Location = new Point(242, 318);
             pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(103, 98);
+            pictureBox7.Size = new Size(118, 131);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 22;
             pictureBox7.TabStop = false;
@@ -395,12 +393,12 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Location = new Point(66, 318);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(103, 98);
+            pictureBox6.Size = new Size(118, 131);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;
@@ -410,12 +408,12 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox5.Location = new Point(786, 67);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(103, 98);
+            pictureBox5.Size = new Size(118, 131);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 16;
             pictureBox5.TabStop = false;
@@ -435,12 +433,12 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Location = new Point(609, 67);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(103, 98);
+            pictureBox4.Size = new Size(118, 131);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
@@ -450,12 +448,12 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Location = new Point(430, 67);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(103, 98);
+            pictureBox3.Size = new Size(118, 131);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
@@ -465,12 +463,12 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox2.Location = new Point(251, 67);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(103, 98);
+            pictureBox2.Size = new Size(118, 131);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 12;
             pictureBox2.TabStop = false;
@@ -520,12 +518,12 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(75, 67);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(103, 98);
+            pictureBox1.Size = new Size(118, 131);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -534,7 +532,7 @@
             // 
             // MenuProductos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 574);
             Controls.Add(panel2);

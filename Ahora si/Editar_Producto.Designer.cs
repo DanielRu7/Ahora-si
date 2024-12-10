@@ -86,9 +86,8 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(444, 546);
+            panel1.Size = new Size(507, 728);
             panel1.TabIndex = 0;
             // 
             // richTextBoxDescripcion
@@ -207,7 +206,7 @@
             label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(216, 309);
             label5.Name = "label5";
-            label5.Size = new Size(124, 23);
+            label5.Size = new Size(157, 28);
             label5.TabIndex = 25;
             label5.Text = "Descripcion:";
             // 
@@ -218,7 +217,7 @@
             label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(212, 240);
             label4.Name = "label4";
-            label4.Size = new Size(104, 23);
+            label4.Size = new Size(129, 28);
             label4.TabIndex = 24;
             label4.Text = "Cantidad:";
             // 
@@ -229,7 +228,7 @@
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(212, 172);
             label1.Name = "label1";
-            label1.Size = new Size(73, 23);
+            label1.Size = new Size(91, 28);
             label1.TabIndex = 23;
             label1.Text = "Precio:";
             // 
@@ -240,7 +239,7 @@
             label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(212, 101);
             label3.Name = "label3";
-            label3.Size = new Size(90, 23);
+            label3.Size = new Size(114, 28);
             label3.TabIndex = 22;
             label3.Text = "Nombre:";
             // 
@@ -251,7 +250,7 @@
             label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(212, 32);
             label2.Name = "label2";
-            label2.Size = new Size(33, 23);
+            label2.Size = new Size(42, 28);
             label2.TabIndex = 21;
             label2.Text = "Id:";
             // 
@@ -262,7 +261,7 @@
             buttonRegresar.Location = new Point(340, 446);
             buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(65, 64);
+            buttonRegresar.Size = new Size(74, 85);
             buttonRegresar.TabIndex = 15;
             buttonRegresar.UseVisualStyleBackColor = true;
             buttonRegresar.Click += buttonRegresar_Click;
@@ -273,7 +272,7 @@
             buttonEditar.FlatStyle = FlatStyle.Flat;
             buttonEditar.Location = new Point(216, 446);
             buttonEditar.Name = "buttonEditar";
-            buttonEditar.Size = new Size(66, 66);
+            buttonEditar.Size = new Size(75, 88);
             buttonEditar.TabIndex = 14;
             buttonEditar.UseVisualStyleBackColor = true;
             buttonEditar.Click += buttonEditar_Click;
@@ -307,7 +306,7 @@
             pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Location = new Point(35, 38);
             pictureBoxImagen.Name = "pictureBoxImagen";
-            pictureBoxImagen.Size = new Size(147, 150);
+            pictureBoxImagen.Size = new Size(168, 200);
             pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxImagen.TabIndex = 8;
             pictureBoxImagen.TabStop = false;
@@ -339,11 +338,10 @@
             // 
             // Editar_Producto
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 546);
+            ClientSize = new Size(507, 728);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Editar_Producto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar_Producto";
