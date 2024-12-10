@@ -173,16 +173,6 @@ namespace Ahora_si
 
 
 
-
-
-
-        private void labelCuenta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void button2_Click(object sender, EventArgs e)//cuenta boton
         {
             Conexion_cuentas aux = new Conexion_cuentas();
