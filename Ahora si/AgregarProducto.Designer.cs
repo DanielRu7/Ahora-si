@@ -80,9 +80,8 @@
             panel1.Controls.Add(pictureBoxImagen);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(507, 728);
+            panel1.Size = new Size(444, 546);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -115,7 +114,7 @@
             label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(217, 297);
             label5.Name = "label5";
-            label5.Size = new Size(157, 28);
+            label5.Size = new Size(124, 23);
             label5.TabIndex = 28;
             label5.Text = "Descripcion:";
             // 
@@ -246,7 +245,7 @@
             label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(216, 234);
             label4.Name = "label4";
-            label4.Size = new Size(129, 28);
+            label4.Size = new Size(104, 23);
             label4.TabIndex = 27;
             label4.Text = "Cantidad:";
             // 
@@ -257,7 +256,7 @@
             label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(217, 172);
             label3.Name = "label3";
-            label3.Size = new Size(91, 28);
+            label3.Size = new Size(73, 23);
             label3.TabIndex = 26;
             label3.Text = "Precio:";
             // 
@@ -268,7 +267,7 @@
             label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(217, 110);
             label7.Name = "label7";
-            label7.Size = new Size(114, 28);
+            label7.Size = new Size(90, 23);
             label7.TabIndex = 25;
             label7.Text = "Nombre:";
             // 
@@ -279,7 +278,7 @@
             label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(217, 42);
             label2.Name = "label2";
-            label2.Size = new Size(42, 28);
+            label2.Size = new Size(33, 23);
             label2.TabIndex = 20;
             label2.Text = "Id:";
             // 
@@ -291,7 +290,7 @@
             buttonRegresar.Location = new Point(337, 441);
             buttonRegresar.Margin = new Padding(3, 2, 3, 2);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(82, 89);
+            buttonRegresar.Size = new Size(72, 67);
             buttonRegresar.TabIndex = 7;
             buttonRegresar.UseVisualStyleBackColor = false;
             buttonRegresar.Click += buttonRegresar_Click;
@@ -303,7 +302,7 @@
             pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Location = new Point(29, 43);
             pictureBoxImagen.Name = "pictureBoxImagen";
-            pictureBoxImagen.Size = new Size(168, 200);
+            pictureBoxImagen.Size = new Size(147, 150);
             pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxImagen.TabIndex = 0;
             pictureBoxImagen.TabStop = false;
@@ -311,11 +310,10 @@
             // 
             // AgregarProducto
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(507, 728);
+            ClientSize = new Size(444, 546);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarProducto";
             Text = "AgregarProducto";
             panel1.ResumeLayout(false);

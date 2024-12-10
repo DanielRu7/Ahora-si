@@ -11,12 +11,7 @@ namespace Ahora_si
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Portada portada = new Portada();
-            if (portada.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(new Crear_cuenta());
-            }
-            
+            Application.Run(new Portada());
         }
     }
 }

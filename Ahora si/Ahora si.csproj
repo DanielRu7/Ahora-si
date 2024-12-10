@@ -40,9 +40,6 @@
     <None Update="Resources\barra-de-menus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\botonagregar-removebg-preview.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\bloquear.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

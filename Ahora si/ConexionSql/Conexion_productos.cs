@@ -1,12 +1,13 @@
 ﻿using Ahora_si.clases;
 using MySql.Data.MySqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ahora_si.ConexionSql
 {
-    public class Conexion_productos
+    internal class Conexion_productos
     {
         private string Cadena = "Server=localhost; Database=personal; User=root; Password=; SslMode=none;";
-        private MySqlConnection? conexion;
+        private MySqlConnection conexion;
 
         public Conexion_productos()
         {
@@ -17,12 +18,8 @@ namespace Ahora_si.ConexionSql
         {
             try
             {
-
                 conexion = new MySqlConnection(Cadena);
                 conexion.Open();
-
-
-
             }
             catch
             {
@@ -47,20 +44,13 @@ namespace Ahora_si.ConexionSql
                 cmd.Parameters.AddWithValue("@nombre", add.Nombre);
                 cmd.Parameters.AddWithValue("@precio", add.Precio);
                 cmd.Parameters.AddWithValue("@cantidad", add.Cantidad);
+                cmd.Parameters.AddWithValue("@imagen", add.Imagen);
                 cmd.Parameters.AddWithValue("@descripcion", add.Descripcion);
-                if (add.Imagen == null)
-                {
-                    cmd.Parameters.AddWithValue("@imagen", DBNull.Value);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@imagen", add.Imagen);
-                }
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Se agrego Exitosamente!");
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al insertar producto en el servidor ");
                 return false;
@@ -69,7 +59,7 @@ namespace Ahora_si.ConexionSql
             {
                 cerrar();
             }
-
+            
         }
 
 
@@ -85,10 +75,10 @@ namespace Ahora_si.ConexionSql
                 {
                     producto pro = new producto();
                     pro.Id = Convert.ToInt32(reader["id"]);
-                    pro.Nombre = Convert.ToString(reader["nombre"]) ?? "";
+                    pro.Nombre = Convert.ToString(reader["nombre"])??"";
                     pro.Cantidad = Convert.ToInt32(reader["cantidad"]);
                     pro.Precio = Convert.ToSingle(reader["precio"]);
-                    pro.Descripcion = Convert.ToString(reader["descripcion"]) ?? "";
+                    pro.Descripcion = Convert.ToString(reader["descripcion"])??"";
                     pro.Imagen = (byte[])reader["imagen"];
 
 
@@ -96,7 +86,7 @@ namespace Ahora_si.ConexionSql
 
                 }
 
-
+                
             }
             catch
             {
@@ -113,7 +103,7 @@ namespace Ahora_si.ConexionSql
         //editar
         public producto BuscarNombre(int posicion)
         {
-
+             
             List<producto> lista = consulta();
             producto pro = lista[posicion];
             return pro;
@@ -146,25 +136,14 @@ namespace Ahora_si.ConexionSql
                 cerrar();
             }
         }
-
-        public void Eliminar(producto borrar)
+        public bool Eliminar(int id)
         {
-            string query = "DELETE FROM productos WHERE id=" + borrar.Id + ";";
             try
             {
-                MySqlCommand cmd=new MySqlCommand(query,conexion);
-                cmd.ExecuteNonQuery();
-
-
-            }
-            catch
-            {
-                MessageBox.Show("Error al borrar...");
-            }
-            finally
-            {
-                cerrar();
-            }
+                string query = "DELETE FROM productos WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@id", id);
+                int filasBorradas = cmd.ExecuteNonQuery();
 
                 if (filasBorradas > 0)
                 {
@@ -188,8 +167,6 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-
-        }
 
 
 
