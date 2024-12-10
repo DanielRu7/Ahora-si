@@ -27,6 +27,7 @@ namespace Ahora_si
             if (cuenta == "invitado")
             {
                 button2.Hide();
+                pictureBox13.Hide();
             }
 
         }

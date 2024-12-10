@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProductos));
             pictureBoxMenu = new PictureBox();
             labelCuenta = new Label();
             button2 = new Button();
@@ -44,6 +43,16 @@
             pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            buttonBorrar10 = new Button();
+            buttonBorrar9 = new Button();
+            buttonBorrar8 = new Button();
+            buttonBorrar7 = new Button();
+            buttonBorrar6 = new Button();
+            buttonBorrar5 = new Button();
+            buttonBorrar4 = new Button();
+            buttonBorrar3 = new Button();
+            buttonBorrar2 = new Button();
+            buttonBorrar1 = new Button();
             pictureBox10 = new PictureBox();
             label10 = new Label();
             pictureBox9 = new PictureBox();
@@ -64,16 +73,6 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            buttonBorrar1 = new Button();
-            buttonBorrar2 = new Button();
-            buttonBorrar3 = new Button();
-            buttonBorrar4 = new Button();
-            buttonBorrar5 = new Button();
-            buttonBorrar10 = new Button();
-            buttonBorrar9 = new Button();
-            buttonBorrar8 = new Button();
-            buttonBorrar7 = new Button();
-            buttonBorrar6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
@@ -159,7 +158,7 @@
             button3.Name = "button3";
             button3.Size = new Size(194, 71);
             button3.TabIndex = 2;
-            button3.Text = "Pausar";
+            button3.Text = "Stop Music";
             button3.UseVisualStyleBackColor = false;
             // 
             // sidebarTransition
@@ -295,10 +294,100 @@
             panel2.Size = new Size(1110, 700);
             panel2.TabIndex = 6;
             // 
+            // buttonBorrar10
+            // 
+            buttonBorrar10.Location = new Point(898, 561);
+            buttonBorrar10.Name = "buttonBorrar10";
+            buttonBorrar10.Size = new Size(94, 29);
+            buttonBorrar10.TabIndex = 36;
+            buttonBorrar10.Text = "Borrar";
+            buttonBorrar10.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar9
+            // 
+            buttonBorrar9.Location = new Point(696, 561);
+            buttonBorrar9.Name = "buttonBorrar9";
+            buttonBorrar9.Size = new Size(94, 29);
+            buttonBorrar9.TabIndex = 35;
+            buttonBorrar9.Text = "Borrar";
+            buttonBorrar9.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar8
+            // 
+            buttonBorrar8.Location = new Point(491, 561);
+            buttonBorrar8.Name = "buttonBorrar8";
+            buttonBorrar8.Size = new Size(94, 29);
+            buttonBorrar8.TabIndex = 34;
+            buttonBorrar8.Text = "Borrar";
+            buttonBorrar8.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar7
+            // 
+            buttonBorrar7.Location = new Point(287, 561);
+            buttonBorrar7.Name = "buttonBorrar7";
+            buttonBorrar7.Size = new Size(94, 29);
+            buttonBorrar7.TabIndex = 33;
+            buttonBorrar7.Text = "Borrar";
+            buttonBorrar7.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar6
+            // 
+            buttonBorrar6.Location = new Point(85, 561);
+            buttonBorrar6.Name = "buttonBorrar6";
+            buttonBorrar6.Size = new Size(94, 29);
+            buttonBorrar6.TabIndex = 32;
+            buttonBorrar6.Text = "Borrar";
+            buttonBorrar6.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar5
+            // 
+            buttonBorrar5.Location = new Point(912, 226);
+            buttonBorrar5.Name = "buttonBorrar5";
+            buttonBorrar5.Size = new Size(94, 29);
+            buttonBorrar5.TabIndex = 31;
+            buttonBorrar5.Text = "Borrar";
+            buttonBorrar5.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar4
+            // 
+            buttonBorrar4.Location = new Point(710, 226);
+            buttonBorrar4.Name = "buttonBorrar4";
+            buttonBorrar4.Size = new Size(94, 29);
+            buttonBorrar4.TabIndex = 30;
+            buttonBorrar4.Text = "Borrar";
+            buttonBorrar4.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar3
+            // 
+            buttonBorrar3.Location = new Point(505, 226);
+            buttonBorrar3.Name = "buttonBorrar3";
+            buttonBorrar3.Size = new Size(94, 29);
+            buttonBorrar3.TabIndex = 29;
+            buttonBorrar3.Text = "Borrar";
+            buttonBorrar3.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar2
+            // 
+            buttonBorrar2.Location = new Point(301, 226);
+            buttonBorrar2.Name = "buttonBorrar2";
+            buttonBorrar2.Size = new Size(94, 29);
+            buttonBorrar2.TabIndex = 28;
+            buttonBorrar2.Text = "Borrar";
+            buttonBorrar2.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrar1
+            // 
+            buttonBorrar1.Location = new Point(99, 226);
+            buttonBorrar1.Name = "buttonBorrar1";
+            buttonBorrar1.Size = new Size(94, 29);
+            buttonBorrar1.TabIndex = 27;
+            buttonBorrar1.Text = "Borrar";
+            buttonBorrar1.UseVisualStyleBackColor = true;
+            // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox10.Location = new Point(888, 424);
             pictureBox10.Name = "pictureBox10";
@@ -322,7 +411,7 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox9.Location = new Point(686, 424);
             pictureBox9.Name = "pictureBox9";
@@ -336,7 +425,7 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox8.Location = new Point(481, 424);
             pictureBox8.Name = "pictureBox8";
@@ -350,7 +439,7 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox7.Location = new Point(277, 424);
             pictureBox7.Name = "pictureBox7";
@@ -404,7 +493,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Location = new Point(75, 424);
             pictureBox6.Name = "pictureBox6";
@@ -418,7 +507,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox5.Location = new Point(898, 89);
             pictureBox5.Name = "pictureBox5";
@@ -442,7 +531,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Location = new Point(696, 89);
             pictureBox4.Name = "pictureBox4";
@@ -456,7 +545,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Location = new Point(491, 89);
             pictureBox3.Name = "pictureBox3";
@@ -470,7 +559,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox2.Location = new Point(287, 89);
             pictureBox2.Name = "pictureBox2";
@@ -524,7 +613,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(86, 89);
             pictureBox1.Name = "pictureBox1";
@@ -534,96 +623,6 @@
             pictureBox1.TabStop = false;
             pictureBox1.MouseLeave += pictureBox1_MouseLeave;
             pictureBox1.MouseHover += pictureBox1_MouseHover;
-            // 
-            // buttonBorrar1
-            // 
-            buttonBorrar1.Location = new Point(99, 226);
-            buttonBorrar1.Name = "buttonBorrar1";
-            buttonBorrar1.Size = new Size(94, 29);
-            buttonBorrar1.TabIndex = 27;
-            buttonBorrar1.Text = "Borrar";
-            buttonBorrar1.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar2
-            // 
-            buttonBorrar2.Location = new Point(301, 226);
-            buttonBorrar2.Name = "buttonBorrar2";
-            buttonBorrar2.Size = new Size(94, 29);
-            buttonBorrar2.TabIndex = 28;
-            buttonBorrar2.Text = "Borrar";
-            buttonBorrar2.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar3
-            // 
-            buttonBorrar3.Location = new Point(505, 226);
-            buttonBorrar3.Name = "buttonBorrar3";
-            buttonBorrar3.Size = new Size(94, 29);
-            buttonBorrar3.TabIndex = 29;
-            buttonBorrar3.Text = "Borrar";
-            buttonBorrar3.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar4
-            // 
-            buttonBorrar4.Location = new Point(710, 226);
-            buttonBorrar4.Name = "buttonBorrar4";
-            buttonBorrar4.Size = new Size(94, 29);
-            buttonBorrar4.TabIndex = 30;
-            buttonBorrar4.Text = "Borrar";
-            buttonBorrar4.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar5
-            // 
-            buttonBorrar5.Location = new Point(912, 226);
-            buttonBorrar5.Name = "buttonBorrar5";
-            buttonBorrar5.Size = new Size(94, 29);
-            buttonBorrar5.TabIndex = 31;
-            buttonBorrar5.Text = "Borrar";
-            buttonBorrar5.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar10
-            // 
-            buttonBorrar10.Location = new Point(898, 561);
-            buttonBorrar10.Name = "buttonBorrar10";
-            buttonBorrar10.Size = new Size(94, 29);
-            buttonBorrar10.TabIndex = 36;
-            buttonBorrar10.Text = "Borrar";
-            buttonBorrar10.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar9
-            // 
-            buttonBorrar9.Location = new Point(696, 561);
-            buttonBorrar9.Name = "buttonBorrar9";
-            buttonBorrar9.Size = new Size(94, 29);
-            buttonBorrar9.TabIndex = 35;
-            buttonBorrar9.Text = "Borrar";
-            buttonBorrar9.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar8
-            // 
-            buttonBorrar8.Location = new Point(491, 561);
-            buttonBorrar8.Name = "buttonBorrar8";
-            buttonBorrar8.Size = new Size(94, 29);
-            buttonBorrar8.TabIndex = 34;
-            buttonBorrar8.Text = "Borrar";
-            buttonBorrar8.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar7
-            // 
-            buttonBorrar7.Location = new Point(287, 561);
-            buttonBorrar7.Name = "buttonBorrar7";
-            buttonBorrar7.Size = new Size(94, 29);
-            buttonBorrar7.TabIndex = 33;
-            buttonBorrar7.Text = "Borrar";
-            buttonBorrar7.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar6
-            // 
-            buttonBorrar6.Location = new Point(85, 561);
-            buttonBorrar6.Name = "buttonBorrar6";
-            buttonBorrar6.Size = new Size(94, 29);
-            buttonBorrar6.TabIndex = 32;
-            buttonBorrar6.Text = "Borrar";
-            buttonBorrar6.UseVisualStyleBackColor = true;
             // 
             // MenuProductos
             // 

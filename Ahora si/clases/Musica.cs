@@ -50,13 +50,13 @@ namespace Ahora_si.clases
 
             if (pausa)//si esta puasado
             {
-                boton.Text = "Stop Musica";
+                boton.Text = "Stop Music";
                 play.Play();
                 pausa = false;
             }
             else
             {
-                boton.Text = "Play Musica";
+                boton.Text = "Play Music";
                 play.Stop();
                 pausa = true;
             }
