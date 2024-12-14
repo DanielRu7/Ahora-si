@@ -34,8 +34,6 @@
             richTextBoxDescripcion = new RichTextBox();
             label5 = new Label();
             richTextBox1 = new RichTextBox();
-            label6 = new Label();
-            pictureBox6 = new PictureBox();
             textBoxCantidad = new TextBox();
             textBox4 = new TextBox();
             textBoxPrecio = new TextBox();
@@ -51,7 +49,6 @@
             buttonRegresar = new Button();
             pictureBoxImagen = new PictureBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).BeginInit();
             SuspendLayout();
             // 
@@ -62,8 +59,6 @@
             panel1.Controls.Add(richTextBoxDescripcion);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(richTextBox1);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(textBoxCantidad);
             panel1.Controls.Add(textBox4);
             panel1.Controls.Add(textBoxPrecio);
@@ -130,29 +125,6 @@
             richTextBox1.Size = new Size(191, 97);
             richTextBox1.TabIndex = 33;
             richTextBox1.Text = "";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.White;
-            label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(23, 371);
-            label6.Name = "label6";
-            label6.Size = new Size(185, 16);
-            label6.TabIndex = 35;
-            label6.Text = "Estas editando un producto";
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources.circulo;
-            pictureBox6.Location = new Point(-2, 288);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(239, 180);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 34;
-            pictureBox6.TabStop = false;
             // 
             // textBoxCantidad
             // 
@@ -318,7 +290,6 @@
             Text = "AgregarProducto";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).EndInit();
             ResumeLayout(false);
         }
@@ -344,7 +315,5 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private RichTextBox richTextBox1;
-        private Label label6;
-        private PictureBox pictureBox6;
     }
 }
