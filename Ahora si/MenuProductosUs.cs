@@ -8,6 +8,8 @@ namespace Ahora_si
     {
         private Label[] Existencia;
         private string cuenta, contrasena;
+        List<producto> compra;
+
         
         public MenuProductos2()
         {
@@ -55,7 +57,7 @@ namespace Ahora_si
         }
 
 
-        public override void picturebox_click(object? sender, EventArgs e)
+        public override void picturebox_click(object? sender, EventArgs e)//cambiar
         {
             PictureBox? box = sender as PictureBox;
             if (box != null)
@@ -70,7 +72,7 @@ namespace Ahora_si
                 else
                 {
                     //mandar el producto entero
-                    ComprarProducto comp = new ComprarProducto(pro,cuenta,contrasena);
+                    ComprarProducto comp = new ComprarProducto(pro,compra);
                     comp.ShowDialog();
                     mostrar();
 
@@ -107,9 +109,12 @@ namespace Ahora_si
 
         }
 
-        private void pictureBoxCarrito_Click(object sender, EventArgs e)
+        private void pictureBoxCarrito_Click(object sender, EventArgs e)//cambiar
         {
-            Carrito carrito = new Carrito(cuenta,contrasena);
+            Conexion_cuentas usu= new Conexion_cuentas();
+            persona per= usu.Busqueda_Usuario(cuenta,contrasena);
+
+            Carrito carrito = new Carrito(per,compra);
             carrito.ShowDialog();
         }
     }

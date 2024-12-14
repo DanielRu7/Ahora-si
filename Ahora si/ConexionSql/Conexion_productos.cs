@@ -108,6 +108,11 @@ namespace Ahora_si.ConexionSql
             }
             return lista;
         }
+
+
+
+
+        //ARREGLAR TODO ESTO PTM ME HACEN DESASTRES
         public void actualizarMonto(List<producto> aux, string cuenta,string contrasena)
         {
             try
@@ -131,6 +136,9 @@ namespace Ahora_si.ConexionSql
             }
 
         }
+
+        //QUITAR ESTO JODER QUE PERRO ASCO
+
         public void agregarCarroDeCompras(producto pro)
         {
             try

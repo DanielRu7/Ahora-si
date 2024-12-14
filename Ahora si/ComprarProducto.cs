@@ -17,21 +17,20 @@ namespace Ahora_si
     public partial class ComprarProducto : Form
     {
         producto pro;
-        private string cuenta, contrasena;
+        List<producto> productos;
 
         public ComprarProducto()
         {
             InitializeComponent();
         }
-        public ComprarProducto(producto pro, string cuenta, string contrasena)
+        public ComprarProducto(producto pro,List<producto> productos)
         {
             InitializeComponent();
-            this.cuenta = cuenta;
-            this.contrasena = contrasena;
             this.pro = pro;
+            this.productos = productos;
             llenar();
         }
-        private void llenar()
+        private void llenar()//carga los datos
         {
             label6.Text = Convert.ToString(pro.Id);
             label7.Text = Convert.ToString(pro.Cantidad);
@@ -42,19 +41,26 @@ namespace Ahora_si
 
         }
 
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            Conexion_productos obj2 = new Conexion_productos();
 
-            Conexion_productos obj = new Conexion_productos();
-            obj.agregarCarroDeCompras(pro);
-            obj.actualizarMonto(obj2.getCarrito(), cuenta, contrasena);
-            this.Close();
+        private void buttonAgregar_Click(object sender, EventArgs e)//compras
+        {
+            if (pro.Cantidad>Convert.ToInt32( UpDownCan.Text))
+            {
+                pro.CantidadCompra=(Convert.ToInt32(UpDownCan.Text));
+                productos.Add(pro);
+                MessageBox.Show($"se Agrego a el carrito de compras {pro.Nombre}, cantidad {pro.CantidadCompra}");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Cantidad de productos mayor a la existencia");
+            }
+
+
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
