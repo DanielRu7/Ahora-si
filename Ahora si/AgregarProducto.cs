@@ -49,7 +49,7 @@ namespace Ahora_si
         private void pictureBoxImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxImagen.ImageLocation = ofd.FileName;

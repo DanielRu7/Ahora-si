@@ -5,6 +5,7 @@ using System.Media;
 using System.IO;
 using System.Windows.Forms.PropertyGridInternal;
 using NAudio.Wave;
+using Ahora_si.clases;
 namespace Ahora_si
 
 
@@ -15,10 +16,7 @@ namespace Ahora_si
         public Crear_cuenta()
         {
             InitializeComponent();
-            ActiveControl = label1;
-
-
-
+            //ActiveControl = label1;
         }
         private void buttonCrear_Click(object sender, EventArgs e)
         {
@@ -50,9 +48,6 @@ namespace Ahora_si
         }
 
 
-
-        
-
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ButtonInvitado.Hide();
@@ -78,17 +73,38 @@ namespace Ahora_si
             Conexion_cuentas con = new Conexion_cuentas();
             if (con.Buscar(cuenta, contrasena))
             {
+                Conexion_cuentas doble = new Conexion_cuentas();
 
-                MenuProductos obj = new MenuProductos(cuenta, contrasena);
-                this.Hide();
-                if (obj.ShowDialog() != DialogResult.Abort)
+                persona per= doble.Busqueda_Usuario(cuenta, contrasena);
+                if (per.Admin==true)
                 {
-                    this.Show();
+                    MenuProductos obj = new MenuProductos(cuenta, contrasena);
+                    this.Hide();
+                    if (obj.ShowDialog() != DialogResult.Abort)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+
                 }
                 else
                 {
-                    this.Close();
+                    MenuProductos2 obj = new MenuProductos2(cuenta, contrasena);
+                    this.Hide();
+                    if (obj.ShowDialog() != DialogResult.Abort)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+
                 }
+                
             }
             else
             {
@@ -103,7 +119,7 @@ namespace Ahora_si
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MenuProductos obj = new MenuProductos("invitado", "invitado");
+            MenuProductos2 obj = new MenuProductos2("invitado", "invitado");
             this.Hide();
             if (obj.ShowDialog() != DialogResult.Abort) 
             {
@@ -115,5 +131,14 @@ namespace Ahora_si
             }
             
         }
+
+
+
+
+
+
+
+
+
     }
 }

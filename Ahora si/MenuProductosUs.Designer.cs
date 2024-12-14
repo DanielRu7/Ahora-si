@@ -1,6 +1,6 @@
 ﻿namespace Ahora_si
 {
-    partial class MenuProductos
+    partial class MenuProductos2
     {
         /// <summary>
         /// Required designer variable.
@@ -43,16 +43,12 @@
             pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
-            buttonBorrar10 = new Button();
-            buttonBorrar9 = new Button();
-            buttonBorrar8 = new Button();
-            buttonBorrar7 = new Button();
-            buttonBorrar6 = new Button();
-            buttonBorrar5 = new Button();
-            buttonBorrar4 = new Button();
-            buttonBorrar3 = new Button();
-            buttonBorrar2 = new Button();
-            buttonBorrar1 = new Button();
+            labelNoE1 = new Label();
+            labelNoE2 = new Label();
+            labelNoE3 = new Label();
+            labelNoE4 = new Label();
+            labelNoE5 = new Label();
+            pictureBox1 = new PictureBox();
             pictureBox10 = new PictureBox();
             label10 = new Label();
             pictureBox9 = new PictureBox();
@@ -72,7 +68,11 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
+            labelNoE6 = new Label();
+            labelNoE7 = new Label();
+            labelNoE8 = new Label();
+            labelNoE9 = new Label();
+            labelNoE10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
@@ -81,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -90,7 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxMenu
@@ -110,7 +110,7 @@
             labelCuenta.AutoSize = true;
             labelCuenta.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold);
             labelCuenta.ForeColor = Color.Transparent;
-            labelCuenta.Location = new Point(961, 11);
+            labelCuenta.Location = new Point(929, 11);
             labelCuenta.Name = "labelCuenta";
             labelCuenta.Size = new Size(150, 44);
             labelCuenta.TabIndex = 3;
@@ -252,26 +252,17 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
-            panel2.Controls.Add(buttonBorrar10);
-            panel2.Controls.Add(buttonBorrar9);
-            panel2.Controls.Add(buttonBorrar8);
-            panel2.Controls.Add(buttonBorrar7);
-            panel2.Controls.Add(buttonBorrar6);
-            panel2.Controls.Add(buttonBorrar5);
-            panel2.Controls.Add(buttonBorrar4);
-            panel2.Controls.Add(buttonBorrar3);
-            panel2.Controls.Add(buttonBorrar2);
-            panel2.Controls.Add(buttonBorrar1);
-            panel2.Controls.Add(pictureBox10);
+            panel2.Controls.Add(labelNoE1);
+            panel2.Controls.Add(labelNoE2);
+            panel2.Controls.Add(labelNoE3);
+            panel2.Controls.Add(labelNoE4);
+            panel2.Controls.Add(labelNoE5);
+            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label10);
-            panel2.Controls.Add(pictureBox9);
-            panel2.Controls.Add(pictureBox8);
-            panel2.Controls.Add(pictureBox7);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox4);
@@ -281,107 +272,91 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(labelNoE6);
+            panel2.Controls.Add(labelNoE7);
+            panel2.Controls.Add(labelNoE8);
+            panel2.Controls.Add(labelNoE9);
+            panel2.Controls.Add(labelNoE10);
+            panel2.Controls.Add(pictureBox10);
+            panel2.Controls.Add(pictureBox9);
+            panel2.Controls.Add(pictureBox8);
+            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(pictureBox6);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 65);
             panel2.Name = "panel2";
             panel2.Size = new Size(1110, 700);
             panel2.TabIndex = 6;
             // 
-            // buttonBorrar10
+            // labelNoE1
             // 
-            buttonBorrar10.Location = new Point(898, 561);
-            buttonBorrar10.Name = "buttonBorrar10";
-            buttonBorrar10.Size = new Size(94, 29);
-            buttonBorrar10.TabIndex = 36;
-            buttonBorrar10.Text = "Borrar";
-            buttonBorrar10.UseVisualStyleBackColor = true;
+            labelNoE1.AutoSize = true;
+            labelNoE1.BackColor = Color.Transparent;
+            labelNoE1.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE1.ForeColor = Color.Red;
+            labelNoE1.Location = new Point(86, 148);
+            labelNoE1.Name = "labelNoE1";
+            labelNoE1.Size = new Size(0, 20);
+            labelNoE1.TabIndex = 27;
             // 
-            // buttonBorrar9
+            // labelNoE2
             // 
-            buttonBorrar9.Location = new Point(696, 561);
-            buttonBorrar9.Name = "buttonBorrar9";
-            buttonBorrar9.Size = new Size(94, 29);
-            buttonBorrar9.TabIndex = 35;
-            buttonBorrar9.Text = "Borrar";
-            buttonBorrar9.UseVisualStyleBackColor = true;
+            labelNoE2.AutoSize = true;
+            labelNoE2.BackColor = Color.Transparent;
+            labelNoE2.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE2.ForeColor = Color.Red;
+            labelNoE2.Location = new Point(287, 148);
+            labelNoE2.Name = "labelNoE2";
+            labelNoE2.Size = new Size(0, 20);
+            labelNoE2.TabIndex = 28;
             // 
-            // buttonBorrar8
+            // labelNoE3
             // 
-            buttonBorrar8.Location = new Point(491, 561);
-            buttonBorrar8.Name = "buttonBorrar8";
-            buttonBorrar8.Size = new Size(94, 29);
-            buttonBorrar8.TabIndex = 34;
-            buttonBorrar8.Text = "Borrar";
-            buttonBorrar8.UseVisualStyleBackColor = true;
+            labelNoE3.AutoSize = true;
+            labelNoE3.BackColor = Color.Transparent;
+            labelNoE3.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE3.ForeColor = Color.Red;
+            labelNoE3.Location = new Point(491, 148);
+            labelNoE3.Name = "labelNoE3";
+            labelNoE3.Size = new Size(0, 20);
+            labelNoE3.TabIndex = 29;
             // 
-            // buttonBorrar7
+            // labelNoE4
             // 
-            buttonBorrar7.Location = new Point(287, 561);
-            buttonBorrar7.Name = "buttonBorrar7";
-            buttonBorrar7.Size = new Size(94, 29);
-            buttonBorrar7.TabIndex = 33;
-            buttonBorrar7.Text = "Borrar";
-            buttonBorrar7.UseVisualStyleBackColor = true;
+            labelNoE4.AutoSize = true;
+            labelNoE4.BackColor = Color.Transparent;
+            labelNoE4.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE4.ForeColor = Color.Red;
+            labelNoE4.Location = new Point(696, 148);
+            labelNoE4.Name = "labelNoE4";
+            labelNoE4.Size = new Size(0, 20);
+            labelNoE4.TabIndex = 30;
             // 
-            // buttonBorrar6
+            // labelNoE5
             // 
-            buttonBorrar6.Location = new Point(85, 561);
-            buttonBorrar6.Name = "buttonBorrar6";
-            buttonBorrar6.Size = new Size(94, 29);
-            buttonBorrar6.TabIndex = 32;
-            buttonBorrar6.Text = "Borrar";
-            buttonBorrar6.UseVisualStyleBackColor = true;
+            labelNoE5.AutoSize = true;
+            labelNoE5.BackColor = Color.Transparent;
+            labelNoE5.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE5.ForeColor = Color.Red;
+            labelNoE5.Location = new Point(898, 148);
+            labelNoE5.Name = "labelNoE5";
+            labelNoE5.Size = new Size(0, 20);
+            labelNoE5.TabIndex = 31;
             // 
-            // buttonBorrar5
+            // pictureBox1
             // 
-            buttonBorrar5.Location = new Point(912, 226);
-            buttonBorrar5.Name = "buttonBorrar5";
-            buttonBorrar5.Size = new Size(94, 29);
-            buttonBorrar5.TabIndex = 31;
-            buttonBorrar5.Text = "Borrar";
-            buttonBorrar5.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar4
-            // 
-            buttonBorrar4.Location = new Point(710, 226);
-            buttonBorrar4.Name = "buttonBorrar4";
-            buttonBorrar4.Size = new Size(94, 29);
-            buttonBorrar4.TabIndex = 30;
-            buttonBorrar4.Text = "Borrar";
-            buttonBorrar4.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar3
-            // 
-            buttonBorrar3.Location = new Point(505, 226);
-            buttonBorrar3.Name = "buttonBorrar3";
-            buttonBorrar3.Size = new Size(94, 29);
-            buttonBorrar3.TabIndex = 29;
-            buttonBorrar3.Text = "Borrar";
-            buttonBorrar3.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar2
-            // 
-            buttonBorrar2.Location = new Point(301, 226);
-            buttonBorrar2.Name = "buttonBorrar2";
-            buttonBorrar2.Size = new Size(94, 29);
-            buttonBorrar2.TabIndex = 28;
-            buttonBorrar2.Text = "Borrar";
-            buttonBorrar2.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrar1
-            // 
-            buttonBorrar1.Location = new Point(99, 226);
-            buttonBorrar1.Name = "buttonBorrar1";
-            buttonBorrar1.Size = new Size(94, 29);
-            buttonBorrar1.TabIndex = 27;
-            buttonBorrar1.Text = "Borrar";
-            buttonBorrar1.UseVisualStyleBackColor = true;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(86, 88);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(118, 131);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Transparent;
-            pictureBox10.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox10.Location = new Point(888, 424);
             pictureBox10.Name = "pictureBox10";
@@ -394,7 +369,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11.25F);
-            label10.Location = new Point(888, 396);
+            label10.Location = new Point(888, 557);
             label10.Name = "label10";
             label10.Size = new Size(163, 25);
             label10.TabIndex = 25;
@@ -403,7 +378,6 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox9.Location = new Point(686, 424);
             pictureBox9.Name = "pictureBox9";
@@ -415,7 +389,6 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox8.Location = new Point(481, 424);
             pictureBox8.Name = "pictureBox8";
@@ -427,7 +400,6 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox7.Location = new Point(277, 424);
             pictureBox7.Name = "pictureBox7";
@@ -440,7 +412,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F);
-            label9.Location = new Point(686, 396);
+            label9.Location = new Point(686, 557);
             label9.Name = "label9";
             label9.Size = new Size(163, 25);
             label9.TabIndex = 21;
@@ -450,7 +422,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.25F);
-            label8.Location = new Point(472, 396);
+            label8.Location = new Point(472, 557);
             label8.Name = "label8";
             label8.Size = new Size(163, 25);
             label8.TabIndex = 20;
@@ -460,7 +432,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F);
-            label7.Location = new Point(266, 396);
+            label7.Location = new Point(266, 557);
             label7.Name = "label7";
             label7.Size = new Size(163, 25);
             label7.TabIndex = 19;
@@ -470,7 +442,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F);
-            label6.Location = new Point(65, 396);
+            label6.Location = new Point(65, 557);
             label6.Name = "label6";
             label6.Size = new Size(163, 25);
             label6.TabIndex = 18;
@@ -479,7 +451,6 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BackgroundImage = Properties.Resources.botonagregar_removebg_preview1;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox6.Location = new Point(75, 424);
             pictureBox6.Name = "pictureBox6";
@@ -491,9 +462,9 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
+            pictureBox5.BackgroundImage = Properties.Resources.Sin_título;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox5.Location = new Point(898, 89);
+            pictureBox5.Location = new Point(898, 88);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(118, 131);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -504,7 +475,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F);
-            label5.Location = new Point(898, 61);
+            label5.Location = new Point(898, 223);
             label5.Name = "label5";
             label5.Size = new Size(163, 25);
             label5.TabIndex = 15;
@@ -513,9 +484,8 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Location = new Point(696, 89);
+            pictureBox4.Location = new Point(696, 88);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(118, 131);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -525,9 +495,8 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(491, 89);
+            pictureBox3.Location = new Point(491, 88);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(118, 131);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -537,9 +506,8 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(287, 89);
+            pictureBox2.Location = new Point(287, 88);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(118, 131);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -550,7 +518,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(696, 61);
+            label4.Location = new Point(696, 223);
             label4.Name = "label4";
             label4.Size = new Size(163, 25);
             label4.TabIndex = 10;
@@ -560,7 +528,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F);
-            label3.Location = new Point(483, 61);
+            label3.Location = new Point(483, 223);
             label3.Name = "label3";
             label3.Size = new Size(163, 25);
             label3.TabIndex = 7;
@@ -570,7 +538,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(278, 61);
+            label2.Location = new Point(278, 223);
             label2.Name = "label2";
             label2.Size = new Size(163, 25);
             label2.TabIndex = 4;
@@ -580,25 +548,68 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(75, 61);
+            label1.Location = new Point(75, 223);
             label1.Name = "label1";
             label1.Size = new Size(163, 25);
             label1.TabIndex = 1;
             label1.Text = "Nombre producto";
             // 
-            // pictureBox1
+            // labelNoE6
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = Properties.Resources.botonagregar_removebg_preview;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(86, 89);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(118, 131);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            labelNoE6.AutoSize = true;
+            labelNoE6.BackColor = Color.Transparent;
+            labelNoE6.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE6.ForeColor = Color.Red;
+            labelNoE6.Location = new Point(75, 481);
+            labelNoE6.Name = "labelNoE6";
+            labelNoE6.Size = new Size(0, 20);
+            labelNoE6.TabIndex = 32;
             // 
-            // MenuProductos
+            // labelNoE7
+            // 
+            labelNoE7.AutoSize = true;
+            labelNoE7.BackColor = Color.Transparent;
+            labelNoE7.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE7.ForeColor = Color.Red;
+            labelNoE7.Location = new Point(277, 481);
+            labelNoE7.Name = "labelNoE7";
+            labelNoE7.Size = new Size(0, 20);
+            labelNoE7.TabIndex = 33;
+            // 
+            // labelNoE8
+            // 
+            labelNoE8.AutoSize = true;
+            labelNoE8.BackColor = Color.Transparent;
+            labelNoE8.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE8.ForeColor = Color.Red;
+            labelNoE8.Location = new Point(481, 481);
+            labelNoE8.Name = "labelNoE8";
+            labelNoE8.Size = new Size(0, 20);
+            labelNoE8.TabIndex = 34;
+            // 
+            // labelNoE9
+            // 
+            labelNoE9.AutoSize = true;
+            labelNoE9.BackColor = Color.Transparent;
+            labelNoE9.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE9.ForeColor = Color.Red;
+            labelNoE9.Location = new Point(686, 481);
+            labelNoE9.Name = "labelNoE9";
+            labelNoE9.Size = new Size(0, 20);
+            labelNoE9.TabIndex = 35;
+            // 
+            // labelNoE10
+            // 
+            labelNoE10.AutoSize = true;
+            labelNoE10.BackColor = Color.Transparent;
+            labelNoE10.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE10.ForeColor = Color.Red;
+            labelNoE10.Location = new Point(888, 481);
+            labelNoE10.Name = "labelNoE10";
+            labelNoE10.Size = new Size(0, 20);
+            labelNoE10.TabIndex = 36;
+            // 
+            // MenuProductos2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -608,7 +619,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "MenuProductos";
+            Name = "MenuProductos2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuProductos";
             FormClosing += MenuProductos_FormClosing;
@@ -623,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -632,7 +644,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -671,15 +682,15 @@
         private PictureBox pictureBox12;
         private PictureBox pictureBox13;
         private PictureBox pictureBoxMusica;
-        private Button buttonBorrar1;
-        private Button buttonBorrar10;
-        private Button buttonBorrar9;
-        private Button buttonBorrar8;
-        private Button buttonBorrar7;
-        private Button buttonBorrar6;
-        private Button buttonBorrar5;
-        private Button buttonBorrar4;
-        private Button buttonBorrar3;
-        private Button buttonBorrar2;
+        private Label labelNoE1;
+        private Label labelNoE10;
+        private Label labelNoE9;
+        private Label labelNoE8;
+        private Label labelNoE7;
+        private Label labelNoE6;
+        private Label labelNoE5;
+        private Label labelNoE4;
+        private Label labelNoE3;
+        private Label labelNoE2;
     }
 }
