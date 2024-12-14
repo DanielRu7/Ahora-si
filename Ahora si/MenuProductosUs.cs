@@ -63,6 +63,11 @@ namespace Ahora_si
                 }
                 else
                 {
+                    //mandar el producto entero
+                    ComprarProducto comp=new ComprarProducto(pro);
+                    comp.ShowDialog();
+                    mostrar();
+
 
                 }
 
