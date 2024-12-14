@@ -111,7 +111,7 @@
             labelCuenta.AutoSize = true;
             labelCuenta.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold);
             labelCuenta.ForeColor = Color.Transparent;
-            labelCuenta.Location = new Point(813, 8);
+            labelCuenta.Location = new Point(66, 6);
             labelCuenta.Name = "labelCuenta";
             labelCuenta.Size = new Size(118, 36);
             labelCuenta.TabIndex = 3;
@@ -175,7 +175,7 @@
             // 
             pictureBoxCarrito.BackColor = Color.Transparent;
             pictureBoxCarrito.Image = Properties.Resources.anadir_a_la_cesta;
-            pictureBoxCarrito.Location = new Point(746, 6);
+            pictureBoxCarrito.Location = new Point(908, 7);
             pictureBoxCarrito.Name = "pictureBoxCarrito";
             pictureBoxCarrito.Size = new Size(40, 37);
             pictureBoxCarrito.SizeMode = PictureBoxSizeMode.Zoom;
@@ -352,10 +352,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(75, 66);
+            pictureBox1.Location = new Point(66, 66);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(103, 98);
+            pictureBox1.Size = new Size(135, 124);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -363,50 +363,50 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 11.25F);
-            label10.Location = new Point(777, 418);
+            label10.Font = new Font("Segoe UI", 12F);
+            label10.Location = new Point(777, 284);
             label10.Name = "label10";
-            label10.Size = new Size(129, 20);
+            label10.Size = new Size(135, 21);
             label10.TabIndex = 25;
             label10.Text = "Nombre producto";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11.25F);
-            label9.Location = new Point(600, 418);
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.Location = new Point(600, 284);
             label9.Name = "label9";
-            label9.Size = new Size(129, 20);
+            label9.Size = new Size(135, 21);
             label9.TabIndex = 21;
             label9.Text = "Nombre producto";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11.25F);
-            label8.Location = new Point(413, 418);
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(421, 284);
             label8.Name = "label8";
-            label8.Size = new Size(129, 20);
+            label8.Size = new Size(135, 21);
             label8.TabIndex = 20;
             label8.Text = "Nombre producto";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F);
-            label7.Location = new Point(233, 418);
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(242, 284);
             label7.Name = "label7";
-            label7.Size = new Size(129, 20);
+            label7.Size = new Size(135, 21);
             label7.TabIndex = 19;
             label7.Text = "Nombre producto";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F);
-            label6.Location = new Point(57, 418);
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(66, 284);
             label6.Name = "label6";
-            label6.Size = new Size(129, 20);
+            label6.Size = new Size(135, 21);
             label6.TabIndex = 18;
             label6.Text = "Nombre producto";
             // 
@@ -415,10 +415,10 @@
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.BackgroundImage = Properties.Resources.Sin_título;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox5.Location = new Point(786, 66);
+            pictureBox5.Location = new Point(777, 66);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(103, 98);
+            pictureBox5.Size = new Size(135, 124);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 16;
             pictureBox5.TabStop = false;
@@ -426,10 +426,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F);
-            label5.Location = new Point(786, 167);
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(777, 33);
             label5.Name = "label5";
-            label5.Size = new Size(129, 20);
+            label5.Size = new Size(135, 21);
             label5.TabIndex = 15;
             label5.Text = "Nombre producto";
             // 
@@ -437,10 +437,10 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Location = new Point(609, 66);
+            pictureBox4.Location = new Point(600, 66);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(103, 98);
+            pictureBox4.Size = new Size(135, 124);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
@@ -449,10 +449,10 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(430, 66);
+            pictureBox3.Location = new Point(421, 66);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(103, 98);
+            pictureBox3.Size = new Size(135, 124);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
@@ -461,10 +461,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(251, 66);
+            pictureBox2.Location = new Point(242, 66);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(103, 98);
+            pictureBox2.Size = new Size(135, 124);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 12;
             pictureBox2.TabStop = false;
@@ -472,40 +472,40 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F);
-            label4.Location = new Point(609, 167);
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(600, 33);
             label4.Name = "label4";
-            label4.Size = new Size(129, 20);
+            label4.Size = new Size(135, 21);
             label4.TabIndex = 10;
             label4.Text = "Nombre producto";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F);
-            label3.Location = new Point(423, 167);
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(421, 33);
             label3.Name = "label3";
-            label3.Size = new Size(129, 20);
+            label3.Size = new Size(135, 21);
             label3.TabIndex = 7;
             label3.Text = "Nombre producto";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(243, 167);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(242, 33);
             label2.Name = "label2";
-            label2.Size = new Size(129, 20);
+            label2.Size = new Size(135, 21);
             label2.TabIndex = 4;
             label2.Text = "Nombre producto";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(66, 167);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(66, 33);
             label1.Name = "label1";
-            label1.Size = new Size(129, 20);
+            label1.Size = new Size(135, 21);
             label1.TabIndex = 1;
             label1.Text = "Nombre producto";
             // 
@@ -571,7 +571,7 @@
             pictureBox10.Location = new Point(777, 318);
             pictureBox10.Margin = new Padding(3, 2, 3, 2);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(103, 98);
+            pictureBox10.Size = new Size(135, 124);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 26;
             pictureBox10.TabStop = false;
@@ -583,7 +583,7 @@
             pictureBox9.Location = new Point(600, 318);
             pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(103, 98);
+            pictureBox9.Size = new Size(135, 124);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 24;
             pictureBox9.TabStop = false;
@@ -595,7 +595,7 @@
             pictureBox8.Location = new Point(421, 318);
             pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(103, 98);
+            pictureBox8.Size = new Size(135, 124);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 23;
             pictureBox8.TabStop = false;
@@ -607,7 +607,7 @@
             pictureBox7.Location = new Point(242, 318);
             pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(103, 98);
+            pictureBox7.Size = new Size(135, 124);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 22;
             pictureBox7.TabStop = false;
@@ -619,7 +619,7 @@
             pictureBox6.Location = new Point(66, 318);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(103, 98);
+            pictureBox6.Size = new Size(135, 124);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;

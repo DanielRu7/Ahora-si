@@ -68,12 +68,12 @@
             // lblhora
             // 
             lblhora.AutoSize = true;
-            lblhora.BackColor = SystemColors.ControlDark;
-            lblhora.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblhora.BackColor = Color.Transparent;
+            lblhora.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblhora.ForeColor = SystemColors.ActiveCaptionText;
-            lblhora.Location = new Point(379, 425);
+            lblhora.Location = new Point(364, 426);
             lblhora.Name = "lblhora";
-            lblhora.Size = new Size(0, 21);
+            lblhora.Size = new Size(0, 24);
             lblhora.TabIndex = 8;
             // 
             // button1

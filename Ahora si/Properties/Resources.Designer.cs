@@ -183,6 +183,36 @@ namespace Ahora_si.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iniciarsesion_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("iniciarsesion-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logodulceria {
+            get {
+                object obj = ResourceManager.GetObject("logodulceria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logodulceria_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("logodulceria-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);
@@ -227,6 +257,16 @@ namespace Ahora_si.Properties {
         internal static System.Drawing.Bitmap poder {
             get {
                 object obj = ResourceManager.GetObject("poder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap regresar_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("regresar-removebg-preview (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

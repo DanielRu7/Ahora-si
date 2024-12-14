@@ -34,8 +34,12 @@
             label1 = new Label();
             textBoxContrasena = new TextBox();
             SignUp = new Panel();
-            buttonRegresar = new Button();
+            pictureBox12 = new PictureBox();
+            pictureBox11 = new PictureBox();
+            pictureBox10 = new PictureBox();
             buttonCrear = new Button();
+            pictureBox9 = new PictureBox();
+            buttonRegresar = new Button();
             ButtonInvitado = new Panel();
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
@@ -53,8 +57,11 @@
             linkLabel = new LinkLabel();
             label2 = new Label();
             pictureBox3 = new PictureBox();
-            pictureBox9 = new PictureBox();
             SignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ButtonInvitado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -64,12 +71,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(52, 111);
+            textBoxNombre.Location = new Point(123, 106);
             textBoxNombre.Margin = new Padding(3, 2, 3, 2);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.PlaceholderText = "Nombre";
@@ -79,7 +85,7 @@
             // 
             // textBoxCuenta
             // 
-            textBoxCuenta.Location = new Point(51, 157);
+            textBoxCuenta.Location = new Point(122, 152);
             textBoxCuenta.Margin = new Padding(3, 2, 3, 2);
             textBoxCuenta.Name = "textBoxCuenta";
             textBoxCuenta.PlaceholderText = "Cuenta";
@@ -91,15 +97,15 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(162, 29);
+            label1.Location = new Point(142, 30);
             label1.Name = "label1";
-            label1.Size = new Size(117, 36);
+            label1.Size = new Size(159, 36);
             label1.TabIndex = 2;
-            label1.Text = "Sign up";
+            label1.Text = "Registrase";
             // 
             // textBoxContrasena
             // 
-            textBoxContrasena.Location = new Point(51, 205);
+            textBoxContrasena.Location = new Point(122, 200);
             textBoxContrasena.Margin = new Padding(3, 2, 3, 2);
             textBoxContrasena.Name = "textBoxContrasena";
             textBoxContrasena.PlaceholderText = "Contraseña";
@@ -110,10 +116,12 @@
             // SignUp
             // 
             SignUp.BackColor = SystemColors.ControlLightLight;
-            SignUp.Controls.Add(pictureBox9);
-            SignUp.Controls.Add(ButtonInvitado);
-            SignUp.Controls.Add(buttonRegresar);
+            SignUp.Controls.Add(pictureBox12);
+            SignUp.Controls.Add(pictureBox11);
+            SignUp.Controls.Add(pictureBox10);
             SignUp.Controls.Add(buttonCrear);
+            SignUp.Controls.Add(pictureBox9);
+            SignUp.Controls.Add(buttonRegresar);
             SignUp.Controls.Add(textBoxContrasena);
             SignUp.Controls.Add(label1);
             SignUp.Controls.Add(textBoxCuenta);
@@ -121,31 +129,79 @@
             SignUp.Location = new Point(2, 0);
             SignUp.Margin = new Padding(3, 2, 3, 2);
             SignUp.Name = "SignUp";
-            SignUp.Size = new Size(460, 547);
+            SignUp.Size = new Size(448, 522);
             SignUp.TabIndex = 4;
             SignUp.Paint += SignUp_Paint;
             // 
-            // buttonRegresar
+            // pictureBox12
             // 
-            buttonRegresar.Location = new Point(133, 304);
-            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
-            buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(82, 22);
-            buttonRegresar.TabIndex = 1;
-            buttonRegresar.Text = "Regresar";
-            buttonRegresar.UseVisualStyleBackColor = true;
-            buttonRegresar.Click += button1_Click;
+            pictureBox12.BackColor = Color.Transparent;
+            pictureBox12.Image = Properties.Resources.circulo;
+            pictureBox12.Location = new Point(65, 475);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(120, 106);
+            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox12.TabIndex = 37;
+            pictureBox12.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.BackColor = Color.Transparent;
+            pictureBox11.Image = Properties.Resources.circulo;
+            pictureBox11.Location = new Point(316, -53);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(305, 279);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 36;
+            pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackColor = Color.Transparent;
+            pictureBox10.Image = Properties.Resources.circulo;
+            pictureBox10.Location = new Point(362, 385);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(120, 106);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 35;
+            pictureBox10.TabStop = false;
             // 
             // buttonCrear
             // 
-            buttonCrear.Location = new Point(100, 264);
+            buttonCrear.BackColor = Color.Transparent;
+            buttonCrear.BackgroundImage = (Image)resources.GetObject("buttonCrear.BackgroundImage");
+            buttonCrear.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonCrear.FlatStyle = FlatStyle.Flat;
+            buttonCrear.Location = new Point(173, 249);
             buttonCrear.Margin = new Padding(3, 2, 3, 2);
             buttonCrear.Name = "buttonCrear";
-            buttonCrear.Size = new Size(82, 22);
-            buttonCrear.TabIndex = 5;
-            buttonCrear.Text = "Crear";
-            buttonCrear.UseVisualStyleBackColor = true;
-            buttonCrear.Click += buttonCrear_Click;
+            buttonCrear.Size = new Size(68, 68);
+            buttonCrear.TabIndex = 34;
+            buttonCrear.Text = "    ";
+            buttonCrear.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.Transparent;
+            pictureBox9.Image = Properties.Resources.circulo;
+            pictureBox9.Location = new Point(-40, 363);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(120, 106);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 33;
+            pictureBox9.TabStop = false;
+            // 
+            // buttonRegresar
+            // 
+            buttonRegresar.BackgroundImage = Properties.Resources.regresar_removebg_preview__1_;
+            buttonRegresar.FlatStyle = FlatStyle.Flat;
+            buttonRegresar.Location = new Point(173, 357);
+            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
+            buttonRegresar.Name = "buttonRegresar";
+            buttonRegresar.Size = new Size(68, 62);
+            buttonRegresar.TabIndex = 1;
+            buttonRegresar.UseVisualStyleBackColor = true;
+            buttonRegresar.Click += button1_Click;
             // 
             // ButtonInvitado
             // 
@@ -166,7 +222,7 @@
             ButtonInvitado.Controls.Add(linkLabel);
             ButtonInvitado.Controls.Add(label2);
             ButtonInvitado.Controls.Add(pictureBox3);
-            ButtonInvitado.Location = new Point(264, 0);
+            ButtonInvitado.Location = new Point(2, 0);
             ButtonInvitado.Margin = new Padding(3, 2, 3, 2);
             ButtonInvitado.Name = "ButtonInvitado";
             ButtonInvitado.Size = new Size(448, 524);
@@ -362,22 +418,12 @@
             pictureBox3.TabIndex = 27;
             pictureBox3.TabStop = false;
             // 
-            // pictureBox9
-            // 
-            pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.Image = Properties.Resources.circulo;
-            pictureBox9.Location = new Point(-40, 363);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(120, 106);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 33;
-            pictureBox9.TabStop = false;
-            // 
             // Crear_cuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(444, 517);
+            Controls.Add(ButtonInvitado);
             Controls.Add(SignUp);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -387,6 +433,10 @@
             Text = "Crear_cuenta";
             SignUp.ResumeLayout(false);
             SignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ButtonInvitado.ResumeLayout(false);
             ButtonInvitado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -397,7 +447,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
 
@@ -408,7 +457,6 @@
         private Label label1;
         private TextBox textBoxContrasena;
         private Panel SignUp;
-        private Button buttonCrear;
         private Panel ButtonInvitado;
         private LinkLabel linkLabel;
         private Button buttonRegresar;
@@ -428,5 +476,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox9;
+        private Button buttonCrear;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox12;
     }
 }

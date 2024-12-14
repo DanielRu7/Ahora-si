@@ -14,8 +14,13 @@ namespace Ahora_si
             Portada portada = new Portada();
             if (portada.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new Crear_cuenta());
+                segundaportada cosa = new segundaportada(); 
+                if (cosa.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new Crear_cuenta());
+                }
             }
+
 
         }
     }

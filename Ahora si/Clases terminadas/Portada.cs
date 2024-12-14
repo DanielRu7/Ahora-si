@@ -6,7 +6,7 @@
         {
             InitializeComponent();
             // Asignar eventos MouseEnter y MouseLeave para todas las labels
-            Label[] labels = { label1, label2, label4, label5, label6 };
+            Label[] labels = { label1, label4, label5, label6 };
 
             foreach (var labs in labels)
             {
@@ -53,6 +53,7 @@
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+
         }
     }
 }
