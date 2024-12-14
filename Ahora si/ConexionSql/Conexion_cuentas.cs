@@ -37,6 +37,32 @@ namespace Ahora_si.ConexionSql
             }
         }
 
+        public void actualizarMonto(float monto, string cuenta, string contrasena)
+        {
+            try
+            {
+
+                    string query = "UPDATE persona SET monto = @monto WHERE cuenta = @cuenta AND contrasena = @contrasena";
+                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+
+                    cmd.Parameters.AddWithValue("@monto", monto);
+                    cmd.Parameters.AddWithValue("@cuenta", cuenta);
+                    cmd.Parameters.AddWithValue("@contrasena", contrasena);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Monto actualizado correctamente");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al aumentar el monto " );
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
 
         public void Insertar(string nombre,string cuenta,string contrasena)//conexion a la base de datos persona agrega cuentas OJO
         {

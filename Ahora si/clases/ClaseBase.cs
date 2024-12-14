@@ -68,6 +68,7 @@ namespace Ahora_si.clases
         {
             this.Close();
             musica.play.Stop();
+            
         }
         public void cerrar()//CUANDO SE CIERRA El FORMS //MUSICA
         {

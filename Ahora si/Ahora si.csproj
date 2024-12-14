@@ -37,6 +37,9 @@
     <None Update="Resources\accederlogin.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\anadir-a-la-cesta.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\barra-de-menus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

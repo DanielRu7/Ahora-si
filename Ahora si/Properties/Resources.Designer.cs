@@ -83,6 +83,16 @@ namespace Ahora_si.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anadir_a_la_cesta {
+            get {
+                object obj = ResourceManager.GetObject("anadir-a-la-cesta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barra_de_menus {
             get {
                 object obj = ResourceManager.GetObject("barra-de-menus", resourceCulture);

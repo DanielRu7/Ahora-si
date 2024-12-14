@@ -7,12 +7,16 @@ namespace Ahora_si
     public partial class MenuProductos2 : ClaseBase
     {
         private Label[] Existencia;
+        private string cuenta, contrasena;
+        
         public MenuProductos2()
         {
             InitializeComponent();
         }
         public MenuProductos2(string cuenta, string contrasena)
         {
+            this.cuenta = cuenta;
+            this.contrasena = contrasena;   
             Datos(cuenta, contrasena);
 
             InitializeComponent();
@@ -20,7 +24,7 @@ namespace Ahora_si
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
             Button[] botones = { button1, button2, button3, buttonFiniquitar };
 
-            Label[] Existencia = { labelNoE1,labelNoE2,labelNoE3,labelNoE4,labelNoE5,labelNoE6,labelNoE7,labelNoE8,labelNoE9,labelNoE10};
+            Label[] Existencia = { labelNoE1, labelNoE2, labelNoE3, labelNoE4, labelNoE5, labelNoE6, labelNoE7, labelNoE8, labelNoE9, labelNoE10 };
             this.Existencia = Existencia;
             obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu);
             labelCuenta.Text = cuenta;
@@ -32,12 +36,14 @@ namespace Ahora_si
             }
 
         }
+
         //modificar mostrar
         //quitar los botones y eventos
 
 
         private void MenuProductos_FormClosing(object sender, FormClosingEventArgs e)//general
         {
+
             cerrar();
         }
 
@@ -56,15 +62,15 @@ namespace Ahora_si
             {
                 //FINALY
                 Conexion_productos conexion = new Conexion_productos();
-                producto pro=conexion.BuscarNombre(Convert.ToInt32( box.Tag));
-                if (pro.Cantidad<=0)
+                producto pro = conexion.BuscarNombre(Convert.ToInt32(box.Tag));
+                if (pro.Cantidad <= 0)
                 {
                     MessageBox.Show("NO HAY EXISTENCIAS");
                 }
                 else
                 {
                     //mandar el producto entero
-                    ComprarProducto comp=new ComprarProducto(pro);
+                    ComprarProducto comp = new ComprarProducto(pro,cuenta,contrasena);
                     comp.ShowDialog();
                     mostrar();
 
@@ -99,6 +105,12 @@ namespace Ahora_si
                 nombres[i].Text = "";
             }
 
+        }
+
+        private void pictureBoxCarrito_Click(object sender, EventArgs e)
+        {
+            Carrito carrito = new Carrito(cuenta,contrasena);
+            carrito.ShowDialog();
         }
     }
 }
