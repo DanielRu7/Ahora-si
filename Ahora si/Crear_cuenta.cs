@@ -75,8 +75,8 @@ namespace Ahora_si
             {
                 Conexion_cuentas doble = new Conexion_cuentas();
 
-                persona per= doble.Busqueda_Usuario(cuenta, contrasena);
-                if (per.Admin==true)
+                persona per = doble.Busqueda_Usuario(cuenta, contrasena);
+                if (per.Admin == true)
                 {
                     MenuProductos obj = new MenuProductos(cuenta, contrasena);
                     this.Hide();
@@ -104,7 +104,7 @@ namespace Ahora_si
                     }
 
                 }
-                
+
             }
             else
             {
@@ -121,7 +121,7 @@ namespace Ahora_si
         {
             MenuProductos2 obj = new MenuProductos2("invitado", "invitado");
             this.Hide();
-            if (obj.ShowDialog() != DialogResult.Abort) 
+            if (obj.ShowDialog() != DialogResult.Abort)
             {
                 this.Show();
             }
@@ -129,16 +129,12 @@ namespace Ahora_si
             {
                 this.Close();
             }
-            
+
         }
 
+        private void SignUp_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
-
-
-
-
-
+        }
     }
 }

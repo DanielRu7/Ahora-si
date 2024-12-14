@@ -23,7 +23,7 @@ namespace Ahora_si
         {
             InitializeComponent();
         }
-        public ComprarProducto(producto pro,string cuenta,string contrasena)
+        public ComprarProducto(producto pro, string cuenta, string contrasena)
         {
             InitializeComponent();
             this.cuenta = cuenta;
@@ -33,11 +33,11 @@ namespace Ahora_si
         }
         private void llenar()
         {
-            textBoxId.Text = Convert.ToString(pro.Id);
-            textBoxCantidad.Text = Convert.ToString(pro.Cantidad);
-            textBoxNombre.Text = pro.Nombre;
-            textBoxPrecio.Text = Convert.ToString(pro.Precio);
-            richTextBoxDescripcion.Text = pro.Descripcion;
+            label6.Text = Convert.ToString(pro.Id);
+            label7.Text = Convert.ToString(pro.Cantidad);
+            label8.Text = pro.Nombre;
+            label9.Text = Convert.ToString(pro.Precio);
+            label10.Text = pro.Descripcion;
             pictureBoxImagen.Image = Image.FromStream(new MemoryStream(pro.Imagen));
 
         }
@@ -48,7 +48,7 @@ namespace Ahora_si
 
             Conexion_productos obj = new Conexion_productos();
             obj.agregarCarroDeCompras(pro);
-            obj.actualizarMonto(obj2.getCarrito(),cuenta, contrasena);
+            obj.actualizarMonto(obj2.getCarrito(), cuenta, contrasena);
             this.Close();
         }
 
@@ -56,6 +56,11 @@ namespace Ahora_si
         {
 
             this.Close();
+        }
+
+        private void richTextBoxDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
