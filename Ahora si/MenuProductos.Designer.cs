@@ -36,6 +36,9 @@
             button3 = new Button();
             sidebarTransition = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            label12 = new Label();
+            label11 = new Label();
+            pictureBox14 = new PictureBox();
             panelSidebar = new Panel();
             pictureBoxMusica = new PictureBox();
             pictureBox13 = new PictureBox();
@@ -73,8 +76,10 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            timerparpadea = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMusica).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
@@ -99,7 +104,7 @@
             pictureBoxMenu.Image = Properties.Resources.barra_de_menus;
             pictureBoxMenu.Location = new Point(6, 7);
             pictureBoxMenu.Name = "pictureBoxMenu";
-            pictureBoxMenu.Size = new Size(40, 36);
+            pictureBoxMenu.Size = new Size(50, 50);
             pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMenu.TabIndex = 0;
             pictureBoxMenu.TabStop = false;
@@ -109,7 +114,7 @@
             labelCuenta.AutoSize = true;
             labelCuenta.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold);
             labelCuenta.ForeColor = Color.Transparent;
-            labelCuenta.Location = new Point(841, 8);
+            labelCuenta.Location = new Point(66, 10);
             labelCuenta.Name = "labelCuenta";
             labelCuenta.Size = new Size(118, 36);
             labelCuenta.TabIndex = 3;
@@ -160,13 +165,50 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(pictureBox14);
             panel1.Controls.Add(pictureBoxMenu);
             panel1.Controls.Add(labelCuenta);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(971, 49);
+            panel1.Size = new Size(971, 62);
             panel1.TabIndex = 4;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = SystemColors.ControlLightLight;
+            label12.Location = new Point(357, 32);
+            label12.Name = "label12";
+            label12.Size = new Size(277, 19);
+            label12.TabIndex = 6;
+            label12.Text = "\"Sabores que Iluminan la Pantalla\"";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = SystemColors.ControlLightLight;
+            label11.Location = new Point(421, 7);
+            label11.Name = "label11";
+            label11.Size = new Size(138, 25);
+            label11.TabIndex = 5;
+            label11.Text = "Candy Shop";
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.BackColor = Color.Transparent;
+            pictureBox14.BackgroundImage = Properties.Resources.loguitoinvertido;
+            pictureBox14.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox14.Location = new Point(903, 3);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(56, 54);
+            pictureBox14.TabIndex = 4;
+            pictureBox14.TabStop = false;
             // 
             // panelSidebar
             // 
@@ -181,9 +223,9 @@
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(button2);
             panelSidebar.Dock = DockStyle.Left;
-            panelSidebar.Location = new Point(0, 49);
+            panelSidebar.Location = new Point(0, 62);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(0, 525);
+            panelSidebar.Size = new Size(0, 512);
             panelSidebar.TabIndex = 5;
             // 
             // pictureBoxMusica
@@ -272,10 +314,10 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 49);
+            panel2.Location = new Point(0, 62);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(971, 525);
+            panel2.Size = new Size(971, 512);
             panel2.TabIndex = 6;
             // 
             // buttonBorrar10
@@ -618,6 +660,11 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // timerparpadea
+            // 
+            timerparpadea.Interval = 500;
+            timerparpadea.Tick += timerparpadea_Tick;
+            // 
             // MenuProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -635,6 +682,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             panelSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxMusica).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -700,5 +748,9 @@
         private Button buttonBorrar4;
         private Button buttonBorrar3;
         private Button buttonBorrar2;
+        private PictureBox pictureBox14;
+        private Label label11;
+        private Label label12;
+        private System.Windows.Forms.Timer timerparpadea;
     }
 }

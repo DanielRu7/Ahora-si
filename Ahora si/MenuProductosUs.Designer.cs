@@ -44,6 +44,9 @@
             pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            panel3 = new Panel();
+            label12 = new Label();
+            label11 = new Label();
             labelNoE1 = new Label();
             labelNoE2 = new Label();
             labelNoE3 = new Label();
@@ -74,6 +77,7 @@
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCarrito).BeginInit();
@@ -83,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -109,7 +114,7 @@
             // labelCuenta
             // 
             labelCuenta.AutoSize = true;
-            labelCuenta.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold);
+            labelCuenta.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelCuenta.ForeColor = Color.Transparent;
             labelCuenta.Location = new Point(66, 6);
             labelCuenta.Name = "labelCuenta";
@@ -198,7 +203,7 @@
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 49);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(0, 525);
+            panelSidebar.Size = new Size(0, 536);
             panelSidebar.TabIndex = 5;
             // 
             // pictureBoxMusica
@@ -256,6 +261,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(panel3);
             panel2.Controls.Add(labelNoE1);
             panel2.Controls.Add(labelNoE2);
             panel2.Controls.Add(labelNoE3);
@@ -290,8 +296,40 @@
             panel2.Location = new Point(0, 49);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(971, 525);
+            panel2.Size = new Size(971, 536);
             panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ActiveCaptionText;
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(label11);
+            panel3.Location = new Point(1, 499);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(970, 37);
+            panel3.TabIndex = 37;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = SystemColors.ControlLightLight;
+            label12.Location = new Point(652, 16);
+            label12.Name = "label12";
+            label12.Size = new Size(11, 16);
+            label12.TabIndex = 1;
+            label12.Text = ".";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = SystemColors.ControlLightLight;
+            label11.Location = new Point(891, 13);
+            label11.Name = "label11";
+            label11.Size = new Size(13, 19);
+            label11.TabIndex = 0;
+            label11.Text = ".";
             // 
             // labelNoE1
             // 
@@ -624,11 +662,16 @@
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
             // MenuProductos2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(971, 574);
+            ClientSize = new Size(971, 585);
             Controls.Add(panel2);
             Controls.Add(panelSidebar);
             Controls.Add(panel1);
@@ -649,6 +692,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -708,5 +753,9 @@
         private Label labelNoE3;
         private Label labelNoE2;
         private PictureBox pictureBoxCarrito;
+        private Panel panel3;
+        private System.Windows.Forms.Timer timer1;
+        private Label label11;
+        private Label label12;
     }
 }

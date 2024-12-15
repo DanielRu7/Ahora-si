@@ -38,33 +38,41 @@
             // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.ActiveCaptionText;
             panel1.Controls.Add(buttonCancelar);
             panel1.Controls.Add(buttonAceptar);
             panel1.Controls.Add(labelProducto);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
+            panel1.ForeColor = SystemColors.ActiveCaptionText;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(505, 233);
+            panel1.Size = new Size(442, 175);
             panel1.TabIndex = 0;
             // 
             // buttonCancelar
             // 
-            buttonCancelar.Location = new Point(362, 174);
+            buttonCancelar.BackgroundImage = Properties.Resources.image__1_;
+            buttonCancelar.FlatStyle = FlatStyle.Flat;
+            buttonCancelar.Location = new Point(256, 80);
+            buttonCancelar.Margin = new Padding(3, 2, 3, 2);
             buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(94, 29);
+            buttonCancelar.Size = new Size(82, 73);
             buttonCancelar.TabIndex = 25;
-            buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = true;
             buttonCancelar.Click += buttonCancelar_Click;
             // 
             // buttonAceptar
             // 
-            buttonAceptar.Location = new Point(50, 174);
+            buttonAceptar.BackgroundImage = Properties.Resources.image1;
+            buttonAceptar.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonAceptar.FlatStyle = FlatStyle.Flat;
+            buttonAceptar.Location = new Point(129, 94);
+            buttonAceptar.Margin = new Padding(3, 2, 3, 2);
             buttonAceptar.Name = "buttonAceptar";
-            buttonAceptar.Size = new Size(94, 29);
+            buttonAceptar.Size = new Size(46, 44);
             buttonAceptar.TabIndex = 24;
-            buttonAceptar.Text = "Aceptar";
             buttonAceptar.UseVisualStyleBackColor = true;
             buttonAceptar.Click += buttonAceptar_Click;
             // 
@@ -72,10 +80,10 @@
             // 
             labelProducto.AutoSize = true;
             labelProducto.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelProducto.ForeColor = SystemColors.ActiveCaptionText;
-            labelProducto.Location = new Point(189, 83);
+            labelProducto.ForeColor = SystemColors.ControlLightLight;
+            labelProducto.Location = new Point(176, 62);
             labelProducto.Name = "labelProducto";
-            labelProducto.Size = new Size(107, 28);
+            labelProducto.Size = new Size(85, 23);
             labelProducto.TabIndex = 23;
             labelProducto.Text = "Nombre";
             // 
@@ -83,19 +91,20 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(50, 39);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(53, 28);
             label2.Name = "label2";
-            label2.Size = new Size(406, 28);
+            label2.Size = new Size(336, 23);
             label2.TabIndex = 22;
-            label2.Text = "Estas Seguro De Borrar El Producto";
+            label2.Text = "Estas seguro de borrar el producto?";
             // 
             // Borrar_producto
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(505, 233);
+            ClientSize = new Size(442, 175);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Borrar_producto";
             Text = "Borrar_producto";
             panel1.ResumeLayout(false);

@@ -8,7 +8,7 @@ namespace Ahora_si
     {
         private Label[] Existencia;
         private string cuenta, contrasena;
-        
+
         public MenuProductos2()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace Ahora_si
         public MenuProductos2(string cuenta, string contrasena)
         {
             this.cuenta = cuenta;
-            this.contrasena = contrasena;   
+            this.contrasena = contrasena;
             Datos(cuenta, contrasena);
 
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace Ahora_si
                 else
                 {
                     //mandar el producto entero
-                    ComprarProducto comp = new ComprarProducto(pro,cuenta,contrasena);
+                    ComprarProducto comp = new ComprarProducto(pro, cuenta, contrasena);
                     comp.ShowDialog();
                     mostrar();
 
@@ -109,8 +109,14 @@ namespace Ahora_si
 
         private void pictureBoxCarrito_Click(object sender, EventArgs e)
         {
-            Carrito carrito = new Carrito(cuenta,contrasena);
+            Carrito carrito = new Carrito(cuenta, contrasena);
             carrito.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label11.Text = DateTime.Now.ToLongTimeString();
+            label12.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
