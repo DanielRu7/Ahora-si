@@ -44,15 +44,15 @@
             pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            labelNoE1 = new Label();
+            pictureBox1 = new PictureBox();
             panel3 = new Panel();
             label12 = new Label();
             label11 = new Label();
-            labelNoE1 = new Label();
             labelNoE2 = new Label();
             labelNoE3 = new Label();
             labelNoE4 = new Label();
             labelNoE5 = new Label();
-            pictureBox1 = new PictureBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -87,8 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -273,6 +273,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(labelNoE1);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(labelNoE2);
@@ -303,12 +304,33 @@
             panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(pictureBox7);
             panel2.Controls.Add(pictureBox6);
-            panel2.Controls.Add(labelNoE1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 65);
             panel2.Name = "panel2";
             panel2.Size = new Size(1110, 715);
             panel2.TabIndex = 6;
+            // 
+            // labelNoE1
+            // 
+            labelNoE1.AutoSize = true;
+            labelNoE1.BackColor = Color.Transparent;
+            labelNoE1.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE1.ForeColor = Color.Red;
+            labelNoE1.Location = new Point(75, 148);
+            labelNoE1.Name = "labelNoE1";
+            labelNoE1.Size = new Size(0, 20);
+            labelNoE1.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(75, 88);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(154, 165);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -326,7 +348,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ControlLightLight;
-            label12.Location = new Point(745, 21);
+            label12.Location = new Point(680, 21);
             label12.Name = "label12";
             label12.Size = new Size(14, 19);
             label12.TabIndex = 1;
@@ -337,22 +359,11 @@
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(1018, 17);
+            label11.Location = new Point(953, 17);
             label11.Name = "label11";
             label11.Size = new Size(16, 23);
             label11.TabIndex = 0;
             label11.Text = ".";
-            // 
-            // labelNoE1
-            // 
-            labelNoE1.AutoSize = true;
-            labelNoE1.BackColor = Color.Transparent;
-            labelNoE1.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNoE1.ForeColor = Color.Red;
-            labelNoE1.Location = new Point(86, 148);
-            labelNoE1.Name = "labelNoE1";
-            labelNoE1.Size = new Size(0, 20);
-            labelNoE1.TabIndex = 27;
             // 
             // labelNoE2
             // 
@@ -397,17 +408,6 @@
             labelNoE5.Name = "labelNoE5";
             labelNoE5.Size = new Size(0, 20);
             labelNoE5.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(71, 88);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(154, 165);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -695,9 +695,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

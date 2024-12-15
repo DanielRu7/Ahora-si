@@ -20,6 +20,7 @@ namespace Ahora_si
             this.compra = compra;
             llenar();
             calcularPrecio();
+            labelMonto.Text=this.precio.ToString();
         }
 
 
@@ -77,7 +78,13 @@ namespace Ahora_si
                 return;
             }
 
+            
+            MessageBox.Show($"Compra realizada con total de :{this.precio}");
+            ReciboCompra comp = new ReciboCompra(compra, comprador,this.precio);
+            comp.ShowDialog();
             //actualizar el monto en la base de datos mostrar pdf
+
+
 
 
             foreach (var can in compra)
@@ -89,7 +96,7 @@ namespace Ahora_si
             Conexion_cuentas cone= new Conexion_cuentas();
             comprador.Monto += this.precio;
             cone.actualizarMonto(comprador.Monto,comprador);
-            MessageBox.Show($"Compra realizada con total de :{this.precio}");
+
             compra.Clear();
             this.Close();
         }

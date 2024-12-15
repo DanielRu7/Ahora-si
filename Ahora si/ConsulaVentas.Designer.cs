@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
+            Grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             labelGanancias = new Label();
             label2 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Grafica).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(Grafica);
             panel1.Controls.Add(labelGanancias);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
@@ -43,6 +49,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
+            // 
+            // Grafica
+            // 
+            chartArea1.Name = "ChartArea1";
+            Grafica.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            Grafica.Legends.Add(legend1);
+            Grafica.Location = new Point(31, 89);
+            Grafica.Name = "Grafica";
+            Grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series1.BorderWidth = 10;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Ganancias";
+            Grafica.Series.Add(series1);
+            Grafica.Size = new Size(738, 349);
+            Grafica.TabIndex = 33;
+            Grafica.Text = "Grafica";
             // 
             // labelGanancias
             // 
@@ -75,6 +100,7 @@
             Text = "ConsulaVentas";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Grafica).EndInit();
             ResumeLayout(false);
         }
 
@@ -83,5 +109,6 @@
         private Panel panel1;
         private Label label2;
         private Label labelGanancias;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Grafica;
     }
 }

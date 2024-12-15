@@ -29,7 +29,10 @@ namespace Ahora_si
 
         public void Graficando()
         {
-            
+            for (int i=1; i<personas.Count; i++)
+            {
+                Grafica.Series["Ganancias"].Points.AddXY(i,personas[i].Monto);
+            }
         }
 
 

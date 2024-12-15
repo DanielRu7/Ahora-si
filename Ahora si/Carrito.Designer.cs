@@ -49,6 +49,8 @@
             labelId = new Label();
             pictureBoxImagen = new PictureBox();
             buttonBorrarPro = new Button();
+            labelMonto = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCompra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).BeginInit();
             SuspendLayout();
@@ -259,12 +261,34 @@
             buttonBorrarPro.UseVisualStyleBackColor = true;
             buttonBorrarPro.Click += buttonBorrarPro_Click;
             // 
+            // labelMonto
+            // 
+            labelMonto.AutoSize = true;
+            labelMonto.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
+            labelMonto.Location = new Point(259, 468);
+            labelMonto.Name = "labelMonto";
+            labelMonto.Size = new Size(68, 23);
+            labelMonto.TabIndex = 37;
+            labelMonto.Text = "Monto";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(54, 468);
+            label3.Name = "label3";
+            label3.Size = new Size(176, 23);
+            label3.TabIndex = 36;
+            label3.Text = "TOTAL A PAGAR: ";
+            // 
             // Carrito
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1000, 844);
+            Controls.Add(labelMonto);
+            Controls.Add(label3);
             Controls.Add(buttonBorrarPro);
             Controls.Add(labelMprecio);
             Controls.Add(labelMnombre);
@@ -311,5 +335,7 @@
         private DataGridViewTextBoxColumn CantidadCompra;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewImageColumn Imagen;
+        private Label labelMonto;
+        private Label label3;
     }
 }
