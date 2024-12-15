@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprarProducto));
             panel1 = new Panel();
+            labelCantidadCompra = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -44,8 +45,7 @@
             buttonAgregar = new Button();
             pictureBoxImagen = new PictureBox();
             labelInformacion = new Label();
-            UpDownCan = new DomainUpDown();
-            labelCantidadCompra = new Label();
+            textBoxCantidad = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagen).BeginInit();
             SuspendLayout();
@@ -53,8 +53,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.Controls.Add(textBoxCantidad);
             panel1.Controls.Add(labelCantidadCompra);
-            panel1.Controls.Add(UpDownCan);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -74,6 +74,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(665, 415);
             panel1.TabIndex = 0;
+            // 
+            // labelCantidadCompra
+            // 
+            labelCantidadCompra.AutoSize = true;
+            labelCantidadCompra.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCantidadCompra.Location = new Point(263, 267);
+            labelCantidadCompra.Name = "labelCantidadCompra";
+            labelCantidadCompra.Size = new Size(101, 23);
+            labelCantidadCompra.TabIndex = 25;
+            labelCantidadCompra.Text = "Cantidad";
             // 
             // label10
             // 
@@ -217,23 +227,13 @@
             labelInformacion.TabIndex = 6;
             labelInformacion.Text = "Informacion del producto";
             // 
-            // UpDownCan
+            // textBoxCantidad
             // 
-            UpDownCan.Location = new Point(370, 263);
-            UpDownCan.Name = "UpDownCan";
-            UpDownCan.Size = new Size(55, 27);
-            UpDownCan.TabIndex = 24;
-            UpDownCan.Text = "1";
-            // 
-            // labelCantidadCompra
-            // 
-            labelCantidadCompra.AutoSize = true;
-            labelCantidadCompra.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCantidadCompra.Location = new Point(263, 267);
-            labelCantidadCompra.Name = "labelCantidadCompra";
-            labelCantidadCompra.Size = new Size(101, 23);
-            labelCantidadCompra.TabIndex = 25;
-            labelCantidadCompra.Text = "Cantidad";
+            textBoxCantidad.Location = new Point(384, 263);
+            textBoxCantidad.Name = "textBoxCantidad";
+            textBoxCantidad.Size = new Size(66, 27);
+            textBoxCantidad.TabIndex = 26;
+            textBoxCantidad.Text = "1";
             // 
             // ComprarProducto
             // 
@@ -268,6 +268,6 @@
         private Label label6;
         private Label label10;
         private Label labelCantidadCompra;
-        private DomainUpDown UpDownCan;
+        private TextBox textBoxCantidad;
     }
 }

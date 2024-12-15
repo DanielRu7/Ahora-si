@@ -34,12 +34,15 @@
             buttonCancelar = new Button();
             label1 = new Label();
             dataGridViewCompra = new DataGridView();
-            labelMdescripcion = new Label();
+            Id = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            CantidadCompra = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Imagen = new DataGridViewImageColumn();
             labelMprecio = new Label();
             labelMnombre = new Label();
             labelMcantidad = new Label();
             labelMid = new Label();
-            labelDescripcion = new Label();
             labelPrecio = new Label();
             labelNombre = new Label();
             labelCantidad = new Label();
@@ -101,28 +104,67 @@
             // 
             // dataGridViewCompra
             // 
+            dataGridViewCompra.AllowUserToAddRows = false;
+            dataGridViewCompra.AllowUserToDeleteRows = false;
             dataGridViewCompra.BackgroundColor = SystemColors.ButtonFace;
             dataGridViewCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCompra.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, CantidadCompra, Precio, Imagen });
             dataGridViewCompra.Location = new Point(54, 81);
             dataGridViewCompra.Name = "dataGridViewCompra";
+            dataGridViewCompra.ReadOnly = true;
             dataGridViewCompra.RowHeadersWidth = 51;
-            dataGridViewCompra.Size = new Size(366, 367);
+            dataGridViewCompra.Size = new Size(446, 367);
             dataGridViewCompra.TabIndex = 5;
+            dataGridViewCompra.SelectionChanged += dataGridViewCompra_SelectionChanged;
             // 
-            // labelMdescripcion
+            // Id
             // 
-            labelMdescripcion.AutoSize = true;
-            labelMdescripcion.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelMdescripcion.Location = new Point(779, 255);
-            labelMdescripcion.Name = "labelMdescripcion";
-            labelMdescripcion.Size = new Size(0, 23);
-            labelMdescripcion.TabIndex = 34;
+            Id.HeaderText = "ID";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Width = 125;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Width = 125;
+            // 
+            // CantidadCompra
+            // 
+            CantidadCompra.HeaderText = "Cantidad";
+            CantidadCompra.MinimumWidth = 6;
+            CantidadCompra.Name = "CantidadCompra";
+            CantidadCompra.ReadOnly = true;
+            CantidadCompra.Width = 125;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.MinimumWidth = 6;
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
+            Precio.Width = 125;
+            // 
+            // Imagen
+            // 
+            Imagen.HeaderText = "Imagen";
+            Imagen.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Imagen.MinimumWidth = 6;
+            Imagen.Name = "Imagen";
+            Imagen.ReadOnly = true;
+            Imagen.Resizable = DataGridViewTriState.True;
+            Imagen.SortMode = DataGridViewColumnSortMode.Automatic;
+            Imagen.Width = 125;
             // 
             // labelMprecio
             // 
             labelMprecio.AutoSize = true;
             labelMprecio.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMprecio.Location = new Point(779, 222);
+            labelMprecio.Location = new Point(863, 215);
             labelMprecio.Name = "labelMprecio";
             labelMprecio.Size = new Size(0, 23);
             labelMprecio.TabIndex = 33;
@@ -131,7 +173,7 @@
             // 
             labelMnombre.AutoSize = true;
             labelMnombre.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMnombre.Location = new Point(779, 178);
+            labelMnombre.Location = new Point(863, 171);
             labelMnombre.Name = "labelMnombre";
             labelMnombre.Size = new Size(0, 23);
             labelMnombre.TabIndex = 32;
@@ -140,7 +182,7 @@
             // 
             labelMcantidad.AutoSize = true;
             labelMcantidad.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMcantidad.Location = new Point(779, 139);
+            labelMcantidad.Location = new Point(863, 132);
             labelMcantidad.Name = "labelMcantidad";
             labelMcantidad.Size = new Size(0, 23);
             labelMcantidad.TabIndex = 31;
@@ -149,26 +191,16 @@
             // 
             labelMid.AutoSize = true;
             labelMid.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMid.Location = new Point(779, 100);
+            labelMid.Location = new Point(863, 93);
             labelMid.Name = "labelMid";
             labelMid.Size = new Size(0, 23);
             labelMid.TabIndex = 30;
-            // 
-            // labelDescripcion
-            // 
-            labelDescripcion.AutoSize = true;
-            labelDescripcion.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelDescripcion.Location = new Point(633, 255);
-            labelDescripcion.Name = "labelDescripcion";
-            labelDescripcion.Size = new Size(126, 23);
-            labelDescripcion.TabIndex = 29;
-            labelDescripcion.Text = "Descripcion";
             // 
             // labelPrecio
             // 
             labelPrecio.AutoSize = true;
             labelPrecio.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPrecio.Location = new Point(658, 211);
+            labelPrecio.Location = new Point(739, 208);
             labelPrecio.Name = "labelPrecio";
             labelPrecio.Size = new Size(71, 23);
             labelPrecio.TabIndex = 28;
@@ -178,7 +210,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(658, 172);
+            labelNombre.Location = new Point(739, 169);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(89, 23);
             labelNombre.TabIndex = 27;
@@ -188,7 +220,7 @@
             // 
             labelCantidad.AutoSize = true;
             labelCantidad.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCantidad.Location = new Point(658, 134);
+            labelCantidad.Location = new Point(739, 131);
             labelCantidad.Name = "labelCantidad";
             labelCantidad.Size = new Size(101, 23);
             labelCantidad.TabIndex = 26;
@@ -198,7 +230,7 @@
             // 
             labelId.AutoSize = true;
             labelId.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelId.Location = new Point(658, 95);
+            labelId.Location = new Point(739, 92);
             labelId.Name = "labelId";
             labelId.Size = new Size(29, 23);
             labelId.TabIndex = 25;
@@ -209,7 +241,7 @@
             pictureBoxImagen.BackColor = Color.Transparent;
             pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Enabled = false;
-            pictureBoxImagen.Location = new Point(438, 81);
+            pictureBoxImagen.Location = new Point(538, 78);
             pictureBoxImagen.Margin = new Padding(3, 4, 3, 4);
             pictureBoxImagen.Name = "pictureBoxImagen";
             pictureBoxImagen.Size = new Size(168, 200);
@@ -219,7 +251,7 @@
             // 
             // buttonBorrarPro
             // 
-            buttonBorrarPro.Location = new Point(454, 299);
+            buttonBorrarPro.Location = new Point(551, 296);
             buttonBorrarPro.Name = "buttonBorrarPro";
             buttonBorrarPro.Size = new Size(135, 28);
             buttonBorrarPro.TabIndex = 35;
@@ -232,14 +264,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(942, 844);
+            ClientSize = new Size(1000, 844);
             Controls.Add(buttonBorrarPro);
-            Controls.Add(labelMdescripcion);
             Controls.Add(labelMprecio);
             Controls.Add(labelMnombre);
             Controls.Add(labelMcantidad);
             Controls.Add(labelMid);
-            Controls.Add(labelDescripcion);
             Controls.Add(labelPrecio);
             Controls.Add(labelNombre);
             Controls.Add(labelCantidad);
@@ -266,17 +296,20 @@
         private Button buttonCancelar;
         private Label label1;
         private DataGridView dataGridViewCompra;
-        private Label labelMdescripcion;
         private Label labelMprecio;
         private Label labelMnombre;
         private Label labelMcantidad;
         private Label labelMid;
-        private Label labelDescripcion;
         private Label labelPrecio;
         private Label labelNombre;
         private Label labelCantidad;
         private Label labelId;
         private PictureBox pictureBoxImagen;
         private Button buttonBorrarPro;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn CantidadCompra;
+        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewImageColumn Imagen;
     }
 }

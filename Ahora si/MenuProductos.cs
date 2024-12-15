@@ -9,22 +9,22 @@ namespace Ahora_si
 
         private Button[] borrar;
 
+
         public MenuProductos()
         {
             InitializeComponent();
         }
         public MenuProductos(string cuenta, string contrasena)
         {
-            Datos(cuenta,contrasena);
-            
+            Datos(cuenta, contrasena);
+
             InitializeComponent();
             PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
-            Button[] botones = {button1,button2,button3,buttonFiniquitar };
-
+            Button[] botones = { button1, button2, button3, buttonFiniquitar };
             Button[] borrar = { buttonBorrar1, buttonBorrar2, buttonBorrar3, buttonBorrar4, buttonBorrar5, buttonBorrar6, buttonBorrar7, buttonBorrar8, buttonBorrar9, buttonBorrar10 };
             this.borrar = borrar;
-            obtener(labels,pictureBoxes,botones,panelSidebar,sidebarTransition,pictureBoxMenu);
+            obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu);
             labelCuenta.Text = cuenta;
 
         }
@@ -67,7 +67,7 @@ namespace Ahora_si
 
         }
 
-        
+
 
         public override void picturebox_click(object? sender, EventArgs e)
         {
@@ -96,15 +96,23 @@ namespace Ahora_si
             Conexion_productos con = new Conexion_productos();
             List<producto> pro = con.consulta();
 
-            
-            
+
+
             for (int i = 0; i < pro.Count && i < productos.Length && i < nombres.Length; i++)
             {
 
                 productos[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
                 productos[i].BackgroundImage = null;
                 nombres[i].Text = pro[i].Nombre;
-                borrar[i].Show();
+                if (pro.Count > 6)
+                {
+                    borrar[i].Show();
+                }
+                else
+                {
+                    borrar[i].Hide();
+                }
+
 
             }
 
@@ -118,8 +126,20 @@ namespace Ahora_si
 
         }
 
+        private void buttonOrden_Click(object sender, EventArgs e)
+        {
 
-        
+            ProductosOrdenados obj = new ProductosOrdenados();
+            obj.ShowDialog();
 
+
+        }
+
+        private void buttonVentas_Click(object sender, EventArgs e)
+        {
+            ConsulaVentas obj = new ConsulaVentas();
+            obj.ShowDialog();
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-        public void actualizarMonto(float monto, string cuenta, string contrasena)
+        public void actualizarMonto(float monto, persona pers)
         {
             try
             {
@@ -46,12 +46,9 @@ namespace Ahora_si.ConexionSql
                     MySqlCommand cmd = new MySqlCommand(query, conexion);
 
                     cmd.Parameters.AddWithValue("@monto", monto);
-                    cmd.Parameters.AddWithValue("@cuenta", cuenta);
-                    cmd.Parameters.AddWithValue("@contrasena", contrasena);
-
+                    cmd.Parameters.AddWithValue("@cuenta", pers.Cuenta);
+                    cmd.Parameters.AddWithValue("@contrasena", pers.Contrasena);
                     cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Monto actualizado correctamente");
 
             }
             catch (Exception ex)
@@ -104,19 +101,7 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-        public void Editar(string cuenta,string contrasena,string nombre,int id)
-        {
-            string query= "UPDATE persona SET cuenta='" + cuenta + "', contrasena='" + contrasena + "', nombre='" + nombre + "' WHERE id=" + id + ";";
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(query, conexion);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la edicion de los datos");
-            }
-        }
+        
 
         public persona Busqueda_Usuario(string cuenta, string contrasena)
         {
@@ -165,5 +150,46 @@ namespace Ahora_si.ConexionSql
                 MessageBox.Show("Error al momento de editar usuario");
             }
         }
+
+
+        public List<persona> Consulta()
+        {
+            List<persona> personas=new List<persona>();
+            string query = "SELECT * FROM persona";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    persona per = new persona();
+                    per.Id = Convert.ToInt32(reader["id"]);
+                    per.Cuenta = Convert.ToString(reader["cuenta"]) ?? "";
+                    per.Nombre = Convert.ToString(reader["nombre"]) ?? "";
+                    per.Contrasena = Convert.ToString(reader["contrasena"]) ?? "";
+                    per.Monto = Convert.ToSingle(reader["monto"]);
+                    per.Admin = Convert.ToBoolean(reader["admin"]);
+                    personas.Add(per);
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error Consultar peronas");
+            }
+            finally
+            {
+                cerrar();
+            }
+            return personas;
+        }
+
+
+
+
+
+
     }
 }

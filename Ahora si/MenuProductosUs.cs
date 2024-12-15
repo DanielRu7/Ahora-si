@@ -8,9 +8,9 @@ namespace Ahora_si
     {
         private Label[] Existencia;
         private string cuenta, contrasena;
-        List<producto> compra;
+        List<producto> compra=new List<producto>();
 
-        
+
         public MenuProductos2()
         {
             InitializeComponent();
@@ -18,7 +18,7 @@ namespace Ahora_si
         public MenuProductos2(string cuenta, string contrasena)
         {
             this.cuenta = cuenta;
-            this.contrasena = contrasena;   
+            this.contrasena = contrasena;
             Datos(cuenta, contrasena);
 
             InitializeComponent();
@@ -72,10 +72,8 @@ namespace Ahora_si
                 else
                 {
                     //mandar el producto entero
-                    ComprarProducto comp = new ComprarProducto(pro,compra);
+                    ComprarProducto comp = new ComprarProducto(pro, compra);
                     comp.ShowDialog();
-                    mostrar();
-
 
                 }
 
@@ -111,11 +109,12 @@ namespace Ahora_si
 
         private void pictureBoxCarrito_Click(object sender, EventArgs e)//cambiar
         {
-            Conexion_cuentas usu= new Conexion_cuentas();
-            persona per= usu.Busqueda_Usuario(cuenta,contrasena);
+            Conexion_cuentas usu = new Conexion_cuentas();
+            persona per = usu.Busqueda_Usuario(cuenta, contrasena);
 
-            Carrito carrito = new Carrito(per,compra);
+            Carrito carrito = new Carrito(per, compra);
             carrito.ShowDialog();
+            mostrar();
         }
     }
 }

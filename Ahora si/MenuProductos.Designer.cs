@@ -37,6 +37,7 @@
             sidebarTransition = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
             panelSidebar = new Panel();
+            buttonOrden = new Button();
             pictureBoxMusica = new PictureBox();
             pictureBox13 = new PictureBox();
             pictureBox12 = new PictureBox();
@@ -73,6 +74,7 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            buttonVentas = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             panelSidebar.SuspendLayout();
@@ -177,6 +179,8 @@
             // 
             panelSidebar.BackColor = Color.FromArgb(42, 42, 42);
             panelSidebar.BorderStyle = BorderStyle.FixedSingle;
+            panelSidebar.Controls.Add(buttonVentas);
+            panelSidebar.Controls.Add(buttonOrden);
             panelSidebar.Controls.Add(pictureBoxMusica);
             panelSidebar.Controls.Add(pictureBox13);
             panelSidebar.Controls.Add(pictureBox12);
@@ -191,6 +195,20 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(0, 700);
             panelSidebar.TabIndex = 5;
+            // 
+            // buttonOrden
+            // 
+            buttonOrden.BackColor = Color.FromArgb(42, 42, 42);
+            buttonOrden.Font = new Font("Segoe UI", 11.25F);
+            buttonOrden.ForeColor = Color.White;
+            buttonOrden.Location = new Point(0, 144);
+            buttonOrden.Margin = new Padding(3, 4, 3, 4);
+            buttonOrden.Name = "buttonOrden";
+            buttonOrden.Size = new Size(194, 71);
+            buttonOrden.TabIndex = 8;
+            buttonOrden.Text = "Ordenar por existencia";
+            buttonOrden.UseVisualStyleBackColor = false;
+            buttonOrden.Click += buttonOrden_Click;
             // 
             // pictureBoxMusica
             // 
@@ -598,6 +616,20 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // buttonVentas
+            // 
+            buttonVentas.BackColor = Color.FromArgb(42, 42, 42);
+            buttonVentas.Font = new Font("Segoe UI", 11.25F);
+            buttonVentas.ForeColor = Color.White;
+            buttonVentas.Location = new Point(-1, 216);
+            buttonVentas.Margin = new Padding(3, 4, 3, 4);
+            buttonVentas.Name = "buttonVentas";
+            buttonVentas.Size = new Size(194, 71);
+            buttonVentas.TabIndex = 9;
+            buttonVentas.Text = "Ventas";
+            buttonVentas.UseVisualStyleBackColor = false;
+            buttonVentas.Click += buttonVentas_Click;
+            // 
             // MenuProductos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -681,5 +713,7 @@
         private Button buttonBorrar4;
         private Button buttonBorrar3;
         private Button buttonBorrar2;
+        private Button buttonOrden;
+        private Button buttonVentas;
     }
 }

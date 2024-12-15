@@ -44,9 +44,21 @@ namespace Ahora_si
 
         private void buttonAgregar_Click(object sender, EventArgs e)//compras
         {
-            if (pro.Cantidad>Convert.ToInt32( UpDownCan.Text))
+            int can = 0;
+            bool numero = int.TryParse(textBoxCantidad.Text,out can);
+            var productoExiste = productos.FirstOrDefault(p => p.Id == pro.Id);
+            if (productoExiste!=null)
             {
-                pro.CantidadCompra=(Convert.ToInt32(UpDownCan.Text));
+                can += productoExiste.CantidadCompra;
+            }
+            if (pro.Cantidad>=can &&numero==true)
+            {
+                if (productoExiste != null)
+                {
+                    productos.Remove(productoExiste);
+                }
+
+                pro.CantidadCompra=can;
                 productos.Add(pro);
                 MessageBox.Show($"se Agrego a el carrito de compras {pro.Nombre}, cantidad {pro.CantidadCompra}");
                 this.Close();
