@@ -16,5 +16,7 @@ namespace Ahora_si.clases
         public string Descripcion { get; set; }
         public  byte[] Imagen {  get; set; }
 
+        public int CantidadCompra { get; set; }
+
     }
 }

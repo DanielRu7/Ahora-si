@@ -1,13 +1,5 @@
 ﻿using Ahora_si.clases;
 using Ahora_si.ConexionSql;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ahora_si
@@ -15,53 +7,137 @@ namespace Ahora_si
 
     public partial class Carrito : Form
     {
-        private string cuenta, contrasena;
-        Conexion_productos obj = new Conexion_productos();
-        private List<producto> carrito = new List<producto>();
-        public Carrito(string cuenta,string contrasena)
+        private persona comprador;
+        public List<producto> compra;
+
+        float precio;
+        public Carrito(persona comprador, List<producto> compra)
         {
+
+
             InitializeComponent();
-            this.cuenta = cuenta;
-            this.contrasena = contrasena;
-            Conexion_productos obj = new Conexion_productos();
-            carrito = obj.getCarrito();
+            this.comprador = comprador;
+            this.compra = compra;
             llenar();
+            calcularPrecio();
         }
+
+
+
+        public void calcularPrecio()
+        {
+            foreach (var p in compra)
+            {
+                this.precio += p.Precio * p.CantidadCompra;
+            }
+        }
+
+
+
 
         public void llenar()
         {
-
-            richTextBoxCarrito.Clear();
-
-            foreach (var pro in carrito)
+            dataGridViewCompra.Rows.Clear();
+            dataGridViewCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //datos de data greed
+            for (int i = 0; i < compra.Count; i++)
             {
-                string productoInfo = $"ID: {pro.Id}\n" +
-                                      $"Nombre: {pro.Nombre}\n" +
-                                      $"Precio: {pro.Precio:C}\n" +
-                                      $"Cantidad: {pro.Cantidad}\n" +
-                                      $"Descripción: {pro.Descripcion}\n" +
-                                      "------------------------\n";
-                richTextBoxCarrito.AppendText(productoInfo);
+                dataGridViewCompra.RowTemplate.Height = 50;
+                dataGridViewCompra.Rows.Add(
+                    compra[i].Id,
+                    compra[i].Nombre,
+                    compra[i].CantidadCompra,
+                    compra[i].Precio,
+                    Image.FromStream(new MemoryStream(compra[i].Imagen))
+                    );
             }
+            dataGridViewCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            if (carrito.Count == 0)
-            {
-                richTextBoxCarrito.AppendText("El carrito está vacío.");
-            }
         }
 
         private void buttonVaciar_Click(object sender, EventArgs e)
         {
-            Conexion_cuentas conexion_Cuentas = new Conexion_cuentas();
-            conexion_Cuentas.actualizarMonto(0, cuenta, contrasena);
-            Conexion_productos obj2 = new Conexion_productos();
-            obj.vaciarCarroDeCompras(carrito);
-            this.Close();
+            
+            clear();
+            compra.Clear();
+            llenar();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
+
             this.Close();
+        }
+
+        private void buttonPagar_Click(object sender, EventArgs e)
+        {
+            if (compra.Count==0)
+            {
+                MessageBox.Show("No hay productos en tu carrito");
+                return;
+            }
+
+            //actualizar el monto en la base de datos mostrar pdf
+
+
+            foreach (var can in compra)
+            {
+                can.Cantidad -= can.CantidadCompra;
+            }
+            Conexion_productos conex = new Conexion_productos();
+            conex.ActLotes(compra);
+            Conexion_cuentas cone= new Conexion_cuentas();
+            comprador.Monto += this.precio;
+            cone.actualizarMonto(comprador.Monto,comprador);
+            MessageBox.Show($"Compra realizada con total de :{this.precio}");
+            compra.Clear();
+            this.Close();
+        }
+
+        private void buttonBorrarPro_Click(object sender, EventArgs e)
+        {
+            if (labelMid.Text == "")
+            {
+                MessageBox.Show("No hay nada que borrar");
+            }
+            else
+            {
+                var productoAEliminar = compra.FirstOrDefault(p => p.Id == Convert.ToInt32(labelMid.Text));
+                if (productoAEliminar != null)
+                {
+                    compra.Remove(productoAEliminar);
+                }
+                else
+                {
+                    MessageBox.Show("Producto no encontrado.");
+                }
+
+                clear();
+                llenar();
+            }
+        }
+
+
+
+
+        public void clear()
+        {
+            dataGridViewCompra.CurrentCell = null;
+            labelMid.Text = "";
+            labelMnombre.Text = "";
+            labelMprecio.Text = "";
+            labelMcantidad.Text = "";
+            pictureBoxImagen.Image = null;
+        }
+
+        private void dataGridViewCompra_SelectionChanged(object sender, EventArgs e)
+        {
+            labelMid.Text = Convert.ToString(dataGridViewCompra.CurrentRow.Cells["Id"].Value);
+            labelMnombre.Text = Convert.ToString(dataGridViewCompra.CurrentRow.Cells["Nombre"].Value);
+            labelMcantidad.Text = Convert.ToString(dataGridViewCompra.CurrentRow.Cells["CantidadCompra"].Value);
+            labelMprecio.Text = Convert.ToString(dataGridViewCompra.CurrentRow.Cells["Precio"].Value);
+            pictureBoxImagen.Image = (Image)dataGridViewCompra.CurrentRow.Cells["Imagen"].Value;
+
         }
     }
 }

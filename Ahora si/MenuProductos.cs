@@ -123,5 +123,19 @@ namespace Ahora_si
             label12.Visible = !label12.Visible;
             label11.Visible = !label11.Visible;
         }
+
+        private void buttonOrden_Click(object sender, EventArgs e)
+        {
+            ProductosOrdenados obj = new ProductosOrdenados();
+            obj.ShowDialog();
+
+        }
+
+        private void buttonVentas_Click(object sender, EventArgs e)
+        {
+            ConsulaVentas obj = new ConsulaVentas();
+            obj.ShowDialog();
+
+        }
     }
 }

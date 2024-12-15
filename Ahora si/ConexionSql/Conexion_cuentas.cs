@@ -31,32 +31,29 @@ namespace Ahora_si.ConexionSql
 
         public void cerrar()
         {
-            if (conexion!=null && conexion.State== System.Data.ConnectionState.Open)
+            if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
             {
                 conexion.Close();
             }
         }
 
-        public void actualizarMonto(float monto, string cuenta, string contrasena)
+        public void actualizarMonto(float monto, persona pers)
         {
             try
             {
 
-                    string query = "UPDATE persona SET monto = @monto WHERE cuenta = @cuenta AND contrasena = @contrasena";
-                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+                string query = "UPDATE persona SET monto = @monto WHERE cuenta = @cuenta AND contrasena = @contrasena";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
 
-                    cmd.Parameters.AddWithValue("@monto", monto);
-                    cmd.Parameters.AddWithValue("@cuenta", cuenta);
-                    cmd.Parameters.AddWithValue("@contrasena", contrasena);
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Monto actualizado correctamente");
+                cmd.Parameters.AddWithValue("@monto", monto);
+                cmd.Parameters.AddWithValue("@cuenta", pers.Cuenta);
+                cmd.Parameters.AddWithValue("@contrasena", pers.Contrasena);
+                cmd.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al aumentar el monto " );
+                MessageBox.Show("Error al aumentar el monto ");
             }
             finally
             {
@@ -64,13 +61,13 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-        public void Insertar(string nombre,string cuenta,string contrasena)//conexion a la base de datos persona agrega cuentas OJO
+        public void Insertar(string nombre, string cuenta, string contrasena)//conexion a la base de datos persona agrega cuentas OJO
         {
-            
+
             try
             {
                 string query = "INSERT INTO persona (nombre, cuenta, contrasena) VALUES ('" + nombre + "','" + cuenta + "','" + contrasena + "')";
-                MySqlCommand cmd = new MySqlCommand(query,conexion);
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -84,10 +81,10 @@ namespace Ahora_si.ConexionSql
         {
             try
             {
-                string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='"+contrasena+"';";
+                string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='" + contrasena + "';";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                
+
                 if (reader.HasRows)
                 {
                     return true;
@@ -104,19 +101,7 @@ namespace Ahora_si.ConexionSql
             }
         }
 
-        public void Editar(string cuenta,string contrasena,string nombre,int id)
-        {
-            string query= "UPDATE persona SET cuenta='" + cuenta + "', contrasena='" + contrasena + "', nombre='" + nombre + "' WHERE id=" + id + ";";
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(query, conexion);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en la edicion de los datos");
-            }
-        }
+
 
         public persona Busqueda_Usuario(string cuenta, string contrasena)
         {
@@ -126,13 +111,13 @@ namespace Ahora_si.ConexionSql
                 string query = "SELECT * FROM persona WHERE cuenta='" + cuenta + "' AND contrasena='" + contrasena + "';";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                
+
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    encontrado.Id=Convert.ToInt32(reader["id"]);
-                    encontrado.Cuenta = Convert.ToString(reader["cuenta"])??"";
-                    encontrado.Nombre = Convert.ToString(reader["nombre"])??"";
+                    encontrado.Id = Convert.ToInt32(reader["id"]);
+                    encontrado.Cuenta = Convert.ToString(reader["cuenta"]) ?? "";
+                    encontrado.Nombre = Convert.ToString(reader["nombre"]) ?? "";
                     encontrado.Contrasena = Convert.ToString(reader["contrasena"]) ?? "";
                     encontrado.Monto = Convert.ToSingle(reader["monto"]);
                     encontrado.Admin = Convert.ToBoolean(reader["admin"]);
@@ -150,7 +135,7 @@ namespace Ahora_si.ConexionSql
                 return encontrado;
             }
         }
-        
+
         public void Editar(persona per)
         {
             string query = "UPDATE persona SET nombre='" + per.Nombre + "', cuenta='" + per.Cuenta + "', contrasena='" + per.Contrasena + "' WHERE id=" + per.Id + ";";
@@ -165,5 +150,46 @@ namespace Ahora_si.ConexionSql
                 MessageBox.Show("Error al momento de editar usuario");
             }
         }
+
+
+        public List<persona> Consulta()
+        {
+            List<persona> personas = new List<persona>();
+            string query = "SELECT * FROM persona";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    persona per = new persona();
+                    per.Id = Convert.ToInt32(reader["id"]);
+                    per.Cuenta = Convert.ToString(reader["cuenta"]) ?? "";
+                    per.Nombre = Convert.ToString(reader["nombre"]) ?? "";
+                    per.Contrasena = Convert.ToString(reader["contrasena"]) ?? "";
+                    per.Monto = Convert.ToSingle(reader["monto"]);
+                    per.Admin = Convert.ToBoolean(reader["admin"]);
+                    personas.Add(per);
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error Consultar peronas");
+            }
+            finally
+            {
+                cerrar();
+            }
+            return personas;
+        }
+
+
+
+
+
+
     }
 }
