@@ -40,12 +40,24 @@
             label11 = new Label();
             pictureBox14 = new PictureBox();
             panelSidebar = new Panel();
+            buttonVentas = new Button();
+            buttonOrden = new Button();
             pictureBoxMusica = new PictureBox();
             pictureBox13 = new PictureBox();
             pictureBox12 = new PictureBox();
             pictureBox11 = new PictureBox();
             buttonFiniquitar = new Button();
             panel2 = new Panel();
+            labelNoE10 = new Label();
+            labelNoE9 = new Label();
+            labelNoE8 = new Label();
+            labelNoE7 = new Label();
+            labelNoE6 = new Label();
+            labelNoE5 = new Label();
+            labelNoE4 = new Label();
+            labelNoE3 = new Label();
+            labelNoE2 = new Label();
+            labelNoE1 = new Label();
             buttonBorrar10 = new Button();
             buttonBorrar9 = new Button();
             buttonBorrar8 = new Button();
@@ -77,8 +89,6 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             timerparpadea = new System.Windows.Forms.Timer(components);
-            buttonVentas = new Button();
-            buttonOrden = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
@@ -239,6 +249,34 @@
             panelSidebar.Size = new Size(0, 682);
             panelSidebar.TabIndex = 5;
             // 
+            // buttonVentas
+            // 
+            buttonVentas.BackColor = Color.FromArgb(42, 42, 42);
+            buttonVentas.Font = new Font("Segoe UI", 11.25F);
+            buttonVentas.ForeColor = Color.White;
+            buttonVentas.Location = new Point(-2, 217);
+            buttonVentas.Margin = new Padding(3, 4, 3, 4);
+            buttonVentas.Name = "buttonVentas";
+            buttonVentas.Size = new Size(194, 71);
+            buttonVentas.TabIndex = 11;
+            buttonVentas.Text = "Ventas";
+            buttonVentas.UseVisualStyleBackColor = false;
+            buttonVentas.Click += buttonVentas_Click;
+            // 
+            // buttonOrden
+            // 
+            buttonOrden.BackColor = Color.FromArgb(42, 42, 42);
+            buttonOrden.Font = new Font("Segoe UI", 11.25F);
+            buttonOrden.ForeColor = Color.White;
+            buttonOrden.Location = new Point(-1, 145);
+            buttonOrden.Margin = new Padding(3, 4, 3, 4);
+            buttonOrden.Name = "buttonOrden";
+            buttonOrden.Size = new Size(194, 71);
+            buttonOrden.TabIndex = 10;
+            buttonOrden.Text = "Ordenar por existencia";
+            buttonOrden.UseVisualStyleBackColor = false;
+            buttonOrden.Click += buttonOrden_Click;
+            // 
             // pictureBoxMusica
             // 
             pictureBoxMusica.Image = Properties.Resources.boton_de_pausa;
@@ -299,6 +337,16 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(labelNoE10);
+            panel2.Controls.Add(labelNoE9);
+            panel2.Controls.Add(labelNoE8);
+            panel2.Controls.Add(labelNoE7);
+            panel2.Controls.Add(labelNoE6);
+            panel2.Controls.Add(labelNoE5);
+            panel2.Controls.Add(labelNoE4);
+            panel2.Controls.Add(labelNoE3);
+            panel2.Controls.Add(labelNoE2);
+            panel2.Controls.Add(labelNoE1);
             panel2.Controls.Add(buttonBorrar10);
             panel2.Controls.Add(buttonBorrar9);
             panel2.Controls.Add(buttonBorrar8);
@@ -334,6 +382,116 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1110, 682);
             panel2.TabIndex = 6;
+            // 
+            // labelNoE10
+            // 
+            labelNoE10.AutoSize = true;
+            labelNoE10.BackColor = Color.Transparent;
+            labelNoE10.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE10.ForeColor = Color.Red;
+            labelNoE10.Location = new Point(896, 402);
+            labelNoE10.Name = "labelNoE10";
+            labelNoE10.Size = new Size(0, 20);
+            labelNoE10.TabIndex = 46;
+            // 
+            // labelNoE9
+            // 
+            labelNoE9.AutoSize = true;
+            labelNoE9.BackColor = Color.Transparent;
+            labelNoE9.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE9.ForeColor = Color.Red;
+            labelNoE9.Location = new Point(694, 402);
+            labelNoE9.Name = "labelNoE9";
+            labelNoE9.Size = new Size(0, 20);
+            labelNoE9.TabIndex = 45;
+            // 
+            // labelNoE8
+            // 
+            labelNoE8.AutoSize = true;
+            labelNoE8.BackColor = Color.Transparent;
+            labelNoE8.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE8.ForeColor = Color.Red;
+            labelNoE8.Location = new Point(487, 402);
+            labelNoE8.Name = "labelNoE8";
+            labelNoE8.Size = new Size(0, 20);
+            labelNoE8.TabIndex = 44;
+            // 
+            // labelNoE7
+            // 
+            labelNoE7.AutoSize = true;
+            labelNoE7.BackColor = Color.Transparent;
+            labelNoE7.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE7.ForeColor = Color.Red;
+            labelNoE7.Location = new Point(282, 401);
+            labelNoE7.Name = "labelNoE7";
+            labelNoE7.Size = new Size(0, 20);
+            labelNoE7.TabIndex = 43;
+            // 
+            // labelNoE6
+            // 
+            labelNoE6.AutoSize = true;
+            labelNoE6.BackColor = Color.Transparent;
+            labelNoE6.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE6.ForeColor = Color.Red;
+            labelNoE6.Location = new Point(83, 401);
+            labelNoE6.Name = "labelNoE6";
+            labelNoE6.Size = new Size(0, 20);
+            labelNoE6.TabIndex = 42;
+            // 
+            // labelNoE5
+            // 
+            labelNoE5.AutoSize = true;
+            labelNoE5.BackColor = Color.Transparent;
+            labelNoE5.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE5.ForeColor = Color.Red;
+            labelNoE5.Location = new Point(896, 69);
+            labelNoE5.Name = "labelNoE5";
+            labelNoE5.Size = new Size(0, 20);
+            labelNoE5.TabIndex = 41;
+            // 
+            // labelNoE4
+            // 
+            labelNoE4.AutoSize = true;
+            labelNoE4.BackColor = Color.Transparent;
+            labelNoE4.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE4.ForeColor = Color.Red;
+            labelNoE4.Location = new Point(694, 69);
+            labelNoE4.Name = "labelNoE4";
+            labelNoE4.Size = new Size(0, 20);
+            labelNoE4.TabIndex = 40;
+            // 
+            // labelNoE3
+            // 
+            labelNoE3.AutoSize = true;
+            labelNoE3.BackColor = Color.Transparent;
+            labelNoE3.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE3.ForeColor = Color.Red;
+            labelNoE3.Location = new Point(487, 68);
+            labelNoE3.Name = "labelNoE3";
+            labelNoE3.Size = new Size(0, 20);
+            labelNoE3.TabIndex = 39;
+            // 
+            // labelNoE2
+            // 
+            labelNoE2.AutoSize = true;
+            labelNoE2.BackColor = Color.Transparent;
+            labelNoE2.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE2.ForeColor = Color.Red;
+            labelNoE2.Location = new Point(278, 69);
+            labelNoE2.Name = "labelNoE2";
+            labelNoE2.Size = new Size(0, 20);
+            labelNoE2.TabIndex = 38;
+            // 
+            // labelNoE1
+            // 
+            labelNoE1.AutoSize = true;
+            labelNoE1.BackColor = Color.Transparent;
+            labelNoE1.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNoE1.ForeColor = Color.Red;
+            labelNoE1.Location = new Point(80, 68);
+            labelNoE1.Name = "labelNoE1";
+            labelNoE1.Size = new Size(0, 20);
+            labelNoE1.TabIndex = 37;
             // 
             // buttonBorrar10
             // 
@@ -561,7 +719,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(887, 44);
+            label5.Location = new Point(887, 33);
             label5.Name = "label5";
             label5.Size = new Size(172, 28);
             label5.TabIndex = 15;
@@ -607,7 +765,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(683, 44);
+            label4.Location = new Point(683, 33);
             label4.Name = "label4";
             label4.Size = new Size(172, 28);
             label4.TabIndex = 10;
@@ -617,7 +775,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(480, 44);
+            label3.Location = new Point(480, 33);
             label3.Name = "label3";
             label3.Size = new Size(172, 28);
             label3.TabIndex = 7;
@@ -627,7 +785,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(277, 44);
+            label2.Location = new Point(277, 33);
             label2.Name = "label2";
             label2.Size = new Size(172, 28);
             label2.TabIndex = 4;
@@ -637,7 +795,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(74, 44);
+            label1.Location = new Point(74, 33);
             label1.Name = "label1";
             label1.Size = new Size(172, 28);
             label1.TabIndex = 1;
@@ -659,34 +817,6 @@
             // 
             timerparpadea.Interval = 500;
             timerparpadea.Tick += timerparpadea_Tick;
-            // 
-            // buttonVentas
-            // 
-            buttonVentas.BackColor = Color.FromArgb(42, 42, 42);
-            buttonVentas.Font = new Font("Segoe UI", 11.25F);
-            buttonVentas.ForeColor = Color.White;
-            buttonVentas.Location = new Point(-2, 217);
-            buttonVentas.Margin = new Padding(3, 4, 3, 4);
-            buttonVentas.Name = "buttonVentas";
-            buttonVentas.Size = new Size(194, 71);
-            buttonVentas.TabIndex = 11;
-            buttonVentas.Text = "Ventas";
-            buttonVentas.UseVisualStyleBackColor = false;
-            buttonVentas.Click += buttonVentas_Click;
-            // 
-            // buttonOrden
-            // 
-            buttonOrden.BackColor = Color.FromArgb(42, 42, 42);
-            buttonOrden.Font = new Font("Segoe UI", 11.25F);
-            buttonOrden.ForeColor = Color.White;
-            buttonOrden.Location = new Point(-1, 145);
-            buttonOrden.Margin = new Padding(3, 4, 3, 4);
-            buttonOrden.Name = "buttonOrden";
-            buttonOrden.Size = new Size(194, 71);
-            buttonOrden.TabIndex = 10;
-            buttonOrden.Text = "Ordenar por existencia";
-            buttonOrden.UseVisualStyleBackColor = false;
-            buttonOrden.Click += buttonOrden_Click;
             // 
             // MenuProductos
             // 
@@ -778,5 +908,15 @@
         private System.Windows.Forms.Timer timerparpadea;
         private Button buttonVentas;
         private Button buttonOrden;
+        private Label labelNoE1;
+        private Label labelNoE6;
+        private Label labelNoE5;
+        private Label labelNoE4;
+        private Label labelNoE3;
+        private Label labelNoE2;
+        private Label labelNoE10;
+        private Label labelNoE9;
+        private Label labelNoE8;
+        private Label labelNoE7;
     }
 }

@@ -8,7 +8,7 @@ namespace Ahora_si
     {
 
         private Button[] borrar;
-
+        private Label[] Existencia;
         public MenuProductos()
         {
             InitializeComponent();
@@ -24,6 +24,8 @@ namespace Ahora_si
 
             Button[] borrar = { buttonBorrar1, buttonBorrar2, buttonBorrar3, buttonBorrar4, buttonBorrar5, buttonBorrar6, buttonBorrar7, buttonBorrar8, buttonBorrar9, buttonBorrar10 };
             this.borrar = borrar;
+            Label[] Existencia = { labelNoE1, labelNoE2, labelNoE3, labelNoE4, labelNoE5, labelNoE6, labelNoE7, labelNoE8, labelNoE9, labelNoE10 };
+            this.Existencia = Existencia;
             obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu);
             labelCuenta.Text = cuenta;
 
@@ -100,6 +102,14 @@ namespace Ahora_si
 
             for (int i = 0; i < pro.Count && i < productos.Length && i < nombres.Length; i++)
             {
+                if (pro[i].Cantidad <= 0)
+                {
+                    Existencia[i].Text = "No Existencia";
+                }
+                else
+                {
+                    Existencia[i].Text = "";
+                }
 
                 productos[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
                 productos[i].BackgroundImage = null;

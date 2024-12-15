@@ -273,13 +273,12 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(panel3);
-            panel2.Controls.Add(labelNoE1);
             panel2.Controls.Add(labelNoE2);
             panel2.Controls.Add(labelNoE3);
             panel2.Controls.Add(labelNoE4);
             panel2.Controls.Add(labelNoE5);
-            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
@@ -304,6 +303,7 @@
             panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(pictureBox7);
             panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(labelNoE1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 65);
             panel2.Name = "panel2";
@@ -402,7 +402,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(75, 88);
+            pictureBox1.Location = new Point(71, 88);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(154, 165);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
