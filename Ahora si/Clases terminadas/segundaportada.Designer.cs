@@ -127,6 +127,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "segundaportada";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "segundaportada";
