@@ -102,7 +102,7 @@ namespace Ahora_si
                 doc.AddTitle("Recibo de compra");
 
                 // Agregar imagen centrada
-                string logoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logo.png");
+                string logoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logodulceria-removebg-preview.png");
                 if (File.Exists(logoPath))
                 {
                     iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);

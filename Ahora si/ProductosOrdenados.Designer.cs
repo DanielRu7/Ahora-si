@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosOrdenados));
             panel1 = new Panel();
             Cerrar = new Button();
             labelMdescripcion = new Label();
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(Cerrar);
             panel1.Controls.Add(labelMdescripcion);
             panel1.Controls.Add(labelMprecio);
@@ -78,14 +80,13 @@
             // 
             // Cerrar
             // 
-            Cerrar.Location = new Point(533, 237);
-            Cerrar.Margin = new Padding(3, 2, 3, 2);
+            Cerrar.BackgroundImage = (Image)resources.GetObject("Cerrar.BackgroundImage");
+            Cerrar.BackgroundImageLayout = ImageLayout.Zoom;
+            Cerrar.Location = new Point(929, 330);
             Cerrar.Name = "Cerrar";
-            Cerrar.Size = new Size(138, 50);
-            Cerrar.TabIndex = 36;
-            Cerrar.Text = "Cerrar";
+            Cerrar.Size = new Size(69, 68);
+            Cerrar.TabIndex = 37;
             Cerrar.UseVisualStyleBackColor = true;
-            Cerrar.Click += Cerrar_Click;
             // 
             // labelMdescripcion
             // 
@@ -208,6 +209,8 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, Precio, Cantidad, Imagen });
             dataGridView1.Location = new Point(10, 9);
@@ -268,8 +271,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1026, 410);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "ProductosOrdenados";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ProductosOrdenados";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -294,11 +299,11 @@
         private Label labelId;
         private PictureBox pictureBoxImagen;
         private Label labelInformacion;
-        private Button Cerrar;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewImageColumn Imagen;
+        private Button Cerrar;
     }
 }

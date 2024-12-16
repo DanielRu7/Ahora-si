@@ -95,7 +95,7 @@ namespace Ahora_si.clases
             else // Si está contraída, expandir
             {
                 panelSidebar.Width += 10;
-                if (panelSidebar.Width >= 193)
+                if (panelSidebar.Width >= 173)
                 {
 
                     sidebarExpand = true;
