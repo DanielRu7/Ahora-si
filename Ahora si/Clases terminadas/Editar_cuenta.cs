@@ -35,7 +35,7 @@ namespace Ahora_si
             textBoxContrasena.Text = usuario.Contrasena;
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
+        public void buttonEditar_Click(object sender, EventArgs e)
         {
             if (textBoxNombre.Text == "" || textBoxCuenta.Text == "" || textBoxContrasena.Text == "")
             {

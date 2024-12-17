@@ -54,6 +54,7 @@ namespace Ahora_si
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            limpiarCampos();
             SignUp.Hide();
             ButtonInvitado.Show();
         }
@@ -135,5 +136,7 @@ namespace Ahora_si
         {
 
         }
+
+       
     }
 }

@@ -17,6 +17,7 @@ namespace Ahora_si.clases
         private System.Windows.Forms.Timer sidebarTransition;
         private Musica musica;
         private Panel panelSidebar;
+        private Label labelCuenta;
 
         private string? cuenta;
         private string? contrasena;
@@ -28,7 +29,7 @@ namespace Ahora_si.clases
         }
 
 
-        public void obtener(Label[] nombres, PictureBox[] productos, Button[] boton, Panel panelSidebar, System.Windows.Forms.Timer sidebarTransition,PictureBox menu)
+        public void obtener(Label[] nombres, PictureBox[] productos, Button[] boton, Panel panelSidebar, System.Windows.Forms.Timer sidebarTransition,PictureBox menu, Label labelCuenta)
         {
             this.panelSidebar = panelSidebar;
             this.nombres = nombres;
@@ -41,6 +42,8 @@ namespace Ahora_si.clases
             menu.MouseHover += pictureBoxMenu_MouseHover;
             boton[1].Click += button2_Click;
             boton[3].Click += buttonFiniquitar_Click;
+            this.labelCuenta=labelCuenta;
+            labelCuenta.Text = cuenta;
             MauseCambio();
 
         }
@@ -116,7 +119,15 @@ namespace Ahora_si.clases
             Conexion_cuentas aux = new Conexion_cuentas();
             persona edit = aux.Busqueda_Usuario(cuenta ?? "", contrasena ?? "");
             Editar_cuenta mostrar = new Editar_cuenta(edit);
-            mostrar.Show();
+            mostrar.ShowDialog();
+
+            Conexion_cuentas busqueda= new Conexion_cuentas();
+            edit= busqueda.BuscarID(edit.Id);
+            this.cuenta = edit.Cuenta;
+            this.contrasena = edit.Contrasena;
+            labelCuenta.Text = this.cuenta;
+
+
         }
 
         private void buttonFiniquitar_Click(object? sender, EventArgs e)

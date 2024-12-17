@@ -28,8 +28,8 @@ namespace Ahora_si
 
             Label[] Existencia = { labelNoE1, labelNoE2, labelNoE3, labelNoE4, labelNoE5, labelNoE6, labelNoE7, labelNoE8, labelNoE9, labelNoE10 };
             this.Existencia = Existencia;
-            obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu);
-            labelCuenta.Text = cuenta;
+            obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu, labelCuenta);
+            
 
             if (cuenta == "invitado")
             {
@@ -121,6 +121,11 @@ namespace Ahora_si
         {
             label11.Text = DateTime.Now.ToLongTimeString();
             label12.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void labelCuenta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

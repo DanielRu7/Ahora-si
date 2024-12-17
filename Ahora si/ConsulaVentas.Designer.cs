@@ -31,23 +31,26 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsulaVentas));
             panel1 = new Panel();
             Grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             labelGanancias = new Label();
             label2 = new Label();
+            buttonCancelar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Grafica).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonCancelar);
             panel1.Controls.Add(Grafica);
             panel1.Controls.Add(labelGanancias);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(783, 449);
             panel1.TabIndex = 0;
             // 
             // Grafica
@@ -58,7 +61,7 @@
             Grafica.Legends.Add(legend1);
             Grafica.Location = new Point(31, 89);
             Grafica.Name = "Grafica";
-            Grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            Grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.BorderWidth = 10;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -90,11 +93,23 @@
             label2.TabIndex = 31;
             label2.Text = "Ganancias Totales:";
             // 
+            // buttonCancelar
+            // 
+            buttonCancelar.BackgroundImage = (Image)resources.GetObject("buttonCancelar.BackgroundImage");
+            buttonCancelar.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonCancelar.Location = new Point(663, 344);
+            buttonCancelar.Margin = new Padding(3, 4, 3, 4);
+            buttonCancelar.Name = "buttonCancelar";
+            buttonCancelar.Size = new Size(87, 84);
+            buttonCancelar.TabIndex = 34;
+            buttonCancelar.UseVisualStyleBackColor = true;
+            buttonCancelar.Click += buttonCancelar_Click;
+            // 
             // ConsulaVentas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(783, 449);
             Controls.Add(panel1);
             Name = "ConsulaVentas";
             Text = "ConsulaVentas";
@@ -110,5 +125,6 @@
         private Label label2;
         private Label labelGanancias;
         private System.Windows.Forms.DataVisualization.Charting.Chart Grafica;
+        private Button buttonCancelar;
     }
 }

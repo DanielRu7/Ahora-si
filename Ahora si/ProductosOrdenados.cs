@@ -18,7 +18,7 @@ namespace Ahora_si
         public ProductosOrdenados()
         {
             InitializeComponent();
-            
+
             Conexion_productos conexion = new Conexion_productos();
             this.productos = conexion.consulta();
             ordenar();
@@ -29,7 +29,7 @@ namespace Ahora_si
 
         private void ordenar()
         {
-            this.productos= productos.OrderByDescending(p => p.Cantidad).ToList();
+            this.productos = productos.OrderByDescending(p => p.Cantidad).ToList();
 
 
         }
@@ -43,11 +43,11 @@ namespace Ahora_si
         {
             int seleccion = dataGridView1.CurrentRow.Index;
             producto aux = productos[seleccion];
-            labelMid.Text=aux.Id.ToString();
-            labelMnombre.Text=aux.Nombre.ToString();
-            labelMprecio.Text=aux.Precio.ToString();
-            labelMcantidad.Text=aux.Cantidad.ToString();
-            labelMdescripcion.Text=aux.Descripcion.ToString();
+            labelMid.Text = aux.Id.ToString();
+            labelMnombre.Text = aux.Nombre.ToString();
+            labelMprecio.Text = aux.Precio.ToString();
+            labelMcantidad.Text = aux.Cantidad.ToString();
+            labelMdescripcion.Text = aux.Descripcion.ToString();
             pictureBoxImagen.Image = Image.FromStream(new MemoryStream(aux.Imagen));
 
         }
@@ -56,7 +56,7 @@ namespace Ahora_si
         private void agregar()
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            for (int i=0; i<productos.Count; i++)
+            for (int i = 0; i < productos.Count; i++)
             {
                 dataGridView1.RowTemplate.Height = 50;
                 dataGridView1.Rows.Add(
@@ -71,7 +71,9 @@ namespace Ahora_si
 
         }
 
-
-
+        private void Cerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

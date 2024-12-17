@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_cuenta));
-            textBoxNombre = new TextBox();
-            textBoxCuenta = new TextBox();
             label1 = new Label();
-            textBoxContrasena = new TextBox();
             SignUp = new Panel();
             pictureBox12 = new PictureBox();
             pictureBox11 = new PictureBox();
@@ -50,13 +47,22 @@
             pictureBox1 = new PictureBox();
             textBoxCuenta1 = new TextBox();
             pictureBox2 = new PictureBox();
-            textBoxContrasena1 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             linkLabel1 = new LinkLabel();
             linkLabel = new LinkLabel();
             label2 = new Label();
             pictureBox3 = new PictureBox();
+            textBoxNombre = new TextBox();
+            textBoxContrasena1 = new TextBox();
+            textBox4 = new TextBox();
+            textBoxCuenta = new TextBox();
+            textBox5 = new TextBox();
+            textBoxContrasena = new TextBox();
+            textBox6 = new TextBox();
+            pictureBox13 = new PictureBox();
+            pictureBox14 = new PictureBox();
+            pictureBox15 = new PictureBox();
             SignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
@@ -71,65 +77,43 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             SuspendLayout();
-            // 
-            // textBoxNombre
-            // 
-            textBoxNombre.Location = new Point(123, 106);
-            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.PlaceholderText = "Nombre";
-            textBoxNombre.Size = new Size(179, 23);
-            textBoxNombre.TabIndex = 0;
-            textBoxNombre.TextAlign = HorizontalAlignment.Center;
-            // 
-            // textBoxCuenta
-            // 
-            textBoxCuenta.Location = new Point(122, 152);
-            textBoxCuenta.Margin = new Padding(3, 2, 3, 2);
-            textBoxCuenta.Name = "textBoxCuenta";
-            textBoxCuenta.PlaceholderText = "Cuenta";
-            textBoxCuenta.Size = new Size(179, 23);
-            textBoxCuenta.TabIndex = 1;
-            textBoxCuenta.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(142, 30);
+            label1.Location = new Point(162, 107);
             label1.Name = "label1";
-            label1.Size = new Size(159, 36);
+            label1.Size = new Size(200, 44);
             label1.TabIndex = 2;
             label1.Text = "Registrase";
-            // 
-            // textBoxContrasena
-            // 
-            textBoxContrasena.Location = new Point(122, 200);
-            textBoxContrasena.Margin = new Padding(3, 2, 3, 2);
-            textBoxContrasena.Name = "textBoxContrasena";
-            textBoxContrasena.PlaceholderText = "Contraseña";
-            textBoxContrasena.Size = new Size(179, 23);
-            textBoxContrasena.TabIndex = 3;
-            textBoxContrasena.TextAlign = HorizontalAlignment.Center;
             // 
             // SignUp
             // 
             SignUp.BackColor = SystemColors.ControlLightLight;
+            SignUp.Controls.Add(pictureBox15);
+            SignUp.Controls.Add(pictureBox14);
+            SignUp.Controls.Add(pictureBox13);
+            SignUp.Controls.Add(textBoxContrasena);
+            SignUp.Controls.Add(textBox6);
+            SignUp.Controls.Add(textBoxCuenta);
+            SignUp.Controls.Add(textBox5);
+            SignUp.Controls.Add(textBoxNombre);
             SignUp.Controls.Add(pictureBox12);
             SignUp.Controls.Add(pictureBox11);
             SignUp.Controls.Add(pictureBox10);
             SignUp.Controls.Add(buttonCrear);
             SignUp.Controls.Add(pictureBox9);
             SignUp.Controls.Add(buttonRegresar);
-            SignUp.Controls.Add(textBoxContrasena);
             SignUp.Controls.Add(label1);
-            SignUp.Controls.Add(textBoxCuenta);
-            SignUp.Controls.Add(textBoxNombre);
+            SignUp.Controls.Add(textBox4);
             SignUp.Location = new Point(2, 0);
-            SignUp.Margin = new Padding(3, 2, 3, 2);
             SignUp.Name = "SignUp";
-            SignUp.Size = new Size(448, 522);
+            SignUp.Size = new Size(512, 696);
             SignUp.TabIndex = 4;
             SignUp.Paint += SignUp_Paint;
             // 
@@ -137,9 +121,10 @@
             // 
             pictureBox12.BackColor = Color.Transparent;
             pictureBox12.Image = Properties.Resources.circulo;
-            pictureBox12.Location = new Point(65, 475);
+            pictureBox12.Location = new Point(74, 633);
+            pictureBox12.Margin = new Padding(3, 4, 3, 4);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(120, 106);
+            pictureBox12.Size = new Size(137, 141);
             pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox12.TabIndex = 37;
             pictureBox12.TabStop = false;
@@ -148,9 +133,10 @@
             // 
             pictureBox11.BackColor = Color.Transparent;
             pictureBox11.Image = Properties.Resources.circulo;
-            pictureBox11.Location = new Point(316, -53);
+            pictureBox11.Location = new Point(361, -71);
+            pictureBox11.Margin = new Padding(3, 4, 3, 4);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(305, 279);
+            pictureBox11.Size = new Size(349, 372);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox11.TabIndex = 36;
             pictureBox11.TabStop = false;
@@ -159,9 +145,10 @@
             // 
             pictureBox10.BackColor = Color.Transparent;
             pictureBox10.Image = Properties.Resources.circulo;
-            pictureBox10.Location = new Point(362, 385);
+            pictureBox10.Location = new Point(414, 513);
+            pictureBox10.Margin = new Padding(3, 4, 3, 4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(120, 106);
+            pictureBox10.Size = new Size(137, 141);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 35;
             pictureBox10.TabStop = false;
@@ -172,21 +159,22 @@
             buttonCrear.BackgroundImage = (Image)resources.GetObject("buttonCrear.BackgroundImage");
             buttonCrear.BackgroundImageLayout = ImageLayout.Zoom;
             buttonCrear.FlatStyle = FlatStyle.Flat;
-            buttonCrear.Location = new Point(173, 249);
-            buttonCrear.Margin = new Padding(3, 2, 3, 2);
+            buttonCrear.Location = new Point(198, 443);
             buttonCrear.Name = "buttonCrear";
-            buttonCrear.Size = new Size(68, 68);
+            buttonCrear.Size = new Size(78, 91);
             buttonCrear.TabIndex = 34;
             buttonCrear.Text = "    ";
             buttonCrear.UseVisualStyleBackColor = false;
+            buttonCrear.Click += buttonCrear_Click;
             // 
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.Transparent;
             pictureBox9.Image = Properties.Resources.circulo;
-            pictureBox9.Location = new Point(-40, 363);
+            pictureBox9.Location = new Point(-46, 484);
+            pictureBox9.Margin = new Padding(3, 4, 3, 4);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(120, 106);
+            pictureBox9.Size = new Size(137, 141);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 33;
             pictureBox9.TabStop = false;
@@ -194,11 +182,11 @@
             // buttonRegresar
             // 
             buttonRegresar.BackgroundImage = Properties.Resources.regresar_removebg_preview__1_;
+            buttonRegresar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonRegresar.FlatStyle = FlatStyle.Flat;
-            buttonRegresar.Location = new Point(173, 357);
-            buttonRegresar.Margin = new Padding(3, 2, 3, 2);
+            buttonRegresar.Location = new Point(198, 587);
             buttonRegresar.Name = "buttonRegresar";
-            buttonRegresar.Size = new Size(68, 62);
+            buttonRegresar.Size = new Size(78, 83);
             buttonRegresar.TabIndex = 1;
             buttonRegresar.UseVisualStyleBackColor = true;
             buttonRegresar.Click += button1_Click;
@@ -223,18 +211,18 @@
             ButtonInvitado.Controls.Add(label2);
             ButtonInvitado.Controls.Add(pictureBox3);
             ButtonInvitado.Location = new Point(2, 0);
-            ButtonInvitado.Margin = new Padding(3, 2, 3, 2);
             ButtonInvitado.Name = "ButtonInvitado";
-            ButtonInvitado.Size = new Size(448, 524);
+            ButtonInvitado.Size = new Size(512, 699);
             ButtonInvitado.TabIndex = 6;
             // 
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Transparent;
             pictureBox8.Image = Properties.Resources.circulo;
-            pictureBox8.Location = new Point(-36, 439);
+            pictureBox8.Location = new Point(-41, 585);
+            pictureBox8.Margin = new Padding(3, 4, 3, 4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(120, 106);
+            pictureBox8.Size = new Size(137, 141);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 32;
             pictureBox8.TabStop = false;
@@ -243,9 +231,10 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = Properties.Resources.circulo;
-            pictureBox7.Location = new Point(81, 358);
+            pictureBox7.Location = new Point(93, 477);
+            pictureBox7.Margin = new Padding(3, 4, 3, 4);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(25, 27);
+            pictureBox7.Size = new Size(29, 36);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 31;
             pictureBox7.TabStop = false;
@@ -254,9 +243,10 @@
             // 
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = Properties.Resources.circulo;
-            pictureBox6.Location = new Point(319, 179);
+            pictureBox6.Location = new Point(365, 239);
+            pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(307, 229);
+            pictureBox6.Size = new Size(351, 305);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 30;
             pictureBox6.TabStop = false;
@@ -265,9 +255,10 @@
             // 
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = Properties.Resources.circulo;
-            pictureBox5.Location = new Point(295, 465);
+            pictureBox5.Location = new Point(337, 620);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(110, 83);
+            pictureBox5.Size = new Size(126, 111);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 29;
             pictureBox5.TabStop = false;
@@ -276,9 +267,10 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = Properties.Resources.circulo;
-            pictureBox4.Location = new Point(0, 238);
+            pictureBox4.Location = new Point(0, 317);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(86, 42);
+            pictureBox4.Size = new Size(98, 56);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 28;
             pictureBox4.TabStop = false;
@@ -289,10 +281,9 @@
             buttonAcceder.BackgroundImage = (Image)resources.GetObject("buttonAcceder.BackgroundImage");
             buttonAcceder.BackgroundImageLayout = ImageLayout.Zoom;
             buttonAcceder.FlatStyle = FlatStyle.Flat;
-            buttonAcceder.Location = new Point(182, 339);
-            buttonAcceder.Margin = new Padding(3, 2, 3, 2);
+            buttonAcceder.Location = new Point(208, 452);
             buttonAcceder.Name = "buttonAcceder";
-            buttonAcceder.Size = new Size(75, 69);
+            buttonAcceder.Size = new Size(86, 92);
             buttonAcceder.TabIndex = 4;
             buttonAcceder.Text = "    ";
             buttonAcceder.UseVisualStyleBackColor = false;
@@ -302,9 +293,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.usuario;
-            pictureBox1.Location = new Point(123, 206);
+            pictureBox1.Location = new Point(141, 275);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 22);
+            pictureBox1.Size = new Size(34, 29);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -313,35 +305,23 @@
             // 
             textBoxCuenta1.BorderStyle = BorderStyle.None;
             textBoxCuenta1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxCuenta1.Location = new Point(156, 206);
-            textBoxCuenta1.Margin = new Padding(3, 2, 3, 2);
+            textBoxCuenta1.Location = new Point(178, 274);
             textBoxCuenta1.Name = "textBoxCuenta1";
             textBoxCuenta1.PlaceholderText = "Cuenta";
-            textBoxCuenta1.Size = new Size(157, 22);
+            textBoxCuenta1.Size = new Size(179, 27);
             textBoxCuenta1.TabIndex = 1;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.bloquear;
-            pictureBox2.Location = new Point(123, 259);
+            pictureBox2.Location = new Point(141, 345);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(27, 22);
+            pictureBox2.Size = new Size(31, 29);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
-            // 
-            // textBoxContrasena1
-            // 
-            textBoxContrasena1.BorderStyle = BorderStyle.None;
-            textBoxContrasena1.Font = new Font("Segoe UI", 12F);
-            textBoxContrasena1.Location = new Point(156, 259);
-            textBoxContrasena1.Margin = new Padding(3, 2, 3, 2);
-            textBoxContrasena1.Name = "textBoxContrasena1";
-            textBoxContrasena1.PasswordChar = '*';
-            textBoxContrasena1.PlaceholderText = "Contrasena";
-            textBoxContrasena1.Size = new Size(154, 22);
-            textBoxContrasena1.TabIndex = 2;
             // 
             // textBox2
             // 
@@ -349,11 +329,10 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Enabled = false;
             textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(156, 260);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Location = new Point(178, 347);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(154, 22);
+            textBox2.Size = new Size(176, 27);
             textBox2.TabIndex = 26;
             // 
             // textBox1
@@ -362,20 +341,19 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(156, 207);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Location = new Point(178, 276);
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(154, 22);
+            textBox1.Size = new Size(176, 27);
             textBox1.TabIndex = 25;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.DimGray;
-            linkLabel1.Location = new Point(192, 454);
+            linkLabel1.Location = new Point(219, 605);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(50, 15);
+            linkLabel1.Size = new Size(63, 20);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Invitado";
@@ -386,9 +364,9 @@
             linkLabel.AutoSize = true;
             linkLabel.BackColor = Color.Transparent;
             linkLabel.LinkColor = Color.Gray;
-            linkLabel.Location = new Point(169, 428);
+            linkLabel.Location = new Point(193, 571);
             linkLabel.Name = "linkLabel";
-            linkLabel.Size = new Size(97, 15);
+            linkLabel.Size = new Size(120, 20);
             linkLabel.TabIndex = 0;
             linkLabel.TabStop = true;
             linkLabel.Text = "Crear una cuenta";
@@ -401,9 +379,9 @@
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(125, 81);
+            label2.Location = new Point(143, 108);
             label2.Name = "label2";
-            label2.Size = new Size(197, 36);
+            label2.Size = new Size(250, 44);
             label2.TabIndex = 22;
             label2.Text = "Iniciar sesión";
             // 
@@ -411,22 +389,135 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.circulo;
-            pictureBox3.Location = new Point(-11, -261);
+            pictureBox3.Location = new Point(-13, -348);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(473, 451);
+            pictureBox3.Size = new Size(541, 601);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 27;
             pictureBox3.TabStop = false;
             // 
+            // textBoxNombre
+            // 
+            textBoxNombre.BorderStyle = BorderStyle.None;
+            textBoxNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNombre.Location = new Point(155, 267);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.PlaceholderText = "Nombre";
+            textBoxNombre.Size = new Size(179, 27);
+            textBoxNombre.TabIndex = 33;
+            // 
+            // textBoxContrasena1
+            // 
+            textBoxContrasena1.BorderStyle = BorderStyle.None;
+            textBoxContrasena1.Font = new Font("Segoe UI", 12F);
+            textBoxContrasena1.Location = new Point(178, 345);
+            textBoxContrasena1.Name = "textBoxContrasena1";
+            textBoxContrasena1.PasswordChar = '*';
+            textBoxContrasena1.PlaceholderText = "Contrasena";
+            textBoxContrasena1.Size = new Size(176, 27);
+            textBoxContrasena1.TabIndex = 2;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.Black;
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Enabled = false;
+            textBox4.Font = new Font("Segoe UI", 12F);
+            textBox4.Location = new Point(157, 271);
+            textBox4.Name = "textBox4";
+            textBox4.PasswordChar = '*';
+            textBox4.Size = new Size(176, 27);
+            textBox4.TabIndex = 38;
+            // 
+            // textBoxCuenta
+            // 
+            textBoxCuenta.BorderStyle = BorderStyle.None;
+            textBoxCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxCuenta.Location = new Point(155, 317);
+            textBoxCuenta.Name = "textBoxCuenta";
+            textBoxCuenta.PlaceholderText = "Cuenta";
+            textBoxCuenta.Size = new Size(179, 27);
+            textBoxCuenta.TabIndex = 39;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.Black;
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Enabled = false;
+            textBox5.Font = new Font("Segoe UI", 12F);
+            textBox5.Location = new Point(157, 321);
+            textBox5.Name = "textBox5";
+            textBox5.PasswordChar = '*';
+            textBox5.Size = new Size(176, 27);
+            textBox5.TabIndex = 40;
+            // 
+            // textBoxContrasena
+            // 
+            textBoxContrasena.BorderStyle = BorderStyle.None;
+            textBoxContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxContrasena.Location = new Point(154, 370);
+            textBoxContrasena.Name = "textBoxContrasena";
+            textBoxContrasena.PlaceholderText = "Contraseña";
+            textBoxContrasena.Size = new Size(179, 27);
+            textBoxContrasena.TabIndex = 41;
+            // 
+            // textBox6
+            // 
+            textBox6.BackColor = Color.Black;
+            textBox6.BorderStyle = BorderStyle.None;
+            textBox6.Enabled = false;
+            textBox6.Font = new Font("Segoe UI", 12F);
+            textBox6.Location = new Point(156, 374);
+            textBox6.Name = "textBox6";
+            textBox6.PasswordChar = '*';
+            textBox6.Size = new Size(176, 27);
+            textBox6.TabIndex = 42;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackColor = Color.Transparent;
+            pictureBox13.Image = Properties.Resources.usuario;
+            pictureBox13.Location = new Point(115, 321);
+            pictureBox13.Margin = new Padding(3, 4, 3, 4);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(34, 29);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 43;
+            pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.BackColor = Color.Transparent;
+            pictureBox14.Image = Properties.Resources.bloquear;
+            pictureBox14.Location = new Point(116, 376);
+            pictureBox14.Margin = new Padding(3, 4, 3, 4);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(31, 29);
+            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox14.TabIndex = 44;
+            pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.Transparent;
+            pictureBox15.Image = Properties.Resources.iniciarsesion_removebg_preview;
+            pictureBox15.Location = new Point(115, 272);
+            pictureBox15.Margin = new Padding(3, 4, 3, 4);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(34, 29);
+            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox15.TabIndex = 45;
+            pictureBox15.TabStop = false;
+            // 
             // Crear_cuenta
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 517);
+            ClientSize = new Size(507, 689);
             Controls.Add(ButtonInvitado);
             Controls.Add(SignUp);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Crear_cuenta";
             StartPosition = FormStartPosition.CenterScreen;
@@ -447,20 +538,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TextBox textBoxNombre;
-        private TextBox textBoxCuenta;
+        private TextBox textBoxNombre17;
         private Label label1;
-        private TextBox textBoxContrasena;
         private Panel SignUp;
         private Panel ButtonInvitado;
         private LinkLabel linkLabel;
         private Button buttonRegresar;
-        private TextBox textBoxContrasena1;
         private TextBox textBoxCuenta1;
         private Button buttonAcceder;
         private LinkLabel linkLabel1;
@@ -480,5 +571,15 @@
         private PictureBox pictureBox11;
         private PictureBox pictureBox10;
         private PictureBox pictureBox12;
+        private TextBox textBoxNombre;
+        private TextBox textBox4;
+        private TextBox textBoxContrasena1;
+        private TextBox textBoxCuenta;
+        private TextBox textBox5;
+        private PictureBox pictureBox15;
+        private PictureBox pictureBox14;
+        private PictureBox pictureBox13;
+        private TextBox textBoxContrasena;
+        private TextBox textBox6;
     }
 }

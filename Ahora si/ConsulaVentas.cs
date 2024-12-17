@@ -11,8 +11,8 @@ namespace Ahora_si
         {
             InitializeComponent();
             Conexion_cuentas obj = new Conexion_cuentas();
-            this.personas= obj.Consulta();
-            labelGanancias.Text=sumar(personas).ToString();
+            this.personas = obj.Consulta();
+            labelGanancias.Text = sumar(personas).ToString();
             Graficando();
         }
 
@@ -29,17 +29,15 @@ namespace Ahora_si
 
         public void Graficando()
         {
-            for (int i=1; i<personas.Count; i++)
+            for (int i = 1; i < personas.Count; i++)
             {
-                Grafica.Series["Ganancias"].Points.AddXY(i,personas[i].Monto);
+                Grafica.Series["Ganancias"].Points.AddXY(i, personas[i].Monto);
             }
         }
 
-
-
-
-
-
-
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

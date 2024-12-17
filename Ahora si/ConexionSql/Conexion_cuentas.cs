@@ -134,6 +134,10 @@ namespace Ahora_si.ConexionSql
                 MessageBox.Show("Error al buscar la cuenta en el server");
                 return encontrado;
             }
+            finally
+            {
+                cerrar();
+            }
         }
 
         public void Editar(persona per)
@@ -186,6 +190,42 @@ namespace Ahora_si.ConexionSql
             return personas;
         }
 
+        public persona BuscarID(int id)
+        {
+            persona encontrado = new persona();
+            string query = "SELECT * FROM persona WHERE id='" + id + "';";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    encontrado.Id = Convert.ToInt32(reader["id"]);
+                    encontrado.Cuenta = Convert.ToString(reader["cuenta"]) ?? "";
+                    encontrado.Nombre = Convert.ToString(reader["nombre"]) ?? "";
+                    encontrado.Contrasena = Convert.ToString(reader["contrasena"]) ?? "";
+                    encontrado.Monto = Convert.ToSingle(reader["monto"]);
+                    encontrado.Admin = Convert.ToBoolean(reader["admin"]);
+                }
+                else
+                {
+                    MessageBox.Show("Cuenta no encontrada");
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("error al buscar por ID");
+            }
+            finally
+            {
+                cerrar();
+            }
+            return encontrado;
+        }
 
 
 

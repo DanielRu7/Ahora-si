@@ -26,8 +26,7 @@ namespace Ahora_si
             this.borrar = borrar;
             Label[] Existencia = { labelNoE1, labelNoE2, labelNoE3, labelNoE4, labelNoE5, labelNoE6, labelNoE7, labelNoE8, labelNoE9, labelNoE10 };
             this.Existencia = Existencia;
-            obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu);
-            labelCuenta.Text = cuenta;
+            obtener(labels, pictureBoxes, botones, panelSidebar, sidebarTransition, pictureBoxMenu,labelCuenta);
 
         }
 
