@@ -289,7 +289,7 @@
             buttonAcceder.BackgroundImage = (Image)resources.GetObject("buttonAcceder.BackgroundImage");
             buttonAcceder.BackgroundImageLayout = ImageLayout.Zoom;
             buttonAcceder.FlatStyle = FlatStyle.Flat;
-            buttonAcceder.Location = new Point(180, 339);
+            buttonAcceder.Location = new Point(182, 339);
             buttonAcceder.Margin = new Padding(3, 2, 3, 2);
             buttonAcceder.Name = "buttonAcceder";
             buttonAcceder.Size = new Size(75, 69);

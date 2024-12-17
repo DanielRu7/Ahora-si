@@ -90,7 +90,7 @@ namespace Ahora_si
 
             // Obtener la ruta dinámica al escritorio
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = Path.Combine(desktopPath, "reciboCompra.pdf");
+            string filePath = Path.Combine(desktopPath, "reciboCompraCS.pdf");
 
             using (FileStream fs = new FileStream(filePath, FileMode.Create))
             {
@@ -101,14 +101,24 @@ namespace Ahora_si
                 doc.AddAuthor("Candy Shop");
                 doc.AddTitle("Recibo de compra");
 
-                // Agregar imagen centrada
-                string logoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logodulceria-removebg-preview.png");
-                if (File.Exists(logoPath))
+                // Agregar imagen desde los recursos
+                try
                 {
-                    iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);
-                    logo.Alignment = Element.ALIGN_CENTER;
-                    logo.ScaleToFit(100f, 100f);
-                    doc.Add(logo);
+                    using (var ms = new MemoryStream())
+                    {
+                        // Convertir la imagen del recurso a byte[]
+                        Properties.Resources.logodulceria.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(ms.ToArray());
+
+                        // Configuración del logo
+                        logo.Alignment = Element.ALIGN_CENTER;
+                        logo.ScaleToFit(100f, 100f);
+                        doc.Add(logo);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar el logo: " + ex.Message);
                 }
 
                 // Agregar encabezado "Candy Shop"
@@ -157,7 +167,7 @@ namespace Ahora_si
 
                 // Agregar mensaje de agradecimiento
                 iTextSharp.text.Font footerFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD, BaseColor.DARK_GRAY);
-                Paragraph footer = new Paragraph("Gracias por su compra, ojala no vuelva", footerFont) { Alignment = Element.ALIGN_CENTER };
+                Paragraph footer = new Paragraph("Gracias por su compra, vuelva pronto", footerFont) { Alignment = Element.ALIGN_CENTER };
                 doc.Add(footer);
 
                 doc.Close();

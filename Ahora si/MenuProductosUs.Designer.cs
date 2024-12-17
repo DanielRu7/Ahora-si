@@ -346,7 +346,7 @@
             labelNoE1.BackColor = Color.Transparent;
             labelNoE1.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE1.ForeColor = Color.Red;
-            labelNoE1.Location = new Point(66, 111);
+            labelNoE1.Location = new Point(85, 66);
             labelNoE1.Name = "labelNoE1";
             labelNoE1.Size = new Size(0, 15);
             labelNoE1.TabIndex = 27;
@@ -355,7 +355,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(66, 66);
+            pictureBox1.Location = new Point(57, 92);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(135, 124);
@@ -368,7 +368,7 @@
             panel3.BackColor = SystemColors.ActiveCaptionText;
             panel3.Controls.Add(label12);
             panel3.Controls.Add(label11);
-            panel3.Location = new Point(1, 499);
+            panel3.Location = new Point(1, 486);
             panel3.Name = "panel3";
             panel3.Size = new Size(970, 37);
             panel3.TabIndex = 37;
@@ -378,7 +378,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ControlLightLight;
-            label12.Location = new Point(595, 16);
+            label12.Location = new Point(624, 12);
             label12.Name = "label12";
             label12.Size = new Size(11, 16);
             label12.TabIndex = 1;
@@ -389,7 +389,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(834, 13);
+            label11.Location = new Point(863, 9);
             label11.Name = "label11";
             label11.Size = new Size(13, 19);
             label11.TabIndex = 0;
@@ -401,7 +401,7 @@
             labelNoE2.BackColor = Color.Transparent;
             labelNoE2.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE2.ForeColor = Color.Red;
-            labelNoE2.Location = new Point(251, 111);
+            labelNoE2.Location = new Point(261, 66);
             labelNoE2.Name = "labelNoE2";
             labelNoE2.Size = new Size(0, 15);
             labelNoE2.TabIndex = 28;
@@ -412,7 +412,7 @@
             labelNoE3.BackColor = Color.Transparent;
             labelNoE3.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE3.ForeColor = Color.Red;
-            labelNoE3.Location = new Point(430, 111);
+            labelNoE3.Location = new Point(440, 66);
             labelNoE3.Name = "labelNoE3";
             labelNoE3.Size = new Size(0, 15);
             labelNoE3.TabIndex = 29;
@@ -423,7 +423,7 @@
             labelNoE4.BackColor = Color.Transparent;
             labelNoE4.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE4.ForeColor = Color.Red;
-            labelNoE4.Location = new Point(609, 111);
+            labelNoE4.Location = new Point(619, 66);
             labelNoE4.Name = "labelNoE4";
             labelNoE4.Size = new Size(0, 15);
             labelNoE4.TabIndex = 30;
@@ -434,7 +434,7 @@
             labelNoE5.BackColor = Color.Transparent;
             labelNoE5.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE5.ForeColor = Color.Red;
-            labelNoE5.Location = new Point(786, 111);
+            labelNoE5.Location = new Point(796, 66);
             labelNoE5.Name = "labelNoE5";
             labelNoE5.Size = new Size(0, 15);
             labelNoE5.TabIndex = 31;
@@ -494,7 +494,7 @@
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.BackgroundImage = Properties.Resources.Sin_título;
             pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox5.Location = new Point(777, 66);
+            pictureBox5.Location = new Point(777, 92);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(135, 124);
@@ -516,7 +516,7 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Location = new Point(600, 66);
+            pictureBox4.Location = new Point(600, 92);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(135, 124);
@@ -528,7 +528,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(421, 66);
+            pictureBox3.Location = new Point(421, 92);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(135, 124);
@@ -540,7 +540,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(242, 66);
+            pictureBox2.Location = new Point(242, 92);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(135, 124);
@@ -594,7 +594,7 @@
             labelNoE6.BackColor = Color.Transparent;
             labelNoE6.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE6.ForeColor = Color.Red;
-            labelNoE6.Location = new Point(66, 361);
+            labelNoE6.Location = new Point(85, 316);
             labelNoE6.Name = "labelNoE6";
             labelNoE6.Size = new Size(0, 15);
             labelNoE6.TabIndex = 32;
@@ -605,7 +605,7 @@
             labelNoE7.BackColor = Color.Transparent;
             labelNoE7.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE7.ForeColor = Color.Red;
-            labelNoE7.Location = new Point(242, 361);
+            labelNoE7.Location = new Point(261, 316);
             labelNoE7.Name = "labelNoE7";
             labelNoE7.Size = new Size(0, 15);
             labelNoE7.TabIndex = 33;
@@ -616,7 +616,7 @@
             labelNoE8.BackColor = Color.Transparent;
             labelNoE8.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE8.ForeColor = Color.Red;
-            labelNoE8.Location = new Point(421, 361);
+            labelNoE8.Location = new Point(440, 316);
             labelNoE8.Name = "labelNoE8";
             labelNoE8.Size = new Size(0, 15);
             labelNoE8.TabIndex = 34;
@@ -627,7 +627,7 @@
             labelNoE9.BackColor = Color.Transparent;
             labelNoE9.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE9.ForeColor = Color.Red;
-            labelNoE9.Location = new Point(600, 361);
+            labelNoE9.Location = new Point(619, 316);
             labelNoE9.Name = "labelNoE9";
             labelNoE9.Size = new Size(0, 15);
             labelNoE9.TabIndex = 35;
@@ -638,7 +638,7 @@
             labelNoE10.BackColor = Color.Transparent;
             labelNoE10.Font = new Font("Segoe UI Symbol", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNoE10.ForeColor = Color.Red;
-            labelNoE10.Location = new Point(777, 361);
+            labelNoE10.Location = new Point(796, 316);
             labelNoE10.Name = "labelNoE10";
             labelNoE10.Size = new Size(0, 15);
             labelNoE10.TabIndex = 36;
@@ -647,7 +647,7 @@
             // 
             pictureBox10.BackColor = Color.Transparent;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox10.Location = new Point(777, 318);
+            pictureBox10.Location = new Point(777, 347);
             pictureBox10.Margin = new Padding(3, 2, 3, 2);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(135, 124);
@@ -659,7 +659,7 @@
             // 
             pictureBox9.BackColor = Color.Transparent;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox9.Location = new Point(600, 318);
+            pictureBox9.Location = new Point(600, 347);
             pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(135, 124);
@@ -671,7 +671,7 @@
             // 
             pictureBox8.BackColor = Color.Transparent;
             pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox8.Location = new Point(421, 318);
+            pictureBox8.Location = new Point(421, 347);
             pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(135, 124);
@@ -683,7 +683,7 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox7.Location = new Point(242, 318);
+            pictureBox7.Location = new Point(242, 347);
             pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(135, 124);
@@ -695,7 +695,7 @@
             // 
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox6.Location = new Point(66, 318);
+            pictureBox6.Location = new Point(57, 347);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(135, 124);

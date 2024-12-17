@@ -16,7 +16,6 @@ namespace Ahora_si
         public Crear_cuenta()
         {
             InitializeComponent();
-            //ActiveControl = label1;
         }
         private void buttonCrear_Click(object sender, EventArgs e)
         {

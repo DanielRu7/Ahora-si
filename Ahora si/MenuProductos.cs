@@ -147,5 +147,10 @@ namespace Ahora_si
             obj.ShowDialog();
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

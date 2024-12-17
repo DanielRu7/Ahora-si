@@ -60,7 +60,7 @@
             buttonPagar.BackgroundImage = (Image)resources.GetObject("buttonPagar.BackgroundImage");
             buttonPagar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonPagar.FlatStyle = FlatStyle.Flat;
-            buttonPagar.Location = new Point(296, 374);
+            buttonPagar.Location = new Point(35, 464);
             buttonPagar.Name = "buttonPagar";
             buttonPagar.Size = new Size(90, 80);
             buttonPagar.TabIndex = 0;
@@ -69,13 +69,13 @@
             // 
             // buttonVaciar
             // 
+            buttonVaciar.BackgroundImage = Properties.Resources.vaciarcarrito;
             buttonVaciar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonVaciar.FlatStyle = FlatStyle.Flat;
-            buttonVaciar.Location = new Point(403, 374);
+            buttonVaciar.Location = new Point(156, 464);
             buttonVaciar.Name = "buttonVaciar";
-            buttonVaciar.Size = new Size(118, 27);
+            buttonVaciar.Size = new Size(109, 80);
             buttonVaciar.TabIndex = 1;
-            buttonVaciar.Text = "Vaciar carrito";
             buttonVaciar.UseVisualStyleBackColor = true;
             buttonVaciar.Click += buttonVaciar_Click;
             // 
@@ -84,7 +84,7 @@
             buttonCancelar.BackgroundImage = (Image)resources.GetObject("buttonCancelar.BackgroundImage");
             buttonCancelar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonCancelar.FlatStyle = FlatStyle.Flat;
-            buttonCancelar.Location = new Point(615, 476);
+            buttonCancelar.Location = new Point(653, 476);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(71, 68);
             buttonCancelar.TabIndex = 3;
@@ -165,7 +165,7 @@
             // 
             labelMprecio.AutoSize = true;
             labelMprecio.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMprecio.Location = new Point(663, 178);
+            labelMprecio.Location = new Point(685, 343);
             labelMprecio.Name = "labelMprecio";
             labelMprecio.Size = new Size(0, 18);
             labelMprecio.TabIndex = 33;
@@ -174,7 +174,7 @@
             // 
             labelMnombre.AutoSize = true;
             labelMnombre.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMnombre.Location = new Point(663, 145);
+            labelMnombre.Location = new Point(685, 310);
             labelMnombre.Name = "labelMnombre";
             labelMnombre.Size = new Size(0, 18);
             labelMnombre.TabIndex = 32;
@@ -183,7 +183,7 @@
             // 
             labelMcantidad.AutoSize = true;
             labelMcantidad.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMcantidad.Location = new Point(663, 116);
+            labelMcantidad.Location = new Point(685, 281);
             labelMcantidad.Name = "labelMcantidad";
             labelMcantidad.Size = new Size(0, 18);
             labelMcantidad.TabIndex = 31;
@@ -192,7 +192,7 @@
             // 
             labelMid.AutoSize = true;
             labelMid.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMid.Location = new Point(663, 87);
+            labelMid.Location = new Point(685, 252);
             labelMid.Name = "labelMid";
             labelMid.Size = new Size(0, 18);
             labelMid.TabIndex = 30;
@@ -201,7 +201,7 @@
             // 
             labelPrecio.AutoSize = true;
             labelPrecio.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPrecio.Location = new Point(555, 173);
+            labelPrecio.Location = new Point(577, 338);
             labelPrecio.Name = "labelPrecio";
             labelPrecio.Size = new Size(57, 19);
             labelPrecio.TabIndex = 28;
@@ -211,7 +211,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(555, 144);
+            labelNombre.Location = new Point(577, 309);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(73, 19);
             labelNombre.TabIndex = 27;
@@ -221,7 +221,7 @@
             // 
             labelCantidad.AutoSize = true;
             labelCantidad.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCantidad.Location = new Point(555, 115);
+            labelCantidad.Location = new Point(577, 280);
             labelCantidad.Name = "labelCantidad";
             labelCantidad.Size = new Size(83, 19);
             labelCantidad.TabIndex = 26;
@@ -231,7 +231,7 @@
             // 
             labelId.AutoSize = true;
             labelId.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelId.Location = new Point(555, 87);
+            labelId.Location = new Point(577, 252);
             labelId.Name = "labelId";
             labelId.Size = new Size(24, 19);
             labelId.TabIndex = 25;
@@ -242,7 +242,7 @@
             pictureBoxImagen.BackColor = Color.Transparent;
             pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Enabled = false;
-            pictureBoxImagen.Location = new Point(539, 206);
+            pictureBoxImagen.Location = new Point(577, 81);
             pictureBoxImagen.Name = "pictureBoxImagen";
             pictureBoxImagen.Size = new Size(147, 150);
             pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
@@ -252,10 +252,10 @@
             // buttonBorrarPro
             // 
             buttonBorrarPro.FlatStyle = FlatStyle.Flat;
-            buttonBorrarPro.Location = new Point(539, 374);
+            buttonBorrarPro.Location = new Point(285, 464);
             buttonBorrarPro.Margin = new Padding(3, 2, 3, 2);
             buttonBorrarPro.Name = "buttonBorrarPro";
-            buttonBorrarPro.Size = new Size(147, 48);
+            buttonBorrarPro.Size = new Size(147, 80);
             buttonBorrarPro.TabIndex = 35;
             buttonBorrarPro.Text = "Borrar producto seleccionado";
             buttonBorrarPro.UseVisualStyleBackColor = true;
