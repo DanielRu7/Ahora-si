@@ -60,9 +60,10 @@
             buttonPagar.BackgroundImage = (Image)resources.GetObject("buttonPagar.BackgroundImage");
             buttonPagar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonPagar.FlatStyle = FlatStyle.Flat;
-            buttonPagar.Location = new Point(35, 464);
+            buttonPagar.Location = new Point(40, 619);
+            buttonPagar.Margin = new Padding(3, 4, 3, 4);
             buttonPagar.Name = "buttonPagar";
-            buttonPagar.Size = new Size(90, 80);
+            buttonPagar.Size = new Size(103, 107);
             buttonPagar.TabIndex = 0;
             buttonPagar.UseVisualStyleBackColor = true;
             buttonPagar.Click += buttonPagar_Click;
@@ -72,9 +73,10 @@
             buttonVaciar.BackgroundImage = Properties.Resources.vaciarcarrito;
             buttonVaciar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonVaciar.FlatStyle = FlatStyle.Flat;
-            buttonVaciar.Location = new Point(156, 464);
+            buttonVaciar.Location = new Point(178, 619);
+            buttonVaciar.Margin = new Padding(3, 4, 3, 4);
             buttonVaciar.Name = "buttonVaciar";
-            buttonVaciar.Size = new Size(109, 80);
+            buttonVaciar.Size = new Size(125, 107);
             buttonVaciar.TabIndex = 1;
             buttonVaciar.UseVisualStyleBackColor = true;
             buttonVaciar.Click += buttonVaciar_Click;
@@ -84,9 +86,10 @@
             buttonCancelar.BackgroundImage = (Image)resources.GetObject("buttonCancelar.BackgroundImage");
             buttonCancelar.BackgroundImageLayout = ImageLayout.Zoom;
             buttonCancelar.FlatStyle = FlatStyle.Flat;
-            buttonCancelar.Location = new Point(653, 476);
+            buttonCancelar.Location = new Point(746, 635);
+            buttonCancelar.Margin = new Padding(3, 4, 3, 4);
             buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(71, 68);
+            buttonCancelar.Size = new Size(81, 91);
             buttonCancelar.TabIndex = 3;
             buttonCancelar.UseVisualStyleBackColor = true;
             buttonCancelar.Click += buttonCancelar_Click;
@@ -95,9 +98,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(35, 18);
+            label1.Location = new Point(40, 24);
             label1.Name = "label1";
-            label1.Size = new Size(289, 36);
+            label1.Size = new Size(367, 44);
             label1.TabIndex = 4;
             label1.Text = "Carrito de compras";
             // 
@@ -109,12 +112,11 @@
             dataGridViewCompra.BorderStyle = BorderStyle.None;
             dataGridViewCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCompra.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre, CantidadCompra, Precio, Imagen });
-            dataGridViewCompra.Location = new Point(35, 81);
-            dataGridViewCompra.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewCompra.Location = new Point(40, 108);
             dataGridViewCompra.Name = "dataGridViewCompra";
             dataGridViewCompra.ReadOnly = true;
             dataGridViewCompra.RowHeadersWidth = 51;
-            dataGridViewCompra.Size = new Size(482, 275);
+            dataGridViewCompra.Size = new Size(551, 367);
             dataGridViewCompra.TabIndex = 5;
             dataGridViewCompra.SelectionChanged += dataGridViewCompra_SelectionChanged;
             // 
@@ -165,45 +167,45 @@
             // 
             labelMprecio.AutoSize = true;
             labelMprecio.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMprecio.Location = new Point(685, 343);
+            labelMprecio.Location = new Point(783, 457);
             labelMprecio.Name = "labelMprecio";
-            labelMprecio.Size = new Size(0, 18);
+            labelMprecio.Size = new Size(0, 23);
             labelMprecio.TabIndex = 33;
             // 
             // labelMnombre
             // 
             labelMnombre.AutoSize = true;
             labelMnombre.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMnombre.Location = new Point(685, 310);
+            labelMnombre.Location = new Point(783, 413);
             labelMnombre.Name = "labelMnombre";
-            labelMnombre.Size = new Size(0, 18);
+            labelMnombre.Size = new Size(0, 23);
             labelMnombre.TabIndex = 32;
             // 
             // labelMcantidad
             // 
             labelMcantidad.AutoSize = true;
             labelMcantidad.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMcantidad.Location = new Point(685, 281);
+            labelMcantidad.Location = new Point(783, 375);
             labelMcantidad.Name = "labelMcantidad";
-            labelMcantidad.Size = new Size(0, 18);
+            labelMcantidad.Size = new Size(0, 23);
             labelMcantidad.TabIndex = 31;
             // 
             // labelMid
             // 
             labelMid.AutoSize = true;
             labelMid.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMid.Location = new Point(685, 252);
+            labelMid.Location = new Point(783, 336);
             labelMid.Name = "labelMid";
-            labelMid.Size = new Size(0, 18);
+            labelMid.Size = new Size(0, 23);
             labelMid.TabIndex = 30;
             // 
             // labelPrecio
             // 
             labelPrecio.AutoSize = true;
             labelPrecio.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPrecio.Location = new Point(577, 338);
+            labelPrecio.Location = new Point(659, 451);
             labelPrecio.Name = "labelPrecio";
-            labelPrecio.Size = new Size(57, 19);
+            labelPrecio.Size = new Size(71, 23);
             labelPrecio.TabIndex = 28;
             labelPrecio.Text = "Precio";
             // 
@@ -211,9 +213,9 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(577, 309);
+            labelNombre.Location = new Point(659, 412);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(73, 19);
+            labelNombre.Size = new Size(89, 23);
             labelNombre.TabIndex = 27;
             labelNombre.Text = "Nombre";
             // 
@@ -221,9 +223,9 @@
             // 
             labelCantidad.AutoSize = true;
             labelCantidad.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCantidad.Location = new Point(577, 280);
+            labelCantidad.Location = new Point(659, 373);
             labelCantidad.Name = "labelCantidad";
-            labelCantidad.Size = new Size(83, 19);
+            labelCantidad.Size = new Size(101, 23);
             labelCantidad.TabIndex = 26;
             labelCantidad.Text = "Cantidad";
             // 
@@ -231,9 +233,9 @@
             // 
             labelId.AutoSize = true;
             labelId.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelId.Location = new Point(577, 252);
+            labelId.Location = new Point(659, 336);
             labelId.Name = "labelId";
-            labelId.Size = new Size(24, 19);
+            labelId.Size = new Size(29, 23);
             labelId.TabIndex = 25;
             labelId.Text = "Id";
             // 
@@ -242,9 +244,10 @@
             pictureBoxImagen.BackColor = Color.Transparent;
             pictureBoxImagen.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxImagen.Enabled = false;
-            pictureBoxImagen.Location = new Point(577, 81);
+            pictureBoxImagen.Location = new Point(659, 108);
+            pictureBoxImagen.Margin = new Padding(3, 4, 3, 4);
             pictureBoxImagen.Name = "pictureBoxImagen";
-            pictureBoxImagen.Size = new Size(147, 150);
+            pictureBoxImagen.Size = new Size(168, 200);
             pictureBoxImagen.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxImagen.TabIndex = 24;
             pictureBoxImagen.TabStop = false;
@@ -252,10 +255,9 @@
             // buttonBorrarPro
             // 
             buttonBorrarPro.FlatStyle = FlatStyle.Flat;
-            buttonBorrarPro.Location = new Point(285, 464);
-            buttonBorrarPro.Margin = new Padding(3, 2, 3, 2);
+            buttonBorrarPro.Location = new Point(326, 619);
             buttonBorrarPro.Name = "buttonBorrarPro";
-            buttonBorrarPro.Size = new Size(147, 80);
+            buttonBorrarPro.Size = new Size(168, 107);
             buttonBorrarPro.TabIndex = 35;
             buttonBorrarPro.Text = "Borrar producto seleccionado";
             buttonBorrarPro.UseVisualStyleBackColor = true;
@@ -265,9 +267,9 @@
             // 
             labelMonto.AutoSize = true;
             labelMonto.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold);
-            labelMonto.Location = new Point(174, 379);
+            labelMonto.Location = new Point(199, 505);
             labelMonto.Name = "labelMonto";
-            labelMonto.Size = new Size(55, 18);
+            labelMonto.Size = new Size(68, 23);
             labelMonto.TabIndex = 37;
             labelMonto.Text = "Monto";
             // 
@@ -275,18 +277,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(47, 378);
+            label3.Location = new Point(54, 504);
             label3.Name = "label3";
-            label3.Size = new Size(121, 19);
+            label3.Size = new Size(150, 23);
             label3.TabIndex = 36;
             label3.Text = "Total a pagar: ";
             // 
             // Carrito
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(778, 560);
+            ClientSize = new Size(1030, 747);
             Controls.Add(labelMonto);
             Controls.Add(label3);
             Controls.Add(buttonBorrarPro);
@@ -305,6 +307,7 @@
             Controls.Add(buttonVaciar);
             Controls.Add(buttonPagar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Carrito";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Carrito";
