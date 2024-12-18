@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Portada));
             panel1 = new Panel();
+            label7 = new Label();
             lblhora = new Label();
             button1 = new Button();
             label6 = new Label();
@@ -51,6 +52,7 @@
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(lblhora);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label6);
@@ -64,16 +66,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(801, 450);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(250, 433);
+            label7.Name = "label7";
+            label7.Size = new Size(10, 16);
+            label7.TabIndex = 9;
+            label7.Text = ".";
             // 
             // lblhora
             // 
             lblhora.AutoSize = true;
             lblhora.BackColor = Color.Transparent;
-            lblhora.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblhora.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblhora.ForeColor = SystemColors.ActiveCaptionText;
-            lblhora.Location = new Point(364, 426);
+            lblhora.Location = new Point(450, 426);
             lblhora.Name = "lblhora";
-            lblhora.Size = new Size(0, 24);
+            lblhora.Size = new Size(0, 25);
             lblhora.TabIndex = 8;
             // 
             // button1
@@ -200,5 +214,6 @@
         private Label lblhora;
         private Button button1;
         private System.Windows.Forms.Timer horafecha;
+        private Label label7;
     }
 }

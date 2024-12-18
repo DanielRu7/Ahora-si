@@ -47,12 +47,18 @@
         private void horafecha_Tick(object sender, EventArgs e)
         {
             lblhora.Text = DateTime.Now.ToLongTimeString();
+            label7.Text = DateTime.Now.ToLongDateString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
