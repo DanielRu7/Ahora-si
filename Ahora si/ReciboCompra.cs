@@ -14,7 +14,6 @@ namespace Ahora_si
     public partial class ReciboCompra : Form
     {
         private List<producto> productos;
-        private persona person;
         private float precio;
 
         public ReciboCompra()
@@ -25,11 +24,12 @@ namespace Ahora_si
         {
             InitializeComponent();
             this.productos = productos;
-            this.person=person;
             labelFecha.Text = DateTime.Now.ToString();
             textBoxRecibo.Enabled = false;
             this.precio = precio;
+            labelPersona.Text = $"Comp.:{person.Nombre} Cuent.:{person.Cuenta}";
             llenar();
+            
         }
 
 
