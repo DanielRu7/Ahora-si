@@ -110,7 +110,7 @@ namespace Ahora_si
                     Existencia[i].Text = "";
                 }
 
-                if (pro.Count<6)
+                if (pro.Count<=6)
                 {
                     borrar[i].Hide();
                 }
