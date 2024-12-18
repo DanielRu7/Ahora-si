@@ -29,7 +29,7 @@ namespace Ahora_si
 
         private void ordenar()
         {
-            this.productos = productos.OrderByDescending(p => p.Cantidad).ToList();
+            this.productos = productos.OrderBy(p => p.Cantidad).ToList();
 
 
         }
