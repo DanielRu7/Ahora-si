@@ -89,6 +89,8 @@ namespace Ahora_si
 
             for (int i = 0; i < pro.Count && i < productos.Length && i < nombres.Length; i++)
             {
+                
+
                 if (pro[i].Cantidad <= 0)
                 {
                     Existencia[i].Text = "No Existencia";

@@ -110,10 +110,19 @@ namespace Ahora_si
                     Existencia[i].Text = "";
                 }
 
+                if (pro.Count<6)
+                {
+                    borrar[i].Hide();
+                }
+                else
+                {
+                    borrar[i].Show();
+                }
+
                 productos[i].Image = Image.FromStream(new MemoryStream(pro[i].Imagen));
                 productos[i].BackgroundImage = null;
                 nombres[i].Text = pro[i].Nombre;
-                borrar[i].Show();
+                
 
             }
 
